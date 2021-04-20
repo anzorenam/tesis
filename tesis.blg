@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: tesis.aux
+A level-1 auxiliary file: portada.aux
+A level-1 auxiliary file: cap1.aux
+A level-1 auxiliary file: cap2.aux
+A level-1 auxiliary file: cap3.aux
+The style file: unsrt.bst
+Database file #1: tesis.bib
+I was expecting a `,' or a `}'---line 313 of file tesis.bib
+ : 
+ : doi={10.1016/j.nima.2021.165326},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 322 of file tesis.bib
+ : 
+ : doi={10.1038/158081a0},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 22 entries,
+            1791 wiz_defined-function locations,
+            578 strings with 6530 characters,
+and the built_in function-call counts, 4398 in all, are:
+= -- 405
+> -- 136
+< -- 1
++ -- 56
+- -- 34
+* -- 244
+:= -- 721
+add.period$ -- 67
+call.type$ -- 22
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 22
+duplicate$ -- 206
+empty$ -- 467
+format.name$ -- 34
+if$ -- 998
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 20
+newline$ -- 114
+num.names$ -- 22
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 89
+stack$ -- 0
+substring$ -- 319
+swap$ -- 33
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 38
+width$ -- 24
+write$ -- 243
+(There were 2 error messages)

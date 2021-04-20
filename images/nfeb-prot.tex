@@ -1,0 +1,62 @@
+\documentclass[landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage[euler-digits,euler-hat-accent]{eulervm}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,backgrounds,decorations.pathreplacing}
+\usepackage[american currents,american voltages]{circuitikz}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphics}
+\pgfrealjobname{survey}
+
+\definecolor{lb}{rgb}{0.43,0.37,0.97}
+\definecolor{lg}{rgb}{0.28,0.51,0.19}
+\definecolor{dg}{rgb}{0.39,0.39,0.39}
+
+\begin{document}
+
+\thispagestyle{empty}
+\tikzstyle{block}=[rectangle,thick,draw=lg,fill=lg,minimum height=4em,minimum width=4em,text width=1.25cm,align=center]
+\tikzstyle{sblock}=[rectangle,thick,draw=lb,fill=lb,minimum height=4em,minimum width=4em,text width=1.25cm,align=center]
+\tikzstyle{bblock}=[rectangle,thick,draw=lb,fill=lb,minimum height=16em,minimum width=4em]
+\tikzstyle{hblock}=[rectangle,thick,fill opacity=0.6,text opacity=0,draw=dg,fill=dg,minimum height=25em,minimum width=24em]
+
+\beginpgfgraphicnamed{nfeb-prot}
+\begin{tikzpicture}[scale=1.0]
+
+\draw[color=black,line width=1.0]
+ 	(2.0,1.0) node [buffer,scale=1.5](opamp){}
+ 	(2.0,3.0) node [anchor=south]{Preamp}
+ 	(7.75,0.5) node [op amp,yscale=-1](comp){}
+ 	($(opamp.out)+(1.75,0)$) node [block]{Shaper}
+ 	($(comp.+)+(4.0,-1.0)$) node [hblock]{FPGA}
+    (7.75,2.0) node [anchor=south]{canal LVDS}
+    (7.75,3.0) node [scale=1.5,anchor=south]{FPGA}
+ 	(opamp.in) to [short,-o] ($(opamp.in)+(-1.0,0)$)
+ 	($(opamp.out)+(0.25,0)$) to [short] ($(opamp.out)+(0.25,1.5)$)
+ 	to [C]  ($(opamp.in)+(-0.25,1.5)$)
+ 	to [short] ($(opamp.in)+(-0.25,0)$)
+ 	($(comp.out)+(1.75,-1.75)$) node [bblock](time){TDC}
+    ($(time)+(2.5,0)$) node [sblock]{SiTCP}
+ 	(comp.+) to [short] (opamp.out)
+ 	(comp.-) to [short] ($(comp.-)+(-0.25,0)$)
+ 	to [short] ($(comp.-)+(-0.25,-0.5)$)
+ 	to [short,-o] ($(comp.-)+(-0.75,-0.5)$)
+ 	($(comp.-)+(-0.75,-0.5)$) node[anchor=east]{$V_{TH}$}
+    (comp.out) to [short] ($(comp.out)+(1.5,0)$)
+    (time) to [short,-o] ($(time)+(4.75,0)$)
+    ($(time)+(4.75,0)$) node[anchor=west]{conexión al servidor}
+
+    ($(time)+(-8.5,-1.7)$) node [anchor=east] {Otros canales}
+    ($(time)+(-8.1,-1.0)$) to [short] ($(time)+(0,-1.0)$)
+    ($(time)+(-8.1,-1.5)$) to [short] ($(time)+(0,-1.5)$)
+    ($(time)+(-8.1,-2.0)$) to [short] ($(time)+(0,-2.0)$)
+    ($(time)+(-8.1,-2.5)$) to [short] ($(time)+(0,-2.5)$);
+
+\draw [color=black,line width=1.0,decorate,decoration={brace,mirror}] ($(time)+(-8.2,-0.9)$) -- ($(time)+(-8.2,-2.6)$);
+
+\end{tikzpicture}
+\endpgfgraphicnamed
+
+\end{document}
