@@ -4,7 +4,7 @@
 \chaptermark{Telescopio centellador}
 \label{chap:dos}
 
-Actualmente los telescopios de neutrones solares solo permiten estudiar el espectro de estas partículas de manera parcial, es decir, con resolución limitada. Dado que los neutrones tienen masa, sus velocidades sufren dispersión dependiendo de su energía, lo cual complica establecer el perfil temporal de emisión. Aunado a esto, la baja estadística de conteo producto de la eficiencia de los telescopios y su limitada resolución angular; limitan las posibilidades de los TNS para esclarecer los mecanismos de aceleración de partículas.
+Actualmente los telescopios de neutrones solares solo permiten estudiar el espectro de energía de manera parcial, es decir, con resolución limitada. Dado que los neutrones tienen masa, sus velocidades sufren dispersión dependiendo de su energía, lo cual complica establecer el perfil temporal de emisión. Aunado a esto, la baja estadística de conteo producto de la eficiencia de los telescopios y su limitada resolución angular; limitan las posibilidades de los TNS para esclarecer los mecanismos de aceleración de partículas.
 
 Un diseño mejorado de Telescopio de neutrones fue propuesto en \cite{sako03}. En este diseño se utilizan barras de centelleo de dimensiones \SI[product-units=power]{5x10x300}{\cm}, alineadas de tal forma que permiten trazar las trayectorias de los neutrones incidentes además de medir su energía depositada. El Telescopio centellador de Rayos cósmicos (\emph{SciCRT} por sus siglas en inglés) es un nuevo experimento de rayos cósmicos basado en este principio.
 
@@ -40,9 +40,15 @@ El espectro de emisión de los plásticos centelladores se puede observar en el 
 
 La electrónica para la adquisición de datos del telescopio fue desarrollada para el experimento K2K y esta integrada por circuitos de procesamiento analógico, de señal mixta y digitales; integrados a través de tecnología de circuitos integrados de alta escala \cite{myoshi04}. El procesamiento de la señales empieza con la conversión de la señal óptica en eléctrica por parte del MAPMT, para posteriormente ser amplificada, formada y multiplexada en la electrónica de \emph{Front End}. Este acondicionamiento se lleva a cabo en el dominio analógico y de señal mixta. Después de este proceso, las señales se transfieren a la electrónica de \emph{Back End} mediante un bus diferencial. En las unidades que integran la electrónica de BE las señales son convertidas a digital y transferidas finalmente al servidor de adquisición de datos mediante la interface VME. Para poder seleccionar los eventos a guardar, las unidades FE mandan una señal de \emph{hit} a las tarjetas de disparo (TRGB), las cuales son unidades de procesamiento digital programable, que seleccionan los eventos con base a una condición de disparo. Una discusión más profunda sobre el funcionamiento de la electrónica se encuentra en el capitulo \ref{chap:tres}, en donde además se listan requerimientos y características de la nueva electrónica a desarrollar.
 
-Bajo condiciones normales, el telescopio registra dos conjuntos de datos diferentes. Muones de alta energía (arriba de \SI{450}{\mega\electronvolt}) son detectados cuando producen coincidencia en las capas superiores e inferiores del detector. El umbral para la detección de partículas en las capas dedicadas es de \SI{0.3}{MIP} (\SI{\approx 0.5}{\mega\electronvolt}). El otro conjunto de datos del telescopio registra partículas neutras (neutrones atmosféricos en \SI{70}{\percent}). El disparo para este tipo de eventos está definido cuando no hay ninguna señal en la capa de muones (anti-coincidencia) y además se registra una traza en uno de los SB con al menos \SI{14}{\mega\electronvolt} de energía depositada. Las ganancias de los MAPMT y umbrales para las capas de neutrones y muones se determinaron mediante simulaciones MC y se calibraron en Abril de \num{2014} \cite{ysasai14}.
+Bajo condiciones normales, el telescopio registra dos conjuntos de datos diferentes. Muones de alta energía (arriba de \SI{450}{\mega\electronvolt}) son detectados cuando producen coincidencia en las capas superiores e inferiores del detector. El umbral para la detección de partículas en las capas dedicadas es de \SI{0.3}{MIP} (\SI{\approx 0.5}{\mega\electronvolt}). El otro conjunto de datos del telescopio registra partículas neutras (aproximadamente \SI{70}{\percent} de los datos son de neutrones atmosféricos). El disparo para este tipo de eventos está definido cuando no hay ninguna señal en la capa de muones (anti-coincidencia) y además se registra una traza en uno de los SB con al menos \SI{14}{\mega\electronvolt} de energía depositada. Las ganancias de los MAPMT y umbrales para las capas de neutrones y muones se determinaron mediante simulaciones MC y se calibraron en Abril de \num{2014} \cite{ysasai14}.
 
-\section{Simulación de una barra de centelleo}
+\subsection{Sistema opto-electrónico}
+
+Para lograr alcanzar los objetivos planteados, la caracterización de los elementos ópticos y opto-electrónicos que integran al SciCRT es de vital importancia.
+
+Como ya se mencionó, las barras de centelleo del detector fueron fabricadas por Fermilab y sus propiedades ópticas (y mecánicas) fueron probadas
+
+
 
 \begin{figure}
         \centering
@@ -52,7 +58,7 @@ Bajo condiciones normales, el telescopio registra dos conjuntos de datos diferen
 \end{figure}
 
 \begin{equation}
-\label{equ:fiber-attributed}
+\label{equ:fiber-att}
 L(x)=k\left(\exp\left(-\frac{x}{\lambda}\right) +R\exp\left(-\frac{2.0x_{tot}-x}{\lambda}\right)\right)
 \end{equation}
 

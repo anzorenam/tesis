@@ -2,60 +2,65 @@ This is BibTeX, Version 0.99d (TeX Live 2020/Arch Linux)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: tesis.aux
 A level-1 auxiliary file: portada.aux
+A level-1 auxiliary file: resumen.aux
 A level-1 auxiliary file: cap1.aux
 A level-1 auxiliary file: cap2.aux
 A level-1 auxiliary file: cap3.aux
 The style file: unsrt.bst
 Database file #1: tesis.bib
-I was expecting a `,' or a `}'---line 313 of file tesis.bib
+I was expecting a `,' or a `}'---line 340 of file tesis.bib
  : 
  : doi={10.1016/j.nima.2021.165326},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 322 of file tesis.bib
+I was expecting a `,' or a `}'---line 349 of file tesis.bib
  : 
  : doi={10.1038/158081a0},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 22 entries,
+Repeated entry---line 392 of file tesis.bib
+ : @article{masuda
+ :                ,
+I'm skipping whatever remains of this entry
+You've used 32 entries,
             1791 wiz_defined-function locations,
-            578 strings with 6530 characters,
-and the built_in function-call counts, 4398 in all, are:
-= -- 405
-> -- 136
+            632 strings with 7877 characters,
+and the built_in function-call counts, 6276 in all, are:
+= -- 575
+> -- 204
 < -- 1
-+ -- 56
-- -- 34
-* -- 244
-:= -- 721
-add.period$ -- 67
-call.type$ -- 22
-change.case$ -- 20
++ -- 83
+- -- 51
+* -- 338
+:= -- 1031
+add.period$ -- 97
+call.type$ -- 32
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 206
-empty$ -- 467
-format.name$ -- 34
-if$ -- 998
+cite$ -- 32
+duplicate$ -- 297
+empty$ -- 669
+format.name$ -- 51
+if$ -- 1426
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 20
-newline$ -- 114
-num.names$ -- 22
-pop$ -- 39
+int.to.str$ -- 32
+missing$ -- 30
+newline$ -- 164
+num.names$ -- 32
+pop$ -- 68
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 89
+skip$ -- 121
 stack$ -- 0
-substring$ -- 319
-swap$ -- 33
+substring$ -- 430
+swap$ -- 44
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 38
-width$ -- 24
-write$ -- 243
-(There were 2 error messages)
+while$ -- 53
+width$ -- 34
+write$ -- 352
+(There were 3 error messages)

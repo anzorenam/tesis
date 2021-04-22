@@ -34,16 +34,16 @@ Despite this, the sensitivity to such transient events is function of the active
 
 \section{La técnica de \emph{Time over threshold}}
 
-La carga depositada por la interacción de una partícula con el centellador se estima integrando el pulso de corriente a la salida del PMT, el cual está conformado por la suma de $N_{phe}$ pulsos de respuesta SPE. De acuerdo con \cite{sanchez10} el modelo de la señal eléctrica se puede define a través de la siguiente ecuación:
+La carga depositada por la interacción de una partícula con el centellador se estima integrando el pulso de corriente a la salida del PMT, el cual está conformado por la suma de $N$ pulsos de SPE. De acuerdo con \cite{sanchez10} el modelo de la señal eléctrica se puede definir a través de la siguiente ecuación:
 
 \begin{equation}\label{equ:3.1}
 i_{pmt}\left(x,t\right)=\sum_{i=1}^{N_{phe}}i\left(t-t_{i}\right)
 \end{equation}
 
-de donde $i_{pmt}$ es la corriente a la salida del MAPMT en función del tiempo y la posición en la que atravesó la partícula la barra; $N_{phe}$ es el número total de fotoelectrones a la salida del MAPMT y $t_{i}$ la distribución de los tiempos de arribo. Es importante mencionar que $N_{phe}$ a su vez depende de la distancia, la ganancia del MAPMT y su eficiencia cuántica. La carga total depositada entonces se puede calcular como:
+de donde $i_{pmt}$ es la corriente a la salida del MAPMT en función del tiempo y posición en la que atravesó la partícula la barra; $N_{phe}$ es el número total de fotoelectrones a la salida del MAPMT y $t_{i}$ la distribución de los tiempos de arribo. Es importante mencionar que $N_{phe}$ a su vez depende de la distancia, la ganancia del MAPMT, eficiencia cuántica y energía depositada por la partícula en la barra. Luego entonces la carga total depositada entonces se puede calcular como:
 
 \begin{equation}
-Q=\int_{0}^{\infty} i_{pmt}\left(x,t\right)\mathrm{d}t
+Q=\int_{0}^{\infty} i_{pmt}\left(t\right)\mathrm{d}t
 \end{equation}
 
 La corriente $i\left(t\right)$ se puede modelar como:

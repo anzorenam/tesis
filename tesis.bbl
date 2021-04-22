@@ -22,7 +22,7 @@ E.~N. Parker.
 \newblock {\em Journal of Geophysical Research}, 62(4):509--520, 1957.
 
 \bibitem{shiba11}
-{K. Shibata y T. Magara}.
+{Shibata, K. y Magara, T.}
 \newblock {{Solar flares: Magnetohydrodynamic processes}}.
 \newblock {\em {Living Rev.\, Solar Phys.}}, {8}, {(2011), 6}.
 \newblock {[Online article]: cited [21-Ene-2014]
@@ -51,6 +51,71 @@ T.~Yokoyama and K.~Shibata.
 S.~Shibata.
 \newblock {Propagation of solar neutrons through the atmosphere of the Earth}.
 \newblock {\em Journal of Geophysical Research}, 99:6651--6665, 1994.
+
+\bibitem{chupp82}
+E.~L. Chupp et~al.
+\newblock {A direct observation of solar neutrons following the 0118 UT flare
+  on 1980 June 21}.
+\newblock {\em Astrophysical Journal, Part 2}, 263:L95--L99, 1982.
+
+\bibitem{dorman}
+{Dorman, L.}
+\newblock {\em {Solar neutrons and related Phenomena}}.
+\newblock {Springer}, {Paises Bajos}, {2010}.
+
+\bibitem{debrunner83}
+H.~Debrunner et~al.
+\newblock {The solar cosmic ray neutron event on June 3, 1982}.
+\newblock In {\em {Proceedings 18th International Cosmic Ray Conference}},
+  1983.
+
+\bibitem{chupp87}
+E.~L. Chupp et~al.
+\newblock Solar neutron emissivity during the large flare on 1982 june 3.
+\newblock {\em Astrophysical Journal}, 318:913--925, 1987.
+
+\bibitem{muraki92}
+Y.~Muraki et~al.
+\newblock {Observation of solar neutrons associated with the large flare on
+  1991 June 4}.
+\newblock {\em The Astrophysical Journal}, 400:L75--L78, 1992.
+
+\bibitem{valdes04}
+J.~F. Valdés-Galicia et~al.
+\newblock {An improved solar neutron telescope installed at a very high
+  altitude in México}.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  535:656--664, 2004.
+
+\bibitem{barrantes18}
+{Barrantes, M.}
+\newblock {\em {El Telescopio de neutrones solares en Sierra Negra y
+  aceleración de iones en la atmósfera solar}}.
+\newblock Tesis doctoral, {Instituto de Geofísica UNAM}, {2010}.
+
+\bibitem{watanabe05}
+K.~Watanabe.
+\newblock {\em {Solar Neutron Events Associated with Large Solar Flares in
+  Solar Cycle 23}}.
+\newblock PhD thesis, Nagoya University, 2005.
+
+\bibitem{sako06}
+T.~Sako et~al.
+\newblock {Long-lived solar neutron emission in comparison with
+  electron-produced radiaion in the 2005 September 7 solar flare}.
+\newblock {\em The Astrophysical Journal}, 651:L69--L72, 2006.
+
+\bibitem{muraki16}
+Y.~Muraki et~al.
+\newblock {Simultaneous Observation of Solar Neutrons from the International
+  Space Station and High Mountain Observatories in Association with a Flare on
+  July 8, 2014}.
+\newblock {\em Solar physics}, 291:1241--1265, 2016.
+
+\bibitem{mirosh15}
+{Miroshnichenko, L. I.}
+\newblock {\em {Solar cosmic rays: Fundamentals and applications}}.
+\newblock {Springer}, {Estados Unidos, Segunda Edición}, {2015}.
 
 \bibitem{sako03}
 T.~Sako et~al.
@@ -114,17 +179,11 @@ Y.~Sasai et~al.
   857:50--57, 2017.
 
 \bibitem{manzorena171}
-M.~Anzorena \textit{et al.}
+M.~Anzorena et~al.
 \newblock {Current status of SciCRT experiment and its expected future
   performance}.
 \newblock In {\em {Proceedings 35th International Cosmic Ray Conference}},
   2017.
-
-\bibitem{sako06}
-T.~Sako et~al.
-\newblock {Long-lived solar neutron emission in comparison with
-  electron-produced radiaion in the 2005 September 7 solar flare}.
-\newblock {\em The Astrophysical Journal}, 651:L69--L72, 2006.
 
 \bibitem{sanchez10}
 F.~A. Sanchéz and G.~Medina-Tanco.
