@@ -8,66 +8,128 @@ Actualmente los telescopios de neutrones solares solo permiten estudiar el espec
 
 Un diseño mejorado de Telescopio de neutrones fue propuesto en \cite{sako03}. En este diseño se utilizan barras de centelleo de dimensiones \SI[product-units=power]{5x10x300}{\cm}, alineadas de tal forma que permiten trazar las trayectorias de los neutrones incidentes además de medir su energía depositada. El Telescopio centellador de Rayos cósmicos (\emph{SciCRT} por sus siglas en inglés) es un nuevo experimento de rayos cósmicos basado en este principio.
 
-El SciCRT utiliza como trazador activo el detector \emph{SciBar}, diseñado originalmente para el experimento \emph{long-baseline K2K} \cite{knitta04} y posteriormente en el experimento \emph{SciBooNE} del \emph{Fermilab} (Laboratorio Nacional Fermi) \cite{hiraide06}. En el año \num{2013} el SciBar fue trasladado a la cima del volcán Sierra Negra, Puebla a \SI{4600}{\metre} sobre el nivel del mar, con el objetivo de observar neutrones solares. La localidad de Sierra Negra es ideal para este experimento debido a la profundidad atmosférica (en línea vertical: \SI{575}{\gram\per\square\centi\metre}), su cercanía con el ecuador terrestre ($\ang{19.0}\mathbf{N}$, $\ang{97.3}\mathbf{W}$) , además de la experiencia previa en la operación de otro telescopio de neutrones solares en el sitio y la infraestructura del lugar\footnote{En la actualidad el volcán Sierra Negra se ha convertido en un observatorio astrofísico de nivel mundial.}.
+El \emph{SciCRT} utiliza como trazador activo el detector \emph{SciBar}, diseñado originalmente para el experimento \emph{long-baseline K2K} \cite{knitta04} y posteriormente en el experimento \emph{SciBooNE} del \emph{Fermilab} (Laboratorio Nacional Fermi) \cite{hiraide06}. En el año \num{2013} el \emph{SciBar} fue trasladado a la cima del volcán Sierra Negra, Puebla a \SI{4600}{\metre} sobre el nivel del mar, con el objetivo de observar neutrones solares. La localidad de Sierra Negra es ideal para este experimento debido a la profundidad atmosférica (en línea vertical: \SI{575}{\gram\per\square\centi\metre}), su cercanía con el ecuador terrestre ($\ang{19.0}\mathbf{N}$, $\ang{97.3}\mathbf{W}$) , además de la experiencia previa en la operación de otro telescopio de neutrones solares en el sitio y la infraestructura del lugar\footnote{En la actualidad el volcán Sierra Negra se ha convertido en un observatorio astrofísico de nivel mundial.}.
 
-Un diagrama esquemático del detector se muestra en la figura \ref{fig:scibar-detector}. Las ventajas del SciCRT sobre la generación previa de telescopios proviene de integrar las funciones de anti-coincidencia, blanco centellador y telescopio direccional en las barras centelleo del SciBar. Esto permite tener \num{15} veces más volumen activo, mejor resolución en energía y un umbral de detección menor. Considerando todas estas características el SciCRT tiene una eficiencia detección \num{10} veces mayor a la del TNS previamente en el mismo sitio \cite{ynagai14} (considerando neutrones de \SI{100}{\mega\electronvolt}).
+Un diagrama esquemático del detector se muestra en la figura \ref{fig:scibar-detector}. Las ventajas del \emph{SciCRT} sobre la generación previa de telescopios proviene de integrar las funciones de anti-coincidencia, blanco centellador y telescopio direccional en las barras centelleo del \emph{SciBar}. Esto permite tener \num{15} veces más volumen activo, mejor resolución en energía y un umbral de detección menor. Considerando todas estas características el \emph{SciCRT} tiene una eficiencia detección \num{10} veces mayor a la del TNS previamente en el mismo sitio \cite{ynagai14} (considerando neutrones de \SI{100}{\mega\electronvolt}).
 
 \begin{figure}
         \centering
         \includegraphics[width=0.7\textwidth]{scibar-diagram.pdf}
-        \caption{Diagram esquemático del SciCRT. El detector se compone de \num{14848} barras centelladoras y fibras WLS. La lectura de las fibras se hace por medio MAPMTs en grupos de \num{64} canales.}
+        \caption{Diagram esquemático del \emph{SciCRT}. El detector se compone de \num{14848} barras centelladoras y fibras \emph{WLS}. La lectura de las fibras se hace por medio \emph{MAPMT}s en grupos de \num{64} canales.}
         \label{fig:scibar-detector}
 \end{figure}
 
-Por otro lado, dado que el SciCRT registra la energía depositada a lo largo la trayectoria de las partículas dentro del detector, podemos aplicar esquemas novedosos de identificación de partículas; lo cual a su vez mejora la sensibilidad a las partículas solares \cite{garcia20}. Este tipo de análisis \emph{offline} en conjunción con el uso de las barras de centelleo en modo anti-coincidencia mejora el rechazo a partículas de fondo (principalmente $\mu^{\pm}$ y rayos $\gamma$) incrementando la razón señal a ruido.
+Por otro lado, dado que el \emph{SciCRT} registra la energía depositada a lo largo la trayectoria de las partículas dentro del detector, podemos aplicar esquemas novedosos de identificación de partículas; lo cual a su vez mejora la sensibilidad a las partículas solares \cite{garcia20}. Este tipo de análisis \emph{offline} en conjunción con el uso de las barras de centelleo en modo anti-coincidencia mejora el rechazo a partículas de fondo (principalmente $\mu^{\pm}$ y rayos $\gamma$) incrementando la razón señal a ruido.
 
 \section{Descripción del detector}
 
-El SciCRT está compuesto de \num{14848} barras de centelleo, alineadas en planos horizontales $X-Y$, perpendiculares entre si. Los planos están constituidos de \num{116} barras en la dirección $X$ y \num{118} en la dirección $Y$. En total hay \num{128} capas de barras de centelleo apiladas verticalmente, agrupada en estructuras de \num{16} capas llamadas \emph{Super block} (SB). Cada SB está sostenido firmemente por una estructura de acero, la cual mantiene la integridad mecánica de las barras. No obstante, la estructura introduce un hueco de aire entra cada capa de \SI{82}{\mm}, lo cual entre otras cosas afecta la respuesta angular del telescopio; por lo que es necesario incluir esta característica en las simulaciones del detector. El volumen total del barras en el detector es de \SI[product-units=power]{300x300x170}{\cm\cubic}.
+El \emph{SciCRT} está compuesto de \num{14848} barras de centelleo, alineadas en planos horizontales $X-Y$, perpendiculares entre si. Los planos están constituidos de \num{116} barras en la dirección $X$ y \num{118} en la dirección $Y$. En total hay \num{128} capas de barras de centelleo apiladas verticalmente, agrupada en estructuras de \num{16} capas llamadas \emph{Super block} (\emph{SB}). Cada \emph{SB} está sostenido firmemente por una estructura de acero, la cual mantiene la integridad mecánica de las barras. No obstante, la estructura introduce un hueco de aire entra cada capa de \SI{82}{\mm}, lo cual entre otras cosas afecta la respuesta angular del telescopio; por lo que es necesario incluir esta característica en las simulaciones del detector. El volumen total del barras en el detector es de \SI[product-units=power]{300x300x170}{\cubic\cm}.
 
-Las barras de centelleo fueron fabricadas en el Fermilab y tienen características similares a las del experimento \emph{MINOS} \cite{knitta04}. Están hechas de poliestireno, dopado con \SI{1}{\percent} PPO and \SI{0.03}{\percent} POPOP (ambos utilizados como \emph{cambiadores} de longitud de onda). Las dimensiones de las barras son \SI[product-units=power]{2.5x1.3x300}{\cm\cubic} y en el centro tienen un orificio cilíndrico de \SI{1.8}{\mm} donde se insertan fibras WLS (\emph{wavelength shifting}). Los centelladores tienen una cubierta de \ce{TiO2} (\SI{0.25}{\mm} de espesor) para aislarlos ópticamente entre si y mejorar la recolección de fotones. Un diagrama de las barras se observa en el panel izquierdo de la figura \ref{fig:scibar-optics}.
+Las barras de centelleo fueron fabricadas en el Fermilab y tienen características similares a las del experimento \emph{MINOS} \cite{knitta04}. Están hechas de poliestireno, dopado con \SI{1}{\percent} \emph{PPO} and \SI{0.03}{\percent} \emph{POPOP} (ambos utilizados como \emph{cambiadores} de longitud de onda). Las dimensiones de las barras son \SI[product-units=power]{2.5x1.3x300}{\cubic\cm} y en el centro tienen un orificio cilíndrico de \SI{1.8}{\mm} donde se insertan fibras \emph{WLS} (\emph{wavelength shifting}). Los centelladores tienen una cubierta de \ce{TiO2} (\SI{0.25}{\mm} de espesor) para aislarlos ópticamente entre si y mejorar la recolección de fotones. Un diagrama de las barras se observa en el panel izquierdo de la figura \ref{fig:scibar-optics}.
 
-Las fibras WLS están acopladas por un lado a un tubo fotomultiplicador multi-ánodo (MAPMT) y por el otro extremo están pintadas de blanco para mejorar la eficiencia de recolección. Las fibras son del tipo Y11(200)MS desarrollado por la empresa \emph{Kuraray}. El fotomultiplicador es de \num{64} canales, modelo H8804, fabricado por \emph{Hamamatsu Photonics}.
+Las fibras \emph{WLS} están acopladas por un lado a un tubo fotomultiplicador multi-ánodo (\emph{MAPMT}) y por el otro extremo están pintadas de blanco para mejorar la eficiencia de recolección. Las fibras son del tipo Y11(200)MS desarrollado por la empresa \emph{Kuraray}. El fotomultiplicador es de \num{64} canales, modelo H8804, fabricado por \emph{Hamamatsu Photonics}.
 
-El espectro de emisión de los plásticos centelladores se puede observar en el panel derecha de la figura \ref{fig:scibar-optics}, con una respuesta máxima a \SI{420}{\nano\metre}. Como se observa en la figura, el espectro de absorción de la fibra WLS está diseñado para cubrir de forma adecuada el espectro del plástico. La emisión de la fibra tiene un máximo a \SI{470}{\nano\metre}. La máxima eficiencia cuántica del MAPMT es de \num{0.25} a \SI{420}{\nano\metre}, pero disminuye a \num{0.12} al considerar el respuesta espectral del MAPMT.
+El espectro de emisión de los plásticos centelladores se puede observar en el panel derecha de la figura \ref{fig:scibar-optics}, con una respuesta máxima a \SI{420}{\nano\metre}. Como se observa en la figura, el espectro de absorción de la fibra \emph{WLS} está diseñado para cubrir de forma adecuada el espectro del plástico. La emisión de la fibra tiene un máximo a \SI{470}{\nano\metre}. La máxima eficiencia cuántica del \emph{MAPMT} es de \num{0.25} a \SI{420}{\nano\metre}, pero disminuye a \num{0.12} al considerar el respuesta espectral del \emph{MAPMT}.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{scibar.pdf}
-        \caption{Diagrama esquemático de una barra centelladora con la fibra WLS instalada (panel izquierdo). Espectros de absorción y emisión de la fibra WLS y la barra de centelleo. Los datos de los espectros fueron obtenidos de \cite{kikawa14} y \cite{dietz16}.}
+        \caption{Diagrama esquemático de una barra centelladora con la fibra \emph{WLS} instalada (panel izquierdo). Espectros de absorción y emisión de la fibra \emph{WLS} y la barra de centelleo. Los datos de los espectros fueron obtenidos de \cite{kikawa14} y \cite{dietz16}.}
         \label{fig:scibar-optics}
 \end{figure}
 
-La electrónica para la adquisición de datos del telescopio fue desarrollada para el experimento K2K y esta integrada por circuitos de procesamiento analógico, de señal mixta y digitales; integrados a través de tecnología de circuitos integrados de alta escala \cite{myoshi04}. El procesamiento de la señales empieza con la conversión de la señal óptica en eléctrica por parte del MAPMT, para posteriormente ser amplificada, formada y multiplexada en la electrónica de \emph{Front End}. Este acondicionamiento se lleva a cabo en el dominio analógico y de señal mixta. Después de este proceso, las señales se transfieren a la electrónica de \emph{Back End} mediante un bus diferencial. En las unidades que integran la electrónica de BE las señales son convertidas a digital y transferidas finalmente al servidor de adquisición de datos mediante la interface VME. Para poder seleccionar los eventos a guardar, las unidades FE mandan una señal de \emph{hit} a las tarjetas de disparo (TRGB), las cuales son unidades de procesamiento digital programable, que seleccionan los eventos con base a una condición de disparo. Una discusión más profunda sobre el funcionamiento de la electrónica se encuentra en el capitulo \ref{chap:tres}, en donde además se listan requerimientos y características de la nueva electrónica a desarrollar.
+La electrónica para la adquisición de datos del telescopio fue desarrollada para el experimento K2K y esta integrada por circuitos de procesamiento analógico, de señal mixta y digitales; integrados a través de tecnología de circuitos integrados de alta escala \cite{myoshi04}. El procesamiento de la señales empieza con la conversión de la señal óptica en eléctrica por parte del \emph{MAPMT}, para posteriormente ser amplificada, formada y multiplexada en la electrónica de \emph{Front End}. Este acondicionamiento se lleva a cabo en el dominio analógico y de señal mixta. Después de este proceso, las señales se transfieren a la electrónica de \emph{Back End} mediante un bus diferencial. En las unidades que integran la electrónica de BE las señales son convertidas a digital y transferidas finalmente al servidor de adquisición de datos mediante la interface VME. Para poder seleccionar los eventos a guardar, las unidades FE mandan una señal de \emph{hit} a las tarjetas de disparo (TRGB), las cuales son unidades de procesamiento digital programable, que seleccionan los eventos con base a una condición de disparo. Una discusión más profunda sobre el funcionamiento de la electrónica se encuentra en el capitulo \ref{chap:tres}, en donde además se listan requerimientos y características de la nueva electrónica a desarrollar.
 
-Bajo condiciones normales, el telescopio registra dos conjuntos de datos diferentes. Muones de alta energía (arriba de \SI{450}{\mega\electronvolt}) son detectados cuando producen coincidencia en las capas superiores e inferiores del detector. El umbral para la detección de partículas en las capas dedicadas es de \SI{0.3}{MIP} (\SI{\approx 0.5}{\mega\electronvolt}). El otro conjunto de datos del telescopio registra partículas neutras (aproximadamente \SI{70}{\percent} de los datos son de neutrones atmosféricos). El disparo para este tipo de eventos está definido cuando no hay ninguna señal en la capa de muones (anti-coincidencia) y además se registra una traza en uno de los SB con al menos \SI{14}{\mega\electronvolt} de energía depositada. Las ganancias de los MAPMT y umbrales para las capas de neutrones y muones se determinaron mediante simulaciones MC y se calibraron en Abril de \num{2014} \cite{ysasai14}.
+Bajo condiciones normales, el telescopio registra dos conjuntos de datos diferentes. Muones de alta energía (arriba de \SI{450}{\mega\electronvolt}) son detectados cuando producen coincidencia en las capas superiores e inferiores del detector. El umbral para la detección de partículas en las capas dedicadas es de \SI{0.3}{MIP} (\SI{\approx 0.5}{\mega\electronvolt}). El otro conjunto de datos del telescopio registra partículas neutras (aproximadamente \SI{70}{\percent} de los datos son de neutrones atmosféricos). El disparo para este tipo de eventos está definido cuando no hay ninguna señal en la capa de muones (anti-coincidencia) y además se registra una traza en uno de los \emph{SB} con al menos \SI{14}{\mega\electronvolt} de energía depositada. Las ganancias de los \emph{MAPMT} y umbrales para las capas de neutrones y muones se determinaron mediante simulaciones MC y se calibraron en Abril de \num{2014} \cite{ysasai14}.
 
-\subsection{Sistema opto-electrónico}
+\section{Caracterización del sistema opto-electrónico}
 
-Para lograr alcanzar los objetivos planteados, la caracterización de los elementos ópticos y opto-electrónicos que integran al SciCRT es de vital importancia.
+Para lograr alcanzar los objetivos planteados, el siguiente paso de mi investigación fue la caracterización de los elementos ópticos y opto-electrónicos que integran al \emph{SciCRT}. Esto tuvo como objeto poder crear un modelo del proceso de generación de la señal de detección (simulación MC) y la posterior calibración de la electrónica usando dicho modelo.
 
-Como ya se mencionó, las barras de centelleo del detector fueron fabricadas por Fermilab y sus propiedades ópticas (y mecánicas) fueron probadas
+Como ya mencioné anteriormente, las barras de centelleo del detector fueron fabricadas en Fermilab y han sido utilizados en diversos experimentos; por la misma razón sus propiedades ópticas y mecánicas han sido investigadas ampliamente. Como referencia me base unicamente en los datos del fabricante \cite{beznosko}.
 
-
+El fluor usado en los plásticos del \emph{SciCRT} (\emph{POPOP} y \emph{PPO}) emite en el espectro visible desde aproximadamente \SI{400}{\nano\metre} hasta \SI{580}{\nano\metre}, con un máximo en la emisión de \SI{420}{\nano\metre} \cite{kikawa14}. El espectro de emisión de la barra se puede observar en color azul en el panel derecho de la figura \ref{fig:scibar-optics}. Por otro lado, la figura \ref{fig:sim-optics} muestra el resultado de simular \num{1e6} muones interaccionando una barra centelladora descrita usando \emph{Geant4} \cite{geant403,geant406} (distribución en color azul). Las características del modelo de la barra descrito se resumen en la tabla \ref{table:optics}.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{sim-optics-spect.pdf}
-        \caption{Simulación MC del proceso de emisión-absorción de fotones entre la barra y la fibra WLS.}
+        \caption{Simulación MC del proceso de emisión-absorción de fotones entre la barra y la fibra \emph{WLS}.}
         \label{fig:sim-optics}
 \end{figure}
+
+Al ser excitadas las moléculas de la barra, los fotones son emitidos de forma isotrópica en el volumen del plástico. Para mejorar la recolección por parte de la fibra WLS y para aislar ópticamente las barras entre si, cada centellador cuenta con un recubrimiento de \ce{TiO2}. El espesor del recubrimiento impone una cota minima en la energía del primario que puede entrar en la barra y producir una señal detectable. De acuerdo con \cite{gros18}, resultados de una simulación MC sugieren que con un espesor similar al de las barras del \emph{SciCRT}; el flujo de protones, electrones y fotones con $E_{k}<\SI{10}{\mega\electronvolt}$ es atenuado considerablemente. En el caso de nuestro detector este efecto es despreciable ya que el umbral de detección de primarios (para todas las especies) se encuentra cercano a \SI{100}{\mega\electronvolt}.
+
+En nuestra simulación de la barra un aspecto de vital importancia para la generación de las señales ópticas es el acoplamiento óptico que existe entre la superficie de la barra y el revestimiento. Tomando en consideración \cite{dietz16,gros18}, fijé la reflectividad del recubrimiento en \SI{90}{\percent} en el rango de \SI{300}{\nano\metre} a \SI{800}{\nano\metre}, considerando además una componente difusa y especular. Dicho de otra forma, esta caracterización garantiza que la simulación trata la reflexión de los fotones en el recubrimiento de manera geométrica, engrosando en el espectro de los fotones de acuerdo a un cierto parámetro de rugosidad; lo cual simula las imperfecciones en ambas superficies.
+
+Una fracción de los fotones que llegan a entrar en la fibra WLS son absorbidos y reemitidos a una mayor longitud de onda que la inicial\footnote{Por efecto de la conservación de la energía el fotón reemitido nunca puede tener una longitud menor a la longitud inicial.}. La emisión de los fotones por la fibra tiene las características de un decaimiento exponencial con $\lambda_{WLS}=\SI{12.0}{\nano\second}$ y es isotrópica. Debido a que la fibra tiene dos recubrimientos (metacrilato y metacrilato fluorado) para que se lleve a cabo la reflexión total interna se requiere que los fotones sean emitidos con ángulos menores a \SI{26.9}{\degree} con respecto al eje de la fibra \cite{kikawa14}.
+
+\begin{table}
+\caption{Características ópticas y mecánicas.}
+\label{table:optics}
+
+\begin{tabular}{lr}
+
+\multicolumn{2}{c}{}\\
+\cmidrule(r){1-2}
+\addlinespace[5pt]
+\textbf{(a) Barra centelladora}\\
+\addlinespace[5pt]
+\cmidrule(r){1-2}
+Material base & poliestireno\\
+Fluor & \emph{PPO} y \emph{POPOP}\\
+Densidad (\si{\gram\per\cubic\cm}) & \num{1.08}\\
+Pico de emisión (\si{\nm}) & \num{420}\\
+Constante de decaimiento (\si{\ns}) & \num{3.6}\\
+Constante de Birks (\si{\cm\per\mega\electronvolt}) & \num{0.0208}\\
+Producción de luz (\si{fotones\per\mega\electronvolt}) & \num{8000}\\
+Dimensiones (\si{\cubic\cm}) & \num[product-units=power]{2.5x1.3x300}\\
+\addlinespace[10pt]
+\textbf{(b) Fibra WLS Y11(200)}\\
+\addlinespace[5pt]
+\cmidrule(r){1-2}
+Densidad (\si{\gram\per\cubic\cm}) & \num{1.05}\\
+Pico de emisión (\si{\nm}) & \num{470}\\
+Longitud de absorción & ver figura \ref{fig:scibar-optics}\\
+Índice de refracción (núcleo) & \num{1.60}\\
+Índice de refracción (revestimiento 1) & \num{1.49}\\
+Índice de refracción (revestimiento 2) & \num{1.42}\\
+Tiempo de decaimiento (\si{\ns}) & \num{12.0}\\
+Reflectancia de la pintura & 0.54\\
+\addlinespace[10pt]
+\textbf{(c) MAPMT H8804}\\
+\addlinespace[5pt]
+\cmidrule(r){1-2}
+Longitud de onda de respuesta máxima(\si{\nm}) & \num{420}\\
+QE máxima (\si{\percent})  & \num{25}\\
+Ganancia a \SI{-950}{\volt} & \num{5.9e6}\\
+Tiempo de levantamiento (\si{\ns}) & \num{1.0}\\
+\addlinespace[5pt]
+\bottomrule
+
+\end{tabular}
+\end{table}
+
+Los parámetros usados en la simulación de la fibra en \emph{Geant4} se muestran en la tabla \ref{table:optics}. Es importante hacer notar que todos los parámetros ópticos utilizados fueron definidos en el rango de \SI{300}{\nano\metre} a \SI{800}{\nano\metre}, lo cual requirió en algunos casos extrapolar cuidadosamente los datos proporcionados por el fabricante. Relacionado a este punto, ese necesario evitar introducir discontinuidades en los espectros definidos, ya que dicha situación conlleva a la creación de acoplamientos ópticos artificiales y por lo tanto a la atenuación de la señal óptica. En la figura \ref{fig:sim-optics}, la distribución en color naranja muestra los fotones reemitidos en la simulación, los cuales constituyen una prueba de la consistencia de la simulación.
+
+Dentro de los parámetros de la simulación, la longitud de atenuación óptica de la fibra WLS requirió una calibración especial. La figura \ref{fig:atlength} muestra los resultados de este procedimiento. Como primer paso, la línea naranja es el resultado de la simulación previo a la calibración. La simulación consistió en arrojar fotones usando el espectro de emisión de la barra, a diferentes posiciones fijas dentro de la fibra y de manera isótropica. En la simulación usé como parámetro de entrada la longitud de atenuación propuesta por el fabricante: $>\SI{3500}{\milli\metre}$, la cual se define en \emph{Geant4} como una propiedad del material (en este caso del núcleo de la fibra). Para cada posición la simulación registra el número de fotones que llegaron al extremo de la barra donde se encuentra el fotosensor. Luego entonces, los resultados en la figura \ref{fig:atlength} son el número de fotones (normalizado) $L(x)$ que alcanzan el MAPMT en función de la distancia al mismo.
+
+Los resultados de la simulación se pueden ajustar con la ecuación \ref{equ:fiber-att}, la cual representa la relación entre la distancia al fotomultiplicador y $L(x)$:
 
 \begin{equation}
 \label{equ:fiber-att}
 L(x)=k\left(\exp\left(-\frac{x}{\lambda}\right) +R\exp\left(-\frac{2.0x_{tot}-x}{\lambda}\right)\right)
 \end{equation}
 
+de donde $k$ es la ganancia del sistema óptico, $\lamba$ es la longitud de atenuación, $R$ es la reflectancia de al final de la fibra WLS y $x_{tot}$ es la longitud total de la fibra (aproximadamente \SI{330}{\cm}, incluyendo la distancia del borde de la barra al fotomultiplicador). De manera general, el primer término de la ecuación representa la fracción de la luz que llega al MAPMT directamente, mientras que el segundo término representa la fracción reflejada.
+
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{data_atlength.pdf}
-        \caption{Atenuación de fotones en la fibra WLS. La línea azul son datos del experimento. La línea naranja representa el resultado de la simulación MC usando la atenuación reportada por el fabricante. La línea verde es el ajuste de la simulación a partir del experimento.}
+        \caption{Atenuación de fotones en la fibra \emph{WLS}. La línea azul son datos del experimento. La línea naranja representa el resultado de la simulación MC usando la atenuación reportada por el fabricante. La línea verde es el ajuste de la simulación a partir del experimento.}
         \label{fig:atlength}
 \end{figure}
+
+
 
 \begin{figure}
         \centering
@@ -106,7 +168,7 @@ v(t)=\frac{QR}{\tau\Gamma(1+\alpha)}\left(\frac{t}{\tau}\right)^{\alpha}\mathrm{
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{muons-tail-fit.pdf}
-        \caption{Análisis del decaimiento exponencial de la fibra WLS. El panel en la esquina superior derecha muestra los resultados de la simulación. Los datos experimentales se muestran en la parte central de la figura}
+        \caption{Análisis del decaimiento exponencial de la fibra \emph{WLS}. El panel en la esquina superior derecha muestra los resultados de la simulación. Los datos experimentales se muestran en la parte central de la figura}
         \label{fig:muons-tail}
 \end{figure}
 
