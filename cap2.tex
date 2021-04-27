@@ -42,7 +42,7 @@ La electrónica para la adquisición de datos del telescopio fue desarrollada pa
 
 Bajo condiciones normales, el telescopio registra dos conjuntos de datos diferentes. Muones de alta energía (arriba de \SI{450}{\mega\electronvolt}) son detectados cuando producen coincidencia en las capas superiores e inferiores del detector. El umbral para la detección de partículas en las capas dedicadas es de \SI{0.3}{MIP} (\SI{\approx 0.5}{\mega\electronvolt}). El otro conjunto de datos del telescopio registra partículas neutras (aproximadamente \SI{70}{\percent} de los datos son de neutrones atmosféricos). El disparo para este tipo de eventos está definido cuando no hay ninguna señal en la capa de muones (anti-coincidencia) y además se registra una traza en uno de los \emph{SB} con al menos \SI{14}{\mega\electronvolt} de energía depositada. Las ganancias de los \emph{MAPMT} y umbrales para las capas de neutrones y muones se determinaron mediante simulaciones MC y se calibraron en Abril de \num{2014} \cite{ysasai14}.
 
-\section{Caracterización del sistema opto-electrónico}
+\section{Caracterización del sistema óptico: barra de centlleo y fibra WLS}
 
 Para lograr alcanzar los objetivos planteados, el siguiente paso de mi investigación fue la caracterización de los elementos ópticos y opto-electrónicos que integran al \emph{SciCRT}. Esto tuvo como objeto poder crear un modelo del proceso de generación de la señal de detección (simulación MC) y la posterior calibración de la electrónica usando dicho modelo.
 
@@ -111,7 +111,7 @@ Tiempo de levantamiento (\si{\ns}) & \num{1.0}\\
 
 Los parámetros usados en la simulación de la fibra en \emph{Geant4} se muestran en la tabla \ref{table:optics}. Es importante hacer notar que todos los parámetros ópticos utilizados fueron definidos en el rango de \SI{300}{\nano\metre} a \SI{800}{\nano\metre}, lo cual requirió en algunos casos extrapolar cuidadosamente los datos proporcionados por el fabricante. Relacionado a este punto, ese necesario evitar introducir discontinuidades en los espectros definidos, ya que dicha situación conlleva a la creación de acoplamientos ópticos artificiales y por lo tanto a la atenuación de la señal óptica. En la figura \ref{fig:sim-optics}, la distribución en color naranja muestra los fotones reemitidos en la simulación, los cuales constituyen una prueba de la consistencia de la simulación.
 
-Dentro de los parámetros de la simulación, la longitud de atenuación óptica de la fibra WLS requirió una calibración especial. La figura \ref{fig:atlength} muestra los resultados de este procedimiento. Como primer paso, la línea naranja es el resultado de la simulación previo a la calibración. La simulación consistió en arrojar fotones usando el espectro de emisión de la barra, a diferentes posiciones fijas dentro de la fibra y de manera isótropica. En la simulación usé como parámetro de entrada la longitud de atenuación propuesta por el fabricante: $>\SI{3500}{\milli\metre}$, la cual se define en \emph{Geant4} como una propiedad del material (en este caso del núcleo de la fibra). Para cada posición la simulación registra el número de fotones que llegaron al extremo de la barra donde se encuentra el fotosensor. Luego entonces, los resultados en la figura \ref{fig:atlength} son el número de fotones (normalizado) $L(x)$ que alcanzan el MAPMT en función de la distancia al mismo.
+Dentro de los parámetros de la simulación, la longitud de atenuación óptica de la fibra WLS requirió una calibración especial. La figura \ref{fig:atlength} muestra los resultados de este procedimiento. Como primer paso, la línea naranja es el resultado de la simulación previo a la calibración. La simulación consistió en arrojar fotones usando el espectro de emisión de la barra, a diferentes posiciones fijas dentro de la fibra y de manera isótropica. En la simulación usé como parámetro de entrada la longitud de atenuación propuesta por el fabricante: $>\SI{3500}{\milli\metre}$, la cual se define en \emph{Geant4} como una propiedad del material (en este caso del núcleo de la fibra). Para cada posición la simulación registra el número de fotones que llegaron al extremo de la barra donde se encuentra el fotosensor. Luego entonces, los resultados en la figura \ref{fig:atlength} son el número de fotones (normalizado) $L(x)$ que alcanzan el \emph{MAPMT}en función de la distancia al mismo.
 
 Los resultados de la simulación se pueden ajustar con la ecuación \ref{equ:fiber-att}, la cual representa la relación entre la distancia al fotomultiplicador y $L(x)$:
 
@@ -120,7 +120,7 @@ Los resultados de la simulación se pueden ajustar con la ecuación \ref{equ:fib
 L(x)=k\left(\exp\left(-\frac{x}{\lambda}\right) +R\exp\left(-\frac{2.0x_{tot}-x}{\lambda}\right)\right)
 \end{equation}
 
-de donde $k$ es la ganancia del sistema óptico, $\lamba$ es la longitud de atenuación, $R$ es la reflectancia de al final de la fibra WLS y $x_{tot}$ es la longitud total de la fibra (aproximadamente \SI{330}{\cm}, incluyendo la distancia del borde de la barra al fotomultiplicador). De manera general, el primer término de la ecuación representa la fracción de la luz que llega al MAPMT directamente, mientras que el segundo término representa la fracción reflejada.
+de donde $k$ es la ganancia del sistema óptico, $\lambda$ es la longitud de atenuación, $R$ es la reflectancia de al final de la fibra WLS y $x_{tot}$ es la longitud total de la fibra (aproximadamente \SI{330}{\cm}, incluyendo la distancia del borde de la barra al fotomultiplicador). De manera general, el primer término de la ecuación representa la fracción de la luz que llega al \emph{MAPMT}directamente, mientras que el segundo término representa la fracción reflejada.
 
 \begin{figure}
         \centering
@@ -129,6 +129,40 @@ de donde $k$ es la ganancia del sistema óptico, $\lamba$ es la longitud de aten
         \label{fig:atlength}
 \end{figure}
 
+El siguiente paso fue la obtención de la longitud de atenuación usando los datos del telescopio. Para determinar este parámetro, usé \num{\sim 4e6} eventos de muones, los cuales fueron registrados usando como disparo la coincidencia de las capas superiores e inferiores del detector (\emph{$4$-fold}). Utilicé muones para esta prueba debido a que son partículas de ionización mínima (\emph{MIP}) y su deposición de energía en una barra es prácticamente constante (aproximadamente \SI{1.8}{\mega\electronvolt}).
+
+A partir de los datos registrados, construí distribuciones de la energía depositada en cada barra de uno de los lados del detector; mientras la traza en la otra cara del detector sirve para medir la distancia entre el punto de cruce de la partícula y el MAPMT. Las distribuciones de cada barra se clasifican en $14$ grupos diferentes (hay \num{14} MAPMTs en una de las caras del \emph{SciCRT}), lo cual hace posible medir el efecto de atenuación en la fibra midiendo la posición del pico de la distribución de energía depositada en cada barra, en función de la distancia. Utilizando esta clasificación es posible medir la distancia del punto de cruce con un incertidumbre de \SI{\pm 10}{\cm}. Una restricción extra que establecí en el análisis fue la de analizar solo eventos producidos por partículas que cruzan de forma vertical, lo cual tiene por objetivo evitar eventos con una larga deposición de energía. La figura \ref{fig:muon-selection} muestra de forma resumida el procedimiento de selección de eventos y clasificación descrito.
+
+Por otro lado la figura \ref{fig:adc-distance} muestra las distribuciones de ADC de muones cruzando a dos distancias diferentes del \emph{MAPMT}. La distribución en azul claro corresponde a una distancia de \SI{280}{\cm}, mientras que la distribución en azul oscuro la obtuve a \SI{40}{\cm}. Usando un voltaje de alimentación para el \emph{MAPMT} de \SI{-900}{\volt}, cerca \SI{50}{\percent} de las barras (de un total de \num{896}) tiene estadística suficiente para realizar el análisis, lo cual quiere decir que las distribuciones obtenidas no son afectadas por la saturación del \emph{MAPMT} o falta de ganancia.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{muon-attenuation.pdf}
+        \caption{Diagrama esquemático de la selección de eventos de muones en los datos del \emph{SciCRT}.}
+        \label{fig:muon-selection}
+\end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{adc_attenuation.pdf}
+        \caption{Distribuciones de ADC de muones que cruzan una barra de centelleo a diferentes distancias del fotomultiplicador.}
+        \label{fig:adc-distance}
+\end{figure}
+
+Ya que los muones registrados en el análisis están el rango de energía de \num{0.5} a \SI{30}{\giga\electronvolt} y son considerados \emph{MIPs}, las distribuciones de intensidad luminosa registrada por los \emph{MAPMTs} pueden ser ajustadas utilizando distribuciones de Landau. A partir del valor máximo estimado en cada ajuste (\emph{MPV}) procedí a calcular el promedio ponderado para cada distancia. Posteriormente, ajusté la ecuación \ref{equ:fiber-att} y como resultado obtuve la gráfica azul mostrada en el figura \ref{fig:atlength}. Los parámetros obtenidos a partir del ajuste son: $\lambda=\SI{408(4)}{\cm}$ y $R=\num{0.541(30)}$, lo cual es consistente con un estudio previo \cite{itow13}.
+
+No obstante, es evidente de la figura que el resultado experimental difiere del obtenido en la simulación, lo cual indica que es necesario ajustar los parámetros del código. La discrepancia entre ambos experimentos proviene de varios factores. El primero es que la longitud de atenuación provista por el fabricante es en realidad un \emph{longitud de atenuación de señal}, es decir, proviene de una medición realizada por el fabricante en donde interviene la geometría del experimento donde se midió y el acoplamiento óptico entre los diferentes elementos. Por otro lado en la simulación, la longitud de atenuación es una propiedad del material.
+
+Con objeto de resolver esta discrepancia en \cite{dietz16} se propone utilizar el espectro de pérdidas de señal $\mu_{WLS}$, el cual se muestra en la figura \ref{fig:sim-optics} describe de mejor forma la atenuación en la fibra. Este espectro es provisto por el fabricante, sin embargo requiere un factor de corrección cuadrático:
+
+\begin{equation}
+\label{equ:quadcorr}
+\mu_{corr}=a_{0}\cdot\mu_{WLS}+a{1}\cdot\mu^{2}_{WLS}
+\end{equation}
+
+en donde $\mu_{corr}$ es el espectro corregido y $\mu_{WLS}$ es el especificado por el fabricante. De esta forma podemos usar las constantes $a_{0}$ y $a_{1}$ para calibrar los resultados de la simulación con el experimento. Finalmente, la linea verde en la figure \ref{fig:atlength} muestra el resultado de la corrección de la simulación, con parámetros de ajuste: $\lambda=\SI{405(3)}{\cm}$ y $R=\num{0.498(20)}$. A partir de esto podemos concluir que la simulación y experimento concuerdan satisfactoriamente.
+
+\section{Caracterización del sistema óptico: respuesta del fotomultiplicador}
 
 
 \begin{figure}
@@ -149,6 +183,10 @@ v(t)=\frac{QR}{\tau\Gamma(1+\alpha)}\left(\frac{t}{\tau}\right)^{\alpha}\mathrm{
         \caption{Respuesta SPE promedio en función del tiempo (linea negra). El área sombreada muestra las fluctuaciones de $\pm\sigma$.}
         \label{fig:sphe}
 \end{figure}
+
+\section{Validación experimental de la simulación}
+
+
 
 \begin{figure}
         \centering
