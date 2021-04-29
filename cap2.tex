@@ -151,31 +151,72 @@ Por otro lado la figura \ref{fig:adc-distance} muestra las distribuciones de ADC
 
 Ya que los muones registrados en el análisis están el rango de energía de \num{0.5} a \SI{30}{\giga\electronvolt} y son considerados \emph{MIPs}, las distribuciones de intensidad luminosa registrada por los \emph{MAPMTs} pueden ser ajustadas utilizando distribuciones de Landau. A partir del valor máximo estimado en cada ajuste (\emph{MPV}) procedí a calcular el promedio ponderado para cada distancia. Posteriormente, ajusté la ecuación \ref{equ:fiber-att} y como resultado obtuve la gráfica azul mostrada en el figura \ref{fig:atlength}. Los parámetros obtenidos a partir del ajuste son: $\lambda=\SI{408(4)}{\cm}$ y $R=\num{0.541(30)}$, lo cual es consistente con un estudio previo \cite{itow13}.
 
-No obstante, es evidente de la figura que el resultado experimental difiere del obtenido en la simulación, lo cual indica que es necesario ajustar los parámetros del código. La discrepancia entre ambos experimentos proviene de varios factores. El primero es que la longitud de atenuación provista por el fabricante es en realidad un \emph{longitud de atenuación de señal}, es decir, proviene de una medición realizada por el fabricante en donde interviene la geometría del experimento donde se midió y el acoplamiento óptico entre los diferentes elementos. Por otro lado en la simulación, la longitud de atenuación es una propiedad del material.
+No obstante, es evidente de la figura que el resultado experimental difiere del obtenido en la simulación, lo cual indica que es necesario ajustar los parámetros del código. La discrepancia entre ambos experimentos proviene de varios factores. El primero es que la longitud de atenuación provista por el fabricante es en realidad un \emph{longitud de atenuación de señal}, es decir, proviene de una medición realizada por el fabricante en donde interviene la geometría del experimento donde se midió y el acoplamiento óptico entre los diferentes elementos. En comparación el valor asignado en la simulación, la longitud de atenuación es una propiedad del material.
 
-Con objeto de resolver esta discrepancia en \cite{dietz16} se propone utilizar el espectro de pérdidas de señal $\mu_{WLS}$, el cual se muestra en la figura \ref{fig:sim-optics} describe de mejor forma la atenuación en la fibra. Este espectro es provisto por el fabricante, sin embargo requiere un factor de corrección cuadrático:
+Con objeto de resolver esta discrepancia en \cite{dietz16} se propone utilizar el espectro de pérdidas de señal $\mu_{WLS}$, el cual se muestra en la figura \ref{fig:sim-optics} y describe de mejor forma la atenuación en la fibra. Este espectro es provisto por el fabricante, sin embargo requiere la corrección mediante un factor de cuadrático, de la siguiente forma:
 
 \begin{equation}
 \label{equ:quadcorr}
 \mu_{corr}=a_{0}\cdot\mu_{WLS}+a{1}\cdot\mu^{2}_{WLS}
 \end{equation}
 
-en donde $\mu_{corr}$ es el espectro corregido y $\mu_{WLS}$ es el especificado por el fabricante. De esta forma podemos usar las constantes $a_{0}$ y $a_{1}$ para calibrar los resultados de la simulación con el experimento. Finalmente, la linea verde en la figure \ref{fig:atlength} muestra el resultado de la corrección de la simulación, con parámetros de ajuste: $\lambda=\SI{405(3)}{\cm}$ y $R=\num{0.498(20)}$. A partir de esto podemos concluir que la simulación y experimento concuerdan satisfactoriamente.
+en donde $\mu_{corr}$ es el espectro corregido y $\mu_{WLS}$ es el especificado por el fabricante. De esta forma podemos usar las constantes $a_{0}$ y $a_{1}$ para calibrar los resultados de la simulación con el experimento. Finalmente, la linea verde en la figura \ref{fig:atlength} muestra el resultado de la corrección de la simulación, con parámetros de ajuste: $\lambda=\SI{405(3)}{\cm}$ y $R=\num{0.498(20)}$. A partir de esto podemos concluir que la atenuación óptica en la simulación s.
 
-\section{Caracterización del sistema óptico: respuesta del fotomultiplicador}
+\section{Formación de la señal de detección y respuesta del fotomultiplicador}
 
+La interacción de una partícula en el centellador produce un enorme número de fotones, de los cuales una pequeña fracción es capturada en la fibra \emph{WLS} y puede propagarse a uno de los pixeles del \emph{MAPMT}. En consecuencia, la señal eléctrica que debe procesar la instrumentación, es una señal de corriente compuesta por la suma de las contribuciones individuales de cada fotón que fue detectado por el sensor óptico. Así el modelo de señal eléctrica se puede definir a través de la siguiente ecuación:
+
+\begin{equation}
+\label{equ:current-pulse}
+i_{pmt}\left(x,t\right)=\sum_{i=1}^{N_{phe}}i\left(t-t_{i}\right)
+\end{equation}
+
+de donde $i_{pmt}$ es la corriente a la salida del MAPMT en función del tiempo y posición en la que atravesó la partícula la barra; $N_{phe}$ es el número total de fotoelectrones a la salida del MAPMT y $t_{i}$ la distribución de los tiempos de arribo. Es importante mencionar que $N_{phe}$ a su vez depende de la distancia, la ganancia del MAPMT, eficiencia cuántica y energía depositada por la partícula en la barra. A continuación dedicaré mi esfuerzo en presentar las características temporales de la señal de detección
+
+Los fotones que la fibra logra transportar hacia alguno de los fotocátodos del sensor tienen una distribución de tiempo definida principalmente por dos variables aleatorias \cite{sanchez10}. La primera de éstas es la suma de dos variables aleatorias; la desexecitación de la fibra \emph{WLS} y la emisión por parte del material centellador debido al paso de radiación ionizante. Ya que ambos procesos son independientes entre si y pueden ser descritos mediante variables aleatorias exponenciales, la siguiente ecuación describe la distribución de tiempos $P_{D}$ resultante:
+
+\begin{equation}
+\label{equ:exponential-decay}
+P_{D}(t)=\frac{e^{-t/t_{p}}-e^{-t/t_{f}}}{t_{p}-t_{f}}
+\end{equation}
+
+de donde $t_{p}$ y $t_{f}$ son las constantes de decaimiento de la barra y fibra \emph{WLS}, respectivamente. Valores característicos para estos parámetros se pueden ver en la tabla \ref{table:optics}, los cuales fueron  determinados en experimentos previos \cite{gros18,mineev11}. Una observación importante al respecto es, dado que la fibra \emph{WLS} tiene una constante de decaimento mayor a la de la barra (\SI{12}{\nano\second}) es la primera la que domina el proceso.
+
+La segunda variable aleatoria que afecta las distribuciones de tiempo de los fotones es la relacionada con la propagación en la fibra. Considerando solo los fotones que tienen una propagación meridional, el tiempo que tardan en recorrer la fibra se puede estimar de la siguiente forma:
+
+\begin{equation}
+\label{equ:meridional}
+t_{prop}=\frac{x}{\cos(\alpha)}\frac{n_{core}}{c}
+\end{equation}
+
+donde $\alpha$ representa el ángulo con respecto al eje de la fibra y es una variable aleatoria uniforme; $c/n_{core}$ es la velocidad de los fotones en el medio y $x/\cos(\alpha)$ la distancia recorrida total por el fotón hasta un pixel del \emph{MAPMT}. No obstante, el tiempo real de propagación de un fotón en la fibra se ve afectado directamente por la pintura al final de la fibra y las reflexiones ocurridas en el recubrimiento del plástico. Luego entonces, si consideramos el \emph{paquete} de fotones que se propaga por la fibra después de la interacción, el efecto general del proceso de transporte es la atenuación y ensanchamiento del pulso luminoso. Ambos efectos son de gran importancia en el contexto del desarrollo de electrónica de alta velocidad.
+
+La distribución temporal de los fotones que llegan al \emph{MAPMT} es finalmente afectada por la respuesta del mismo. A continuación describiré brevemente el principio de funcionamiento del sensor y sus propiedades.
+
+El fotomultiplicador convierte la señal óptica débil en un señal eléctrica, con alta ganancia, bajo ruido y baja distorsión. Cuando los fotones llegan al fotocátodo, los electrones que se encuentran en la banda de valencia absorben la energía de los primeros ($h\nu$). Si la energía adquirida por los electrones es mayor que la función de trabajo del material, éstos son emitidos como \emph{fotoelectrones}. Dependiendo de la eficiencia del material fotosensible y la energía de los fotones incidentes, una pequeña fracción de éstos será emitida como electrones.
+
+Los fotoelectrones emitidos son acelerados por un campo eléctrico los dínodo. En el dínodo la multiplicación de electrones se lleva a cabo a través de la emisión secundaria de electrones. Para alcanzar ganancias superiores a \num{e4}, un fotomultiplicador necesita varias etapas de emisión. Para el caso los \emph{MAPMTs} en el \emph{SciCRT} la ganancia puede alcanzar \num{e7} utilizando \num{12} dínodos.
+
+Los fotomultiplicadores son detectores con respuesta en el tiempo extremadamente rápida. Sus características están principalmente determinadas por el \emph{tiempo de tránsito} que requieren los fotoelectrones emitidos por el fotocátodo en a travesar la estructura multiplicadora y llegar al ánodo \cite{hama07}. A pesar de esto, a causa de la naturaleza aleatoria del proceso de emisión secundaria, el tiempo de tránsito no es constante, sino tiene una distribución. Esto implica que la respuesta del sensor a un pulso muy corto de luz siempre tendrá un ensanchamiento finito y variable \cite{syed07}. Al ancho total a altura media (FWHM) de la función de densidad de los tiempos de tránsito se le conoce como: \emph{spread in transit time}.
+
+La respuesta espectral de los sensores utilizados en el \emph{SciCRT} es proporcionada por el fabricante y está resumida en la tabla \ref{table:optics}. De aquí es importante notar que aunque la eficiencia cuántica máxima es cercana al \SI{30}{\percent}, en realidad al consideramos en su totalidad la respuesta espectral del sensor la eficiencia está más próxima al \SI{15}{\percent}.
+
+Por otro lado, sobre la respuesta temporal del \emph{MAPMT} no existe documentación abierta al respecto. Para lograr caracterizar este elemento, buscaremos obtener el \emph{single photo-electron response} del fotomultiplicador; el cual se define cómo el estado en el que el sensor responde en promedio con un solo fotoelectrón por pulso luminoso incidente. Para obtener esta respuesta desarrollé un experimento colocando al \emph{MAPMT} en una caja negra e iluminé la superficie fotosensible con un pulso de muy corta duración. Para evitar la saturación del sensor, coloqué el sensor a una distancia de \SI{50}{\cm}, además de utilizar un difusor. En este caso el difusor fue un cono de plástico pitado de blanco, el cual produce un haz luminoso homogéneo.
+
+La fuente luminosa la cree utilizando un diodo emisor de luz (\emph{LED}), un circuito digital para generar los pulsos de alimentación (del orden de \SI{100}{\nano\second}) y el circuito diferenciador que se muestra en el diagrama \ref{fig:led-driver}:
 
 \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{mapmt_charge.pdf}
-        \caption{Distribuciones de carga de SPE para tres diferentes voltajes de operación. De izquierda a derecha los voltajes utilizados son: \SI{-800}{\volt},\SI{-850}{\volt} y \SI{-900}{\volt}.}
-        \label{fig:mapmt_charge}
+        \includegraphics[width=\textwidth]{led-driver.pdf}
+        \caption{Diagrama esquemático del circuito diferenciador para generar pulsos luminosos cortos.}
+        \label{fig:led-driver}
 \end{figure}
 
-\begin{equation}
-\label{equ:sphe}
-v(t)=\frac{QR}{\tau\Gamma(1+\alpha)}\left(\frac{t}{\tau}\right)^{\alpha}\mathrm{e}^{-t/\tau}
-\end{equation}
+De forma muy general el circuito acopla la señal de entrada del tipo \emph{NIM} (lógica negativa) en los transistores $Q_{1}$ y $Q_{2}$, y la diferencia en el circuito $RC$ compuesto por la resistencia de \SI{100}{\ohm} y el capacitor \SI{0.1}{\nano\farad}. Los pulsos de voltaje a la salida del circuito tienen una duración aproximada de menos de \SI{10}{\nano\second} y tienen una forma similar a la de un pulso de centello.
+
+Para realizar correctamente la prueba, previo a la iluminación del fotocátodo, medí los niveles de ruido de la cámara oscura para garantizar un nivel adecuado de cuentas por corriente oscura. El nivel de ruido para pulsos de \SI{-10}{\milli\volt} de amplitud es de \SI{0.5}{cuentas\per\second}.
+
+Los resultados del experimento usando la fuente luminosa se muestran en la figura \ref{fig:sphe}. La línea negra representa la respuesta promedio obtenida de probar con \num{7} \emph{MAPMTs}, mientras que el área sombreada representa la variación de $\pm\sigma$. El \emph{LED} que utilicé tiene un máximo en su respuesta de \SI{505}{\nano\metre}. Ya que la respuesta temporal del fotomultiplicador tiene un ancho de banda muy grande, para la digitalización de los pulsos utilicé un osciloscopio de alta resolución  (ancho de banda de \SI{2}{\giga\hertz} y frecuencia de muestreo de \SI{10}{\giga samples\per\second}), el fue facilitado por el Laboratorio de detectores del Instituto de Ciencias Nucleares.
 
 \begin{figure}
         \centering
@@ -184,9 +225,37 @@ v(t)=\frac{QR}{\tau\Gamma(1+\alpha)}\left(\frac{t}{\tau}\right)^{\alpha}\mathrm{
         \label{fig:sphe}
 \end{figure}
 
+Para lograr el estado \emph{SPE} ajusté la intensidad de luz de tal manera que tuviera un \SI{10}{\percent} de eventos detectados, lo cual basados en estadística de Poisson garantiza un \SI{\sim 0.5}{\percent} de eventos contienen $2$ o más fotoelectrones \cite{barnhill08}.
+
+De acuerdo con \cite{sanchez10}, la respuesta \emph{SPE} puede ser modelada como la respuesta en el tiempo de un circuito $CR-(RC)^{\alpha}$ como sigue:
+
+\begin{equation}
+\label{equ:sphe}
+v(t)=\frac{QR}{\tau\Gamma(1+\alpha)}\left(\frac{t}{\tau}\right)^{\alpha}\mathrm{e}^{-t/\tau}
+\end{equation}
+
+en donde $Q$ es la carga integrada del pulso (o carga característica), $R$ es la resistencia de carga y
+$\tau$ y $\alpha$ son parámetros libres del modelo. $\Gamma(1+\alpha)$ es la función gamma la cual se usa como constante de normalización.
+
+Para poder ajustar este modelo a los datos primero obtuve las distribuciones de $Q$ para diferentes voltajes de operación: \SI{-800}{\volt},\SI{-850}{\volt} y \SI{-900}{\volt}, lo cual se muestra en la figura \ref{fig:mapmt_charge}. Estas distribuciones se pueden aproximar utilizando una distribución Gassiana. Con un voltaje de alimentación de \SI{-950}{\volt} la carga media medida es de \SI{0.938(3)}{\pico\coulomb}. Siguiendo un procedimiento similar para las distribuciones de $\tau$ (las cuales se ajustan más a una distribución de Landau) obtuve que el parámetro $\alpha$ que mejor se ajusta nuestro \emph{MAPMT} es igual a $2.0$.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{mapmt_charge.pdf}
+        \caption{Distribuciones de carga de SPE para tres diferentes voltajes de operación. De izquierda a derecha los voltajes utilizados son: \SI{-850}{\volt},\SI{-900}{\volt} y \SI{-950}{\volt}.}
+        \label{fig:mapmt_charge}
+\end{figure}
+
+De esta manera, la caracterización de los elementos ópto-electrónicos que intervienen en la formación de la señal no permitió crear un modelo de la misma, el cual incluye propiedades medidas experimentalmente y procesos físicos relevantes; y nos permitirá un estudio detallado para el desarrollo de nuestro instrumento. Esto será el objetivo del siguiente capítulo. En la siguiente sección mostraré la validación de la simulación Monte Carlo usando un experimento para detectar muones atmosféricos.
+
 \section{Validación experimental de la simulación}
 
-
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{scibar-edep.pdf}
+        \caption{Espectro de energía de $\mu^{\pm}$ utilizado en la simulación. El espectro es estimado a partir del modelo PARMA usando la localidad de Sierra Negra.}
+        \label{fig:muons-spectrum}
+\end{figure}
 
 \begin{figure}
         \centering
@@ -209,6 +278,8 @@ v(t)=\frac{QR}{\tau\Gamma(1+\alpha)}\left(\frac{t}{\tau}\right)^{\alpha}\mathrm{
         \caption{Análisis del decaimiento exponencial de la fibra \emph{WLS}. El panel en la esquina superior derecha muestra los resultados de la simulación. Los datos experimentales se muestran en la parte central de la figura}
         \label{fig:muons-tail}
 \end{figure}
+
+
 
 \begin{equation}
 \label{equ:nphe}

@@ -20,11 +20,11 @@ $\num{6.1e27}\left(E/\si{\mega\electronvolt}\right)^{-3.8}\si{\per\mega\electron
 \begin{figure}
 \centering
   \includegraphics[width=\textwidth]{scicrt-sim.pdf}
-  \caption{Simulación de los perfiles temporales del SciCRT asumiendo un flujo de neutrones solares simular al del event del \num{7} de Septiembre de \num{2005}. La línea punteada en \SI{0}{\second} representa el instante en que la intensidad de rayos \emph{X} duros alcanzó el máximo. La cuerva azul muestra los datos obtenidos por el TNS, la línea verde es el peril temporal del SciCRT usando la electrónica original. La línea roja muestra el caso cuando instalamos la electrónica de alta velocidad y el perfil morado es considerando el caso sin tiempo muerto. Los datos están normalizados al nivel de fondo del TNS.}
+  \caption{Simulación de los perfiles temporales del SciCRT asumiendo un flujo de neutrones solares similar al del evento del \num{7} de Septiembre de \num{2005}. La curva azul muestra los datos obtenidos por el TNS, la línea naranja es el perfil temporal del SciCRT usando la electrónica original. La línea roja muestra el caso cuando instalamos la electrónica de alta velocidad. Los datos están normalizados al nivel de fondo del TNS.}
   \label{fig:solar-sim}
 \end{figure}
 
-Los resultados de nuestro cálculo se muestran en la figura \ref{fig:solar-sim}. Es importante aclarar que para esta estimación tomamos en cuenta dos situaciones; una con la electrónica original y otra con la electrónica de alta velocidad, ambas instaladas en $4/8$ del detector. Los perfiles temporales de las cuentas del SciCRT con la electrónica original muestran una significacia de $39\sigma$, lo que se traduce en una sensibilidad $2.3$ veces mayor a la del TNS durante el mismo evento\footnote{La significacia del TNS para el vente fue estimada en $17\sigma$.}. Sin embargo, al tomar en cuenta la disminución del tiempo muerto por parte del nuevo DAQ, el incremento es de $59\sigma$, es decir, $3.5$ veces mayor sensibilidad. De la figura se puede observar que la diferencia entre la situación ideal (sin tiempo muerto) y con el nuevo DAQ nuevo es muy pequeña.
+Los resultados de nuestro cálculo se muestran en la figura \ref{fig:solar-sim}. Es importante aclarar que para esta estimación tomamos en cuenta dos situaciones; una con la electrónica original y otra con la electrónica de alta velocidad, ambas instaladas en $4/8$ del detector. La línea punteada en \SI{0}{\second} indica el instante en que la intensidad de rayos \emph{X} duros alcanzó el máximo. En la figura la linea azul representa los datos del TNS de partículas neutras con $E_{k}>\SI{30}{\mega\electronvolt}$. El perfil temporal de las cuentas del SciCRT con la electrónica original (línea naranja) muestra una significacia de $39\sigma$, lo que se traduce en una sensibilidad $2.3$ veces mayor a la del TNS durante el mismo evento\footnote{La significacia del TNS para el evento fue estimada en $17\sigma$.}. Sin embargo, al tomar en cuenta el caso de la nuevo DAQ (línea verde), el incremento es de $59\sigma$, es decir, $3.5$ veces mayor sensibilidad.
 
 Con respecto a los datos de energía depositada el incremento también notable puesto que se tiene una sensibilidad $3$ veces mayor, con la ventaja extra de que podemos estimar el espectro de los neutrones con una excelente resolución \cite{ysasai17}.
 
@@ -34,13 +34,7 @@ Despite this, the sensitivity to such transient events is function of the active
 
 \section{La técnica de \emph{Time over threshold}}
 
-La carga depositada por la interacción de una partícula con el centellador se estima integrando el pulso de corriente a la salida del PMT, el cual está conformado por la suma de $N$ pulsos de SPE. De acuerdo con \cite{sanchez10} el modelo de la señal eléctrica se puede definir a través de la siguiente ecuación:
-
-\begin{equation}\label{equ:3.1}
-i_{pmt}\left(x,t\right)=\sum_{i=1}^{N_{phe}}i\left(t-t_{i}\right)
-\end{equation}
-
-de donde $i_{pmt}$ es la corriente a la salida del MAPMT en función del tiempo y posición en la que atravesó la partícula la barra; $N_{phe}$ es el número total de fotoelectrones a la salida del MAPMT y $t_{i}$ la distribución de los tiempos de arribo. Es importante mencionar que $N_{phe}$ a su vez depende de la distancia, la ganancia del MAPMT, eficiencia cuántica y energía depositada por la partícula en la barra. Luego entonces la carga total depositada entonces se puede calcular como:
+ Luego entonces la carga total depositada entonces se puede calcular como:
 
 \begin{equation}
 Q=\int_{0}^{\infty} i_{pmt}\left(t\right)\mathrm{d}t
