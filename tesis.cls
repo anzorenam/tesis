@@ -12,7 +12,7 @@
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{mathtools}
 \RequirePackage{datetime}
-\RequirePackage[separate-uncertainty=true,multi-part-units=single]{siunitx}
+\RequirePackage[separate-uncertainty=true,multi-part-units=single,binary-units]{siunitx}
 \RequirePackage{booktabs}
 \RequirePackage{xfrac}
 \RequirePackage[hypcap]{caption}
