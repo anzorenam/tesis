@@ -58,8 +58,30 @@ Por esta razón el desarrollo de la instrumentación del SciCRT requiere de un m
 
 Una alternativa es el uso de la técnica de Time over threshold (TOT), la cual permite una arquitectura simplificada a cambio de un pérdida en la linealidad y compresión en el rango dinámico \cite{fujiwara10}. En este método una señal digital variante en el tiempo $T_{OT}$ codifica la información de la amplitud del pulso, a partir del tiempo dura el pulso analógico por encima de un umbral predefinido. Posteriormente se necesita convertir la información temporal a valores digitales usando un \emph{time digital converter} (TDC).
 
-Para utilizar el método, primero debemos encontrar una relación entre $Q$ y $TOT$.
+Para aplicar este método el primer paso será encontrar una relación entre $Q$ y $TOT$, lo cual se puede hacer resolviendo un sistema de ecuaciones no lineales. Si consideramos $s\left(t\right)$ la señal con la información de la carga y $v\left(t\right)$ la función que describe al umbral, el sistema de ecuaciones se puede escribir como:
 
+\begin{equation}
+\label{equ:tot-equ}
+\begin{aligned}
+\left. s\left(t\right)\right|_{t=ti} &= \left. v\left(t\right)\right|_{t=ti}\\
+\left. s\left(t\right)\right|_{t=tf} &= \left. v\left(t\right)\right|_{t=tf}
+\end{aligned}
+\end{equation}
+
+donde $t_{i}$ y $t_{f}$ representan los puntos en que la señal rebasa el umbral. Es importante notar que $T_{OT}=t_{f}-t_{i}$. Resolviendo este sistema para el caso particular de un pulso de centelleo del tipo exponencial obtenemos:
+
+\begin{equation}
+\begin{aligned}
+ToT &= -\ln\left(\dfrac{V_{th}}{s_{0}}\right)^{\tau}\\
+ &= \tau_{d} \ln\left(s_{0}\right)-K
+\end{aligned}
+\end{equation}
+
+de donde $s_{0}$ representa la distribución de amplitudes del pulso (energía depositada) y $\tau$ la constante del centellador. Con este modelo simplificado podemos observar que la relación entre la carga y el TOT no es lineal. Para verificar este comportamiento realizaremos una simulación de primeros principios tomando las características similares a las de las señales del SciCRT. Primero consideramos que $s_{0}$ es una variable aleatoria distribuida normalmente $X\ \sim\ \mathcal{N}\left(\mu,\,\sigma^2\right)$, con media $\mu$ y desviación estándar $\sigma$.
+
+El resultado de la simulación se presenta en la figura \ref{fig:tot-model}. Los paneles superior en inferior izquierdo los pulsos simulados y la distribución de amplitudes, respectivamente. Por otro lado, el panel superior derecho en la figura muestra la relación que existe entre $Q$ y $T_{OT}$ para las señales descritas. El panel inferior derecho muestra la distribución de los valores de $T_{OT}$. Idealmente la distribución debe ser la misma que en el panel izquierdo, sin embargo, debido a la relación no lineal entre $Q$ y $T_{OT}$, observamos una distorsión en el área de baja energía, lo cual limita el rango dinámico del método.
+
+Esta limitante del método nos obliga a ser cuidadosos en la elección de parámetros de diseño de nuestro sistema, ya que sin un análisis detallado se corre el riesgo perder resolución en energía. Como expondré más adelante, esto me motivo a realizar un estudio mediante simulación buscando optimizar los parámetros de diseño.
 
 \begin{figure}
         \centering
@@ -68,7 +90,13 @@ Para utilizar el método, primero debemos encontrar una relación entre $Q$ y $T
         \label{fig:tot-model}
 \end{figure}
 
-Un diagrama esquemático del sistema TOT propuesto se muestra en la figura \ref{fig:nfeb-prot}. El uso de un dispositivo programable como el FPGA (field programmable gate array) permite la integración de la mayoría de las funciones requeridas por el sistema de procesamiento de pulsos, incluido SiTCP que nos permite hacer la transferencia de datos rápida. Con el fin de alcanzar una buena resolución temporal y un bajo uso de los recursos del circuito programable, para el diseño del TDC escogí la técnica de sobremuestreo que se describe en la siguiente sección.
+Aunado a este problema es importante establecer que la señal a la salida del detector no es útil para extraer la información de la carga depositada del evento de radiación ya que es de corta duración. Debido a esto, el primer paso antes de poder procesar la señal de radiación, es acondicionar la señal para que tenga una mayor duración y una amplitud máxima definida. El efecto de incrementar la duración de la señal, mejora la razón señal a ruido, mientras que la amplitud definida permite la lectura correcta de la información de la carga. Esto conlleva a que el proceso de optimización requiera el estudio de los diversos elementos que comprenden el sistema.
+
+El diagrama esquemático del sistema TOT propuesto se muestra en la figura \ref{fig:nfeb-prot}. El uso de un dispositivo programable como el FPGA (field programmable gate array) permite la integración de la mayoría de las funciones requeridas por el sistema de procesamiento de pulsos, incluido SiTCP que nos permite hacer la transferencia de datos rápida. La principal ventaja de esta integración es que permite reducir el costo de desarrollo y producción.
+
+La parte analógica del sistema está compuesta por un ciruito preamplificador y un formador.  El pramplificador tiene como función convertir la señal de corriente del fotomultiplicador en una señal de voltaje, llevando a cabo en el proceso la integración de la señal de corriente. El formador es filtro pasa banda, en el cual además de amplificar la señal de la etapa anterior, también define las características temporales (tiempos de subida, bajada y duración) de la señal del detector. Considerando que la mayor parte del sistema es digital, y que ésta se puede implementar en un sólo dispositivo: el tamaño de la tarjeta queda principalmente definido por el número de componentes utilizados para construir la sección de procesamiento analógico.
+
+Con el fin de alcanzar una buena resolución temporal y un bajo uso de los recursos del circuito programable, para el diseño del TDC escogí la técnica de sobremuestreo que se describe en la siguiente sección.
 
 \begin{figure}
         \centering
@@ -133,6 +161,21 @@ La figura \ref{fig:phe-cal} muestra el resultado de este análisis para $C_ {f}=
         \label{fig:phe-cal}
 \end{figure}
 
+Lo siguiente es simular la conversión de la señal analógica a una señal $T_{OT}$. Primeramente,
+
+
+ The conversion requires the definition of the shaping method as well as the resolution and range of the TDC. Along with the power consumption of the circuit, these last two parameters function as constrains to our optimization problem. The shaping method we use is the Gaussian filter because it is best suited for high speed performance \cite{ohkawa76}. Using the Gaussian shape as basis, the relation between the number of photo-electrons in the signal and the $T_{OT}$ can be written as:
+
+\begin{equation}
+\label{equ3.1}
+T_{OT}^{2}=2\sigma^{2}\ln{k_{0} N_{phe}}-w_{th}
+\end{equation}
+
+where $N_{phe}$ is the number of photo-electrons, $k_{0}$ is the conversion gain of the preamplifier, $\sigma$ is the scaling parameter of the Gaussian and $w_{th}$ is an offset term, dependent of the threshold of the TOT and the $\sigma$. Using \ref{equ3.1}, taking into account that $k_{0}$ was determined in the previous step of our analysis, the characteristics of the muon signal may be effectively converted to digital time values changing the $\sigma$ of the shaper and/or the threshold of the system.
+
+The full simulation of the electronics consider the preamplifier, shaping network and digital conversion by the TDC. The range and resolution of TDC are selected from the output of the simulation considering the cases were the full range of the muon signal occupies the most number of bins in the TDC. From this we conclude that a resolution of \SI{1}{\ns\per bin} and \SI{8}{bits \per sample} are enough for our application. Figure \ref{fig8} shows the results of the simulation with this resolution, for values of (from left to right) $\sigma=70,100$ and $\SI{125}{\ns}$. In each panel, the color scale represents different threshold values, starting with the highest at light blue and the lowest in light green. It is clear from the figure that the full dynamic range of the converter is achieved with $\sigma=\SI{125}{\ns}$.
+
+To implement the shaping network we selected the method from  \cite{ohkawa76}. Under this framework, two parameters are required to specify the design: order $N$ of the filter and topology. We choose the Sallen-Key topology because it minimizes the gain-bandwidth product of the amplifier. The order of the filter improves the timing response of the shaping network and reduces the effect of pile-up, with the disadvantage of increasing power requirements. In the simulation we studied the case for shapers with $N=3$, $4$ and $5$ . Even without considering power constraints, the best performance in terms of dynamic range is achieved with $N=3$.
 
 \begin{figure}
         \centering

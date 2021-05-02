@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{Resumen}{\es@scroman {v}}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Mirando al Sol invisible}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Ráfagas solares}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Aceleración de partículas en Ráfagas}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Propagación de neutrones solares}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Observaciones de neutrones solares}{9}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Telescopio centellador de Rayos Cósmicos}{14}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Descripción del detector}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Caracterización del sistema óptico: barra de centlleo y fibra WLS}{17}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Formación de la señal de detección y respuesta del fotomultiplicador}{23}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Validación experimental de la simulación}{28}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Desarrollo de nueva electrónica para el SciCRT}{34}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Desempeño del SciCRT ante un evento de neutrones solares}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}La técnica de \emph {Time over threshold}}{36}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Diseño de un \emph {Time digital converter} con sobremuestreo}{40}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Diseño y optimización de la electrónica}{41}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Detección de partículas energéticas\\ solares en el \emph {SciCRT}}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Desempeño del \emph {SciCRT} como detector de RC}{47}{section.4.1}%
