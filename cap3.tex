@@ -4,15 +4,13 @@
 \chaptermark{Nueva electrónica}
 \label{chap:tres}
 
-Las necesidades del SciCRT operando en Sierra Negra no se acoplan directamente a los objetivos específicos de los experimentos K2K y SciBooNE, una de nuestras metas dentro de la colaboración ha sido el desarrollo de electrónica de alta velocidad de transferencia, bajo costo y consumo de potencia. Sumado a esto, hemos decido seguir principios similares a los del desarrollo de software libre para evitar el \emph{vendor lock-in}. No obstante, encontrar una solución que cumpla de forma simultánea todos estos requerimientos resulta muy complejo. En este capítulo abordaré detalladamente el desarrollo del sistema de adquisición de datos, dando particular énfasis a su motivación científica. En este sentido el primer punto a tratar será la velocidad de transferencia.
+Las necesidades del SciCRT operando en Sierra Negra no se acoplan directamente a los objetivos específicos de los experimentos K2K y SciBooNE, una de nuestras metas dentro de la colaboración ha sido el desarrollo de electrónica de alta velocidad de transferencia, bajo costo y consumo de potencia. Sumado a esto hemos decido seguir principios similares a los del desarrollo de software libre para evitar el \emph{vendor lock-in}. No obstante, encontrar una solución que cumpla de forma simultánea todos estos requerimientos resulta muy complejo. En este capítulo abordaré detalladamente el desarrollo del sistema de adquisición de datos, dando particular énfasis a su motivación científica. En este sentido el primer punto a tratar será la velocidad de transferencia.
 
-En \num{2015} desarrollamos nueva electrónica BE utilizando \emph{SiTCP} (procesador embebido programable desarrollado para experimentos de física de altas energías \cite{uchida08}) y la instalamos en uno de los SB que componen las capas de neutrones del telescopio \cite{ysasai17}. Gracias al uso de esta tecnología logramos alcanzar una tasa de transferencia de datos \num{10} veces mayor a la que teníamos con el bus VME.
-
-A continuación presento un estudio mediante simulación MC para evaluar el desempeño del SciCRT utilizando la electrónica de alta velocidad. Este análisis tiene también por objetivo mostrar la motivación detrás del requerimiento en la velocidad de transferencia. Hago notar que estudios similares se encuentran en: \cite{ynagai14,ysasai17}. El resultado original contenido en esta tesis lo presenté en la Conferencia internacional de Rayos Cósmicos en \emph{Busan}, Corea del Sur \cite{manzorena171}.
+En \num{2015} desarrollamos nueva electrónica BE utilizando \emph{SiTCP} (procesador embebido programable desarrollado para experimentos de física de altas energías \cite{uchida08}) y la instalamos en uno de los SB que componen las capas de neutrones del telescopio \cite{ysasai17}. Gracias al uso de esta tecnología logramos alcanzar una tasa de transferencia de datos \num{10} veces mayor a la que teníamos con el bus VME. En la siguiente sección presentaré un estudio mediante simulación MC para evaluar el desempeño del SciCRT utilizando la electrónica de alta velocidad. Este análisis tiene también por objetivo mostrar la motivación detrás del requerimiento en la velocidad de transferencia. Hago notar que estudios similares se encuentran en: \cite{ynagai14,ysasai17}. El resultado original contenido en esta tesis lo presenté en la Conferencia internacional de Rayos Cósmicos en \emph{Busan}, Corea del Sur \cite{manzorena171}.
 
 \section{Desempeño del SciCRT ante un evento de neutrones solares}
 
-Evaluaremos la respuesta del SciCRT a un evento de neutrones solares mediante simulación MC, comparando el resultado con los datos obtenidos por el TNS instalado en Sierra Negra durante la ráfaga del \num{7} de Septiembre de \num{2005} \cite{sako06}. Este evento fue detectado por el TNS con una significacia de $17\sigma$ en el canal de partículas neutras con energías mayores a $>\SI{30}{\mega\electronvolt}$. El pico de la emisión de rayos \emph{X} duros (satélite Integral) fue a las 17:36:40 UT. La figura
+Evaluaremos la respuesta del SciCRT a un evento de neutrones solares mediante simulación MC, comparando el resultado con los datos obtenidos por el TNS instalado en Sierra Negra durante la ráfaga del \num{7} de Septiembre de \num{2005} \cite{sako06}. Este evento fue detectado por el TNS con una significacia de $17\sigma$ en el canal de partículas neutras con energías mayores a $>\SI{30}{\mega\electronvolt}$. El pico de la emisión de rayos \emph{X} duros (satélite Integral) fue a las 17:36:40 UT.
 
 Si asumimos el flujo de neutrones solares para este evento, podemos estimar la significancia de las señales detectadas por el SciCRT en un evento similar. Para nuestra estimación consideraremos como parámetros de entrada \cite{ynagai14}: un espectro de energía de los neutrones en el Sol de acuerdo a una ley de potencias
 $\num{6.1e27}\left(E/\si{\mega\electronvolt}\right)^{-3.8}\si{\per\mega\electronvolt\per\steradian}$, neutrones emitidos de manera impulsiva en el Sol y un ángulo cenital de \ang{17.5}. La propagación de los neutrones solares en la atmósfera terrestre se simula usando el modelo de Shibata.
@@ -24,11 +22,11 @@ $\num{6.1e27}\left(E/\si{\mega\electronvolt}\right)^{-3.8}\si{\per\mega\electron
   \label{fig:solar-sim}
 \end{figure}
 
-Los resultados de nuestro cálculo se muestran en la figura \ref{fig:solar-sim}. Es importante aclarar que para esta estimación tomamos en cuenta dos situaciones; una con la electrónica original y otra con la electrónica de alta velocidad, ambas instaladas en $4/8$ del detector. La línea punteada en \SI{0}{\second} indica el instante en que la intensidad de rayos \emph{X} duros alcanzó el máximo. En la figura la linea azul representa los datos del TNS de partículas neutras con $E_{k}>\SI{30}{\mega\electronvolt}$. El perfil temporal de las cuentas del SciCRT con la electrónica original (línea naranja) muestra una significacia de $39\sigma$, lo que se traduce en una sensibilidad \num{2.3} veces mayor a la del TNS durante el mismo evento. Sin embargo, al tomar en cuenta el caso de la nuevo DAQ (línea verde), el incremento es de $59\sigma$, es decir, \num{3.5} veces mayor sensibilidad.
+Los resultados de nuestro cálculo se muestran en la figura \ref{fig:solar-sim}. Es importante aclarar que para esta estimación tomamos en cuenta dos situaciones; una con la electrónica original y otra con la electrónica de alta velocidad, ambas instaladas en $4/8$ del detector. La línea punteada en \SI{0}{\second} indica el instante en que la intensidad de rayos \emph{X} duros alcanzó su valor máximo. En la figura la linea azul representa los datos del TNS de partículas neutras con $E_{k}>\SI{30}{\mega\electronvolt}$. El perfil temporal de las cuentas del SciCRT con la electrónica original (línea naranja) muestra una significacia de $39\sigma$, lo que se traduce en una sensibilidad \num{2.3} veces mayor a la del TNS durante el mismo evento. Sin embargo, al tomar en cuenta el caso de la nuevo DAQ (línea verde), el incremento es de $59\sigma$, es decir, \num{3.5} veces mayor sensibilidad.
 
 Con respecto a los datos de energía depositada (considerando el uso de electrónica de alta velocidad) el incremento también notable puesto que se tiene una sensibilidad \num{3} veces mayor, con la ventaja extra de que podemos estimar el espectro de los neutrones con una excelente resolución \cite{ysasai17}.
 
-A pesar de este resultado positivo, la sensibilidad del detector es directamente función del volumen activo del telescopio. Para justificar este punto, la figura \ref{fig:eficiencia-electronica} muestra la eficiencia de detección de neutrones en función del número de SB instalados y la energía incidente. Las línea azul representa el caso para un SB, la línea naranja dos SB y la verde cuatro. De la figura es posible concluir que la eficiencia de detección de neutrones incrementa principalmente en la zona de bajas energías ($<$\SI{100}{\mega\electronvolt}). Este resultado concuerda con lo expuesto en \cite{nagaiphd}, el cual reporta una eficiencia del \SI{30}{\percent} para neutrones de \SI{50}{\mega\electronvolt}. En el caso de los neutrones de mayor energía, aunque la eficiencia de detección no tiene un incremento tan significativo con el número de SBs instalados, las capacidades para estudiar el espectro de energía y la distribución angular si son enormemente mejoradas con la instalación de nueva electrónica.
+A pesar de este resultado positivo, la sensibilidad del detector es directamente función del volumen activo del telescopio. Para justificar este punto, la figura \ref{fig:eficiencia-electronica} muestra la eficiencia de detección de neutrones en función del número de SB instalados y la energía incidente. La línea azul representa el caso para un SB, la línea naranja dos SB y la verde cuatro. De la figura es posible concluir que la eficiencia de detección de neutrones incrementa principalmente en la zona de bajas energías ($<$\SI{100}{\mega\electronvolt}). Este resultado concuerda con lo expuesto en \cite{nagaiphd}, el cual reporta una eficiencia del \SI{30}{\percent} para neutrones de \SI{50}{\mega\electronvolt} considerando la instalación completa del SciCRT. En el caso de los neutrones de mayor energía, aunque la eficiencia de detección incrementa de formar significativo con el número de SBs instalados, las capacidades para estudiar el espectro de energía y la distribución angular si son mejoradas con la instalación de nueva electrónica.
 
 Adicionalmente, dada la operación del telescopio en alta montaña, la operación sostenible a largo plazo requiere de la producción de electrónica de bajo costo y potencia de consumo, ya que las condiciones ambientales reducen la vida útil de los componentes, además de dificultar la disipación de calor. Tomando en cuenta todo lo anterior y considerando que solo $3/8$ de la electrónica total necesaria para la instalación está disponible en estos momentos, el desarrollo de nuevas unidades de \emph{front end} se vuelve una prioridad de nuestro experimento.
 
@@ -40,7 +38,7 @@ Adicionalmente, dada la operación del telescopio en alta montaña, la operació
 \end{figure}
 
 \section{La técnica de \emph{Time over threshold}}
-
+\label{sec:time-over}
 Como mencioné en el capitulo \ref{chap:dos}, cuando una partícula energética entra en el volumen activo de un detector, ésta pierde su energía interaccionando con el medio. Considerando una partícula con carga eléctrica, la energía depositada se puede estimar midiendo las pérdidas por ionización; el número de iones generados al atravesar el detector. En el caso de un material centellador la medida de la pérdida por ionización es el número de fotones.
 
 De esta forma, el cálculo de la carga depositada $Q$ en el detector se puede realizar integrando la señal de corriente:
@@ -56,7 +54,7 @@ Con la llegada de sistemas de detección de radiación de gran escala (sistemas 
 
 Por esta razón el desarrollo de la instrumentación del SciCRT requiere de un método de estimación de energía que se adapte a las necesidades de nuestro experimento.
 
-Una alternativa es el uso de la técnica de Time over threshold (TOT), la cual permite una arquitectura simplificada a cambio de un pérdida en la linealidad y compresión en el rango dinámico \cite{fujiwara10}. En este método una señal digital variante en el tiempo $T_{OT}$ codifica la información de la amplitud del pulso, a partir del tiempo dura el pulso analógico por encima de un umbral predefinido. Posteriormente se necesita convertir la información temporal a valores digitales usando un \emph{time digital converter} (TDC).
+Una alternativa es el uso de la técnica de Time over threshold (TOT), la cual permite una arquitectura simplificada a cambio de un pérdida en la linealidad y compresión en el rango dinámico \cite{fujiwara10}. En este método una señal digital variante en el tiempo $T_{OT}$ codifica la información de la amplitud del pulso, a partir del tiempo que dura el pulso analógico por encima de un umbral predefinido. Posteriormente se necesita convertir la información temporal a valores digitales usando un \emph{time digital converter} (TDC).
 
 Para aplicar este método el primer paso será encontrar una relación entre $Q$ y $TOT$, lo cual se puede hacer resolviendo un sistema de ecuaciones no lineales. Si consideramos $s\left(t\right)$ la señal con la información de la carga y $v\left(t\right)$ la función que describe al umbral, el sistema de ecuaciones se puede escribir como:
 
@@ -79,7 +77,7 @@ ToT &= -\ln\left(\dfrac{V_{th}}{s_{0}}\right)^{\tau}\\
 
 de donde $s_{0}$ representa la distribución de amplitudes del pulso (energía depositada) y $\tau$ la constante del centellador. Con este modelo simplificado podemos observar que la relación entre la carga y el TOT no es lineal. Para verificar este comportamiento realizaremos una simulación de primeros principios tomando las características similares a las de las señales del SciCRT. Primero consideramos que $s_{0}$ es una variable aleatoria distribuida normalmente $X\ \sim\ \mathcal{N}\left(\mu,\,\sigma^2\right)$, con media $\mu$ y desviación estándar $\sigma$.
 
-El resultado de la simulación se presenta en la figura \ref{fig:tot-model}. Los paneles superior en inferior izquierdo los pulsos simulados y la distribución de amplitudes, respectivamente. Por otro lado, el panel superior derecho en la figura muestra la relación que existe entre $Q$ y $T_{OT}$ para las señales descritas. El panel inferior derecho muestra la distribución de los valores de $T_{OT}$. Idealmente la distribución debe ser la misma que en el panel izquierdo, sin embargo, debido a la relación no lineal entre $Q$ y $T_{OT}$, observamos una distorsión en el área de baja energía, lo cual limita el rango dinámico del método.
+El resultado de la simulación se presenta en la figura \ref{fig:tot-model}. Los paneles superior en inferior izquierdo muestran los pulsos simulados y la distribución de amplitudes, respectivamente. Por otro lado, el panel superior derecho en la figura muestra la relación que existe entre $Q$ y $T_{OT}$ para las señales descritas. El panel inferior derecho muestra la distribución de los valores de $T_{OT}$. Idealmente esta distribución debe ser la misma que la del panel izquierdo, sin embargo, debido a la relación no lineal entre $Q$ y $T_{OT}$, observamos una distorsión en el área de baja energía; lo cual limita el rango dinámico del método.
 
 Esta limitante del método nos obliga a ser cuidadosos en la elección de parámetros de diseño de nuestro sistema, ya que sin un análisis detallado se corre el riesgo perder resolución en energía. Como expondré más adelante, esto me motivo a realizar un estudio mediante simulación buscando optimizar los parámetros de diseño.
 
@@ -90,18 +88,18 @@ Esta limitante del método nos obliga a ser cuidadosos en la elección de parám
         \label{fig:tot-model}
 \end{figure}
 
-Aunado a este problema es importante establecer que la señal a la salida del detector no es útil para extraer la información de la carga depositada del evento de radiación ya que es de corta duración. Debido a esto, el primer paso antes de poder procesar la señal de radiación, es acondicionar la señal para que tenga una mayor duración y una amplitud máxima definida. El efecto de incrementar la duración de la señal, mejora la razón señal a ruido, mientras que la amplitud definida permite la lectura correcta de la información de la carga. Esto conlleva a que el proceso de optimización requiera el estudio de los diversos elementos que comprenden el sistema.
+Aunado a este problema, es importante establecer que la señal a la salida del detector no es útil para extraer la información de la carga depositada del evento de radiación ya que es de corta duración. Debido a esto, el primer paso antes de poder procesar la señal de radiación es acondicionar la señal para que tenga una mayor duración y una amplitud máxima definida. El efecto de incrementar la duración de la señal, mejora la razón señal a ruido, mientras que la amplitud definida permite la lectura correcta de la información de la carga. Esto lleva a que el proceso de optimización requiera el estudio de los diversos elementos que comprenden el sistema.
 
-El diagrama esquemático del sistema TOT propuesto se muestra en la figura \ref{fig:nfeb-prot}. El uso de un dispositivo programable como el FPGA (field programmable gate array) permite la integración de la mayoría de las funciones requeridas por el sistema de procesamiento de pulsos, incluido SiTCP que nos permite hacer la transferencia de datos rápida. La principal ventaja de esta integración es que permite reducir el costo de desarrollo y producción.
+El diagrama esquemático del sistema TOT propuesto se muestra en el panel superior de la figura \ref{fig:nfeb-prot}. El uso de un dispositivo programable como el FPGA (field programmable gate array) permite la integración de la mayoría de las funciones requeridas por el sistema de procesamiento de pulsos, incluido SiTCP que nos permite hacer la transferencia de datos rápida. La principal ventaja de esta integración es que permite reducir el costo de desarrollo y producción.
 
-La parte analógica del sistema está compuesta por un ciruito preamplificador y un formador.  El pramplificador tiene como función convertir la señal de corriente del fotomultiplicador en una señal de voltaje, llevando a cabo en el proceso la integración de la señal de corriente. El formador es filtro pasa banda, en el cual además de amplificar la señal de la etapa anterior, también define las características temporales (tiempos de subida, bajada y duración) de la señal del detector. Considerando que la mayor parte del sistema es digital, y que ésta se puede implementar en un sólo dispositivo: el tamaño de la tarjeta queda principalmente definido por el número de componentes utilizados para construir la sección de procesamiento analógico.
+La parte analógica del sistema está compuesta por un ciruito preamplificador y un formador. El preamplificador tiene como función convertir la señal de corriente del fotomultiplicador en una señal de voltaje, llevando a cabo en el proceso la integración de la señal de corriente. El formador es filtro pasa banda, en el cual además de amplificar la señal de la etapa anterior, también define las características temporales (tiempos de subida, bajada y duración) de la señal del detector. Considerando que la mayor parte del sistema es digital, y que ésta se puede implementar en un sólo dispositivo: el tamaño de la tarjeta queda principalmente definido por el número de componentes utilizados para construir la sección de procesamiento analógico. Por esta razón el diseño de este bloque tiene como restricción encontrar un solución que utilice una cantidad de elementos pequeña. Una arquitectura básica para este bloque se muestra en el panel inferior de la figura \ref{fig:nfeb-prot}, la cual se describirá más adelante.
 
-Con el fin de alcanzar una buena resolución temporal y un bajo uso de los recursos del circuito programable, para el diseño del TDC escogí la técnica de sobremuestreo que se describe en la siguiente sección.
+A continuación presente el diseño del sistema TDC usando la técnica de sobremuestreo,  el cual tiene el fin de alcanzar una buena resolución temporal y un bajo uso de los recursos del circuito programable.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{nfeb-prot.pdf}
-        \caption{Diagrama esquemático de la nueva electrónica del SciCRT.}
+        \caption{Diagrama esquemático de la nueva electrónica del SciCRT (panel superior). Circuito de amplicación y formación (panel inferior).}
         \label{fig:nfeb-prot}
 \end{figure}
 
@@ -129,24 +127,7 @@ Procedí a describir un módulo TDC en un FPGA usando un factor de sobremuestreo
 
 Al analizar los resultados de la figura, podemos concluir que son satisfactorios; ya que al utilizar un TDC con resolución de \SI{1}{\nano\second}, el \emph{bin} más cercano a la duración que deseamos medir es \SI{8}{\nano\second} y más del \SI{96}{\percent} de los eventos se encuentran en ese \emph{bin}. Solo el \SI{4}{\percent} de los eventos tienen una error producido debido a errores de sincronía del interpolador (los eventos entre \SI{7}{\nano\second} y \SI{9}{\nano\second}). Es importante mencionar que estos errores están directamente relacionados con el \emph{jitter} (fluctuaciones aleatorias en las fases) en la señal a medir y/o la señal de reloj.
 
-
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.49\textwidth}
-	\includegraphics[width=\textwidth]{neutron_ver1.jpg}
-	\caption{Tarjeta diseñada.}
-	\label{fig:neutron-pcb}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.49\textwidth}
-	\includegraphics[width=\textwidth]{complete-system.jpg}
-	\caption{Sistema en pruebas}
-	\label{fig:complete-sys}
-  \end{subfigure}
-\end{figure}
-
 \section{Diseño y optimización de la electrónica}
-
-
 
 For the preamplifier unit we use an operational amplifier as charge sensitive amplifier with capacitor $C_{f}$ and resistor $R_{f}$ in the feedback loop. In principle, three parameters are needed for the specification of this system: values for $C_{f}$, $R_{f}$ and the minimum bandwidth of the amplifier. The $S/N$ ratio of the preamplifer is sensitive to both parameters, although in the case of the MAPMT the number of photo-electrons contained in the signal is of greater importance. Since MIPs in the far edge of the bar produce  \SI{10}{pe} in average (see next section for a description), we consider the effect of $C_{f}$, $R_{f}$ in the $S/N$ ratio negligible.
 
@@ -161,21 +142,18 @@ La figura \ref{fig:phe-cal} muestra el resultado de este análisis para $C_ {f}=
         \label{fig:phe-cal}
 \end{figure}
 
-Lo siguiente es simular la conversión de la señal analógica a una señal $T_{OT}$. Primeramente,
+Lo siguiente es analizar la conversión de la señal analógica a una señal $T_{OT}$. El análisis requiere que definamos el método de formación de las señales y las características del TDC. Es importante recordar que,  junto con el consumo de potencia del circuito, los parámetros del TDC sirven de restricción al problema de optimización ya que el uso eficiente del rango dinámico disminuye la distorsión por ruido de cuantización. Para el circuito formador utilicé un filtro Gaussiano ya que éste se desempeña satisfactoriamente en aplicaciones con altas tasas de cuentas \cite{ohkawa76}.
 
-
- The conversion requires the definition of the shaping method as well as the resolution and range of the TDC. Along with the power consumption of the circuit, these last two parameters function as constrains to our optimization problem. The shaping method we use is the Gaussian filter because it is best suited for high speed performance \cite{ohkawa76}. Using the Gaussian shape as basis, the relation between the number of photo-electrons in the signal and the $T_{OT}$ can be written as:
+Haciendo un análisis similar al de la sección \ref{sec:time-over} usando una forma de pulso Gaussiana, podemos escribir la relación entre el número de fotoelectrones y el TOT de la siguiente forma:
 
 \begin{equation}
-\label{equ3.1}
+\label{equ:tot-nphe}
 T_{OT}^{2}=2\sigma^{2}\ln{k_{0} N_{phe}}-w_{th}
 \end{equation}
 
-where $N_{phe}$ is the number of photo-electrons, $k_{0}$ is the conversion gain of the preamplifier, $\sigma$ is the scaling parameter of the Gaussian and $w_{th}$ is an offset term, dependent of the threshold of the TOT and the $\sigma$. Using \ref{equ3.1}, taking into account that $k_{0}$ was determined in the previous step of our analysis, the characteristics of the muon signal may be effectively converted to digital time values changing the $\sigma$ of the shaper and/or the threshold of the system.
+en donde $N_{phe}$ es el número de fotoelectrones, $k_{0}$ es la ganacia de conversión del preamplificador, $\sigma$ es el tiempo de formación del cicuito y $w_{th}$ es una constante de calibración; dependiente del umbral usando para el TOT y $\sigma$. Usando la ecuación \ref{equ:tot-nphe} y considerando que $k_{0}$ fue determinada en el análisis anterior, las características de la señal del detector se pueden convertir de forma eficiente cambiando $\sigma$ y el umbral del sistema.
 
-The full simulation of the electronics consider the preamplifier, shaping network and digital conversion by the TDC. The range and resolution of TDC are selected from the output of the simulation considering the cases were the full range of the muon signal occupies the most number of bins in the TDC. From this we conclude that a resolution of \SI{1}{\ns\per bin} and \SI{8}{bits \per sample} are enough for our application. Figure \ref{fig8} shows the results of the simulation with this resolution, for values of (from left to right) $\sigma=70,100$ and $\SI{125}{\ns}$. In each panel, the color scale represents different threshold values, starting with the highest at light blue and the lowest in light green. It is clear from the figure that the full dynamic range of the converter is achieved with $\sigma=\SI{125}{\ns}$.
-
-To implement the shaping network we selected the method from  \cite{ohkawa76}. Under this framework, two parameters are required to specify the design: order $N$ of the filter and topology. We choose the Sallen-Key topology because it minimizes the gain-bandwidth product of the amplifier. The order of the filter improves the timing response of the shaping network and reduces the effect of pile-up, with the disadvantage of increasing power requirements. In the simulation we studied the case for shapers with $N=3$, $4$ and $5$ . Even without considering power constraints, the best performance in terms of dynamic range is achieved with $N=3$.
+La simulación completa de la electrónica considera el preamplificador, circuito formador y conversión a digital usando el TDC. El rango y resolución del TDC se seleccionan a partir de los resultados de la simulación, considerando los casos en donde el rango de la señal del detector ocupa la mayor cantidad de \emph{bins}. A partir de esto determiné que una con una resolución de \SI{1}{\ns\per bin} y \SI{8}{bits \per muestra} es posible convertir la señal de manera efectiva. La figura \ref{fig:tot-sigma} muestra el resultado de la simulación usando la resolución óptima de TDC, para diferentes valores de $\sigma$ del formador ($\sigma=70,100$ y $\SI{125}{\ns}$). En cada panel de la figura la escala de colores representa un umbral distinto, desde azul (\SI{10}{\milli\volt}) claro hasta el verde claro (\SI{50}{\milli\volt}). Es evidente de la figura que el rango dinámico del convertidor se ocupa mejor con $\sigma=\SI{125}{\ns}$.
 
 \begin{figure}
         \centering
@@ -184,6 +162,9 @@ To implement the shaping network we selected the method from  \cite{ohkawa76}. U
         \label{fig:tot-sigma}
 \end{figure}
 
+Con el objetivo de implementar implementar el circuito formador usamos el método descrito en \cite{ohkawa76}, el cual es un método muy usado en el desarrollo de electrónica nuclear. Bajo este marco de referencia solo se necesitan dos parámetros para especificar el diseño: el orden del filtro $N$ y su topología. El orden del filtro mejora la respuesta temporal del circuito disminuyen el efecto del \emph{pile-up}, con la desventaja de incrementar el consumo de potencia. Tras el análisis escogí un filtro de orden $N=3$ ya que ofrecía la mejor respuesta en términos de desempeño y consumo de potencia.
+
+Para finalizar el análisis mediante simulación del diseño, estudié el posible efecto de dependencia entre el TOT y la distancia al MAPMT. Considerando que uno de los extremos de las barras está pintado para mejorar la eficiencia de recolección, es de esperarse un ensanchamiento en la estructura temporal de los pulsos a medida que la partícula cruza el centellador a distancias más cortas del fotosensor. La figura \ref{fig:tot-distance} muestra el resultado de simular \num{1e6} muones cruzando la barra centelladora a diferentes distancias del MAPMT. Como se esperaba, los pulsos generados cerca del sensor son más anchos que los generados en el otro extremo. No obstante, el efecto es muy pequeño; incapaz de producir alguna saturación en la electrónica. Queda la posibilidad de que relación lineal entra estas variables pueda ser útil en el futuro para corregir los datos registrados, en un análisis similar al hecho con la atenuación de la fibra.
 
 \begin{figure}
         \centering
@@ -191,6 +172,31 @@ To implement the shaping network we selected the method from  \cite{ohkawa76}. U
         \caption{Valores promedio de TOT a diferentes distancias del MAPMT, incluyendo barras de error de $\pm\sigma$. La línea punteada representa el resultado del ajuste lineal.}
         \label{fig:tot-distance}
 \end{figure}
+
+El circuito final del preamplificador/formador se muestra en la \ref{fig:preamp-shaper}. La elección del modelo del amplificador operacional se hizo considerando el ancho de banda mínimo con vista a reducir el consumo de potencia. A partir de la simulación estimé que el circuito requiere un mínimo ancho de banda de \SI{200}{\mega\hertz}. Con esto seleccioné dos modelos de amplificadores, el ADA4891 y ADA4807, ambos de Analog Devices. Ambos circuitos tienen una respuesta en frecuencia similar, sin embargo difieren en consumo de potencia y precio.
+
+Durante una estancia de investigación en el ISEE (Institute) de la Universidad de Nagoya, Japón, construí un prototipo de \num{16} canales de la electrónica FE. El prototipo utiliza el amplificador ADA4891 y fue probado con LED verde (pico de emisión \SI{505}{\nano\metre}). La parte digital del sistema la implemté usando una tarjeta Spartan \num{6} de Xilinix, la cual realiza las tareas de discriminación, TDC y transferencia de datos usando SiTCP. Para la interconexión del sistema fue además necesario desarrollar circuito capaz de distribuir la alimentación y señales de reloj del sistema utilizando la capa física del Ethernet. La figuras \ref{fig:neutron-pcb} y \ref{fig:complete-sys} muestran la tarjeta diseñada, así como el prototipo en operación.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.49\textwidth}
+	\includegraphics[width=\textwidth]{neutron_ver1.jpg}
+	\caption{Tarjeta diseñada.}
+	\label{fig:neutron-pcb}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+	\includegraphics[width=\textwidth]{complete-system.jpg}
+	\caption{Sistema en pruebas}
+	\label{fig:complete-sys}
+  \end{subfigure}
+  \label{fig:new-electronics}
+\end{figure}
+
+El resultado de la prueba usando LED con una carga equivalente a \SI{10}{pe} se observa en la figura \ref{fig:tdc-simexp}. El lienzo grande de la figura muestra la distribución de valores de TOT resultado del experimento, mientras que el lienzo pequeño contiene el resultado de una simulación de la electrónica usando la carga definida. Las diferencias entre el experimento y la simulación se observan en los datos alrededor de \SI{5}{\ns} y en eventos mayores a \SI{80}{\ns}. Estos efectos son producidos por el ruido de electrónico (pedestal) y contaminación de fotones, respectivamente; ambos procesos no incluidos en el modelo de la simulación.
+
+Las fluctuaciones periódicas que se observan en el distribución experimento (como por ejemplo alrededor de \SI{20}{\ns}) son producto del jitter en las señales de reloj y LED, además de otros efectos no lineales del TDC. Esta situación se describió previamente en este capitulo, y requiere de un estudio más profundo para determinar sus efectos en la pérdida de precisión del sistema. A pesar de estas discrepancias, las similitudes entre la simulación y el experimento validan nuestra metodología.
+
+La versión final de la electrónica actualmente está en construcción y pronto comenzará a probarse en el sitio. Para esta versión usaremos el circuito ADA4807, ya que tiene excelentes características para operar en alta montaña. Usando este amplificador estimamos un consumo de potencia de \SI{700}{\mW}, lo cual es aproximadamente \num{5} mayor a la electrónica original diseñada usando ASICs. A pesar de esto, la integración de diversas funciones en un solo sistema gracias al uso del FPGA, nos proyecta un consumo total de potencia de \SI{5}{\W} por unidad, lo cual representa un \SI{50}{\percent} de ganacia en comparación.
 
 \begin{figure}
         \centering

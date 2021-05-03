@@ -324,12 +324,32 @@ Como se mencionó en la sección anterior, los fotones de centelleo y de la fibr
         \label{fig:muons-tail}
 \end{figure}
 
+A continuación analicé el ancho de las señales $t_{90}-t_{10}$, definido como el intervalo de tiempo que requiere el pulso para pasar del \num{10} al \SI{90}{\percent} de la carga total. La distribución color verde claro en la figura \ref{fig:t90-distribution} corresponde a los resultados de la simulación, mientras que la distribución negra proviene de los datos experimentales. Aunque ambas distribuciones son muy similares, se puede observar una diferencia de \SI{7}{\ns} entre los valores máximos de ambas. La razón de esto se encuentra en la degradación de los tiempos de subida y bajada de los pulsos debido al ancho de banda limitado de los elementos que componen la cadena de conexión. Si calculamos el tiempo de subida compuesto por estos elementos en serie obtenemos un valor de \SI{3.4}{\ns}, el cual además debe afectar a los pulsos de forma simétrica. De esta forma se explican de forma satisfactoria las diferencias entre experimento y simulación.
 
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{t90_dist.pdf}
+        \caption{Distributiciones de ancho de pulso para datos experimentales y simulación. La distribución verde es el resultado de la simulación, mientras que la de color negro es el experimento.}
+        \label{fig:t90-distribution}
+\end{figure}
+
+Otro rasgo distintivo de la distribución experimental es su cola más extendida, la cual se extiende más allá de los \SI{120}{\ns} y no puede ser corregida con los argumentos previos. Ya que el ancho del pulso es independiente de la energía depositada\footnote{Esto se debe a que la medida del ancho se hace sobre un pulso normalizado en amplitud.}, la cola de la distribución solo se puede atribuir a eventos de dos o más partículas en la ventana de tiempo o disparos accidentales. La figura \ref{fig:qtime-dist} muestra el histograma en dos dimensiones del número de fotoelectrones contra el ancho del pulso de los datos del experimento. Como se observa en la figura los eventos con anchos mayores (mayores a \SI{100}{\ns}) se encuentran distribuidos en la parte de menor deposición de carga, lo cual supone no pueden ser originados por dos o más partículas. Por lo tanto suponemos la contaminación debe originarse de disparos accidentales de la electrónica. A partir de la simulación podemos estimar que la probabilidad de tener un pulso de ancho mayor a \SI{100}{\ns} es menor a \SI{0.5}{\percent}, así que establecemos esto como un umbral de corte para limpiar los datos experimentales. Después de la selección de eventos, la tasa de eventos registrada en el experimento es \SI{253.3(50)}{events\per\hour}.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{qtime-dist.pdf}
+        \caption{Histograma en dos dimensiones mostrando la relación de $t_{90}-t_{10}$ y el número de fotoelectrones en la señal.}
+        \label{fig:qtime-dist}
+\end{figure}
+
+Finalmente, cerraré este capitulo comparando las distribuciones del número de fotoelectrones en el experimento y la simulación. La figura \ref{fig:photons-number} muestra los resultados. La línea verde corresponde a los datos del experimento, mientras que la linea negra representa la simulación. La diferencia entre ambas es de esperarse ya que la simulación no incluyen los efectos de la resolución finita del detector y otras no linealidades. El efecto de la resolución finita puede agregarse a la simulación sumando la contribución de una variable aleatoria Gaussiana. Este proceso se puede representar mediante la ecuación \ref{equ:nphe}, la cual describe la convolución de la distribución de fotoelectrones con la función de resolución $p(N_{phe})$:
 
 \begin{equation}
 \label{equ:nphe}
 s(N_{phe})=\frac{1}{k_{sat}}\int_{0}^{N_{max}} s_{sim}(N_{sim})p(N_{phe}-N_{sim})\;\mathrm{d}N_{sim}
 \end{equation}
+
+de donde $s$ representa la distribución experimental y $s_{sim}$ la obtenida mediante simulación. El efecto de la resolución del detector en la distribución experimental es evidente si comparamos los valores máximos de ambas distribuciones, centrados alrededor de \SI{10}{pe}. De esta forma el ensanchamiento en la distribución del experimento se puede explicar considerando las fluctuaciones aleatorias en la respuesta. Por otra parte, el cambio de variable de $N_{phe}$ (número observable de fotoelectrones) y $N_{sim}$ indica la distorsión ocasionada por una respuesta no lineal. En este sentido introducimos la función de saturación $k_{sat}$, la cual modela la posible saturación del MAPMT al ser operado a voltajes cercanos a su límite de operación. Para nuestro análisis use un polinomio de segundo orden como función de saturación para ajustar la simulación a los datos experimentales.
 
 \begin{figure}
         \centering
@@ -337,3 +357,5 @@ s(N_{phe})=\frac{1}{k_{sat}}\int_{0}^{N_{max}} s_{sim}(N_{sim})p(N_{phe}-N_{sim}
         \caption{Distribución de número de fotoelectrones detectados en el experimento y la simulación MC. Los resultados de la simulación se convolucionan con una función de resolución para ajustar con los datos experimentales.}
         \label{fig:photons-number}
 \end{figure}
+
+La línea punteada en la figura \ref{fig:photons-number} muestra los resultados de la simulación al incorporar los efectos mencionados previamente. Tras la corrección los datos experimentales y la simulación concuerdan en el rango de \num{5} a \SI{150}{pe}. Para valores de carga mayores los motivos de la desviación no son evidentes, lo cual podría suponer un cambio en la función de saturación o alguna otra no linealidad. De cualquier manera, con este análisis podemos concluimos que la deposición de energía de $\mu^{\pm}$ tiene un valor máximo de \SI{250}{pe}. Es importante enfatizar que, dado que el SciCRT opera de forma regular con una ganancia menor. los efectos de saturación y resolución aqui expresados no deben afectar significativamente el desempeño del telescopio.

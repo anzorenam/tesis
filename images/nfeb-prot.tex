@@ -1,11 +1,11 @@
 \documentclass[landscape]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{mathpazo}
-\usepackage[euler-digits,euler-hat-accent]{eulervm}
 \usepackage[spanish]{babel}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,backgrounds,decorations.pathreplacing}
-\usepackage[american currents,american voltages]{circuitikz}
+\usepackage[siunitx,american currents,american voltages,nooldvoltagedirection]{circuitikz}
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{graphics}
 \pgfrealjobname{survey}
@@ -20,30 +20,27 @@
 \tikzstyle{block}=[rectangle,thick,draw=lg,fill=lg,minimum height=4em,minimum width=4em,text width=1.25cm,align=center]
 \tikzstyle{sblock}=[rectangle,thick,draw=lb,fill=lb,minimum height=4em,minimum width=4em,text width=1.25cm,align=center]
 \tikzstyle{bblock}=[rectangle,thick,draw=lb,fill=lb,minimum height=16em,minimum width=4em]
-\tikzstyle{hblock}=[rectangle,thick,fill opacity=0.6,text opacity=0,draw=dg,fill=dg,minimum height=25em,minimum width=24em]
+\tikzstyle{hblock}=[rectangle,thick,fill opacity=0.5,text opacity=0,draw=dg,fill=dg,minimum height=25em,minimum width=24em]
 
 \beginpgfgraphicnamed{nfeb-prot}
 \begin{tikzpicture}[scale=1.0]
 
 \draw[color=black,line width=1.0]
  	(2.0,1.0) node [buffer,scale=1.5](opamp){}
- 	(2.0,3.0) node [anchor=south]{Preamp}
+ 	(2.0,2.5) node [anchor=south]{Preamp}
  	(7.75,0.5) node [op amp,yscale=-1](comp){}
  	($(opamp.out)+(1.75,0)$) node [block]{Shaper}
  	($(comp.+)+(4.0,-1.0)$) node [hblock]{FPGA}
     (7.75,2.0) node [anchor=south]{canal LVDS}
     (7.75,3.0) node [scale=1.5,anchor=south]{FPGA}
  	(opamp.in) to [short,-o] ($(opamp.in)+(-1.0,0)$)
- 	($(opamp.out)+(0.25,0)$) to [short] ($(opamp.out)+(0.25,1.5)$)
- 	to [C]  ($(opamp.in)+(-0.25,1.5)$)
- 	to [short] ($(opamp.in)+(-0.25,0)$)
  	($(comp.out)+(1.75,-1.75)$) node [bblock](time){TDC}
     ($(time)+(2.5,0)$) node [sblock]{SiTCP}
  	(comp.+) to [short] (opamp.out)
  	(comp.-) to [short] ($(comp.-)+(-0.25,0)$)
  	to [short] ($(comp.-)+(-0.25,-0.5)$)
  	to [short,-o] ($(comp.-)+(-0.75,-0.5)$)
- 	($(comp.-)+(-0.75,-0.5)$) node[anchor=east]{$V_{TH}$}
+ 	($(comp.-)+(-0.75,-0.5)$) node[anchor=east]{Threshold}
     (comp.out) to [short] ($(comp.out)+(1.5,0)$)
     (time) to [short,-o] ($(time)+(4.75,0)$)
     ($(time)+(4.75,0)$) node[anchor=west]{conexión al servidor}
@@ -55,6 +52,43 @@
     ($(time)+(-8.1,-2.5)$) to [short] ($(time)+(0,-2.5)$);
 
 \draw [color=black,line width=1.0,decorate,decoration={brace,mirror}] ($(time)+(-8.2,-0.9)$) -- ($(time)+(-8.2,-2.6)$);
+
+\draw [color=black]
+  (4,-8.5) node [buffer](opamp)(a1){}
+  (a1.in) --  ($(a1.in)+(-0.5,0)$) -- ($(a1.in)+(-0.5,1.25)$)
+  to [C=$\mathrm{C_{f}}$] ($(a1.out)+(0.5,1.25)$)
+  --  ($(a1.out)+(0.5,0)$) -- (a1.out)
+  ($(a1.in)+(-0.5,1.25)$) -- ($(a1.in)+(-0.5,2.5)$)
+  to [R=$\mathrm{R_{f}}$] ($(a1.out)+(0.5,2.5)$)
+  -- ($(a1.out)+(0.5,1.25)$)
+  ($(a1.in)+(-0.5,0)$)
+  to [short,-o] ($(a1.in)+(-2.0,0)$) node [anchor=east] {$\mathrm{i_{pe}}$}
+  ($(a1.out)+(0.5,0)$) to [short,-*] ($(a1.out)+(1.0,0)$)
+  ($(a1.out)+(1.0,0)$) --  ($(a1.out)+(1.0,1.0)$)
+  to [C=$\mathrm{C_{pz}}$,-] ($(a1.out)+(3.5,1.0)$)
+  -- ($(a1.out)+(3.5,0)$)
+  ($(a1.out)+(1.0,0)$) -- ($(a1.out)+(1.0,-1.0)$)
+  to [R=$\mathrm{R_{pz}}$] ($(a1.out)+(3.5,-1.0)$)
+  -- ($(a1.out)+(3.5,0)$)
+  ($(a1.out)+(5.5,0)$) node [buffer](a2){}
+  (a2.in) --  ($(a2.in)+(-0.5,0)$) -- ($(a2.in)+(-0.5,1.25)$)
+  to [C=$\mathrm{C_{diff}}$] ($(a2.out)+(0.5,1.25)$)
+  --  ($(a2.out)+(0.5,0)$) -- (a2.out)
+  ($(a2.in)+(-0.5,1.25)$) -- ($(a2.in)+(-0.5,2.5)$)
+  to [R=$\mathrm{R_{diff}}$] ($(a2.out)+(0.5,2.5)$)
+  -- ($(a2.out)+(0.5,1.25)$)
+  ($(a1.out)+(0.5,0)$) to [short,-*] ($(a1.out)+(1.0,0)$)
+  ($(a2.in)+(-0.5,0)$) to [short,-*] ($(a1.out)+(3.5,0)$)
+  ($(a2.out)+(0.5,0)$) to[lowpass,box,-] ++(2,0)
+  ($(a2.out)+(2.0,0)$) to[lowpass,box,-] ++(2,0)
+  ($(a2.out)+(5.0,0)$) node {\Huge$\dots$} ++ (2.0,0)
+  ($(a1.in)+(0.5,-2.0)$) node [anchor=south] {Preamplificador}
+  ($(a1.out)+(2.2,-1.9)$) node [anchor=south] {Circuito PZC}
+  ($(a2.in)+(2.2,-1.95)$) node [anchor=south] {Formador}
+  ($(a2.in)+(3.7,1.5)$) node [anchor=south] {Polos complejos};
+
+\draw [color=black,line width=1.0,decorate,decoration={brace}] ($(a2.in)+(2.5,1.0)$) -- ($(a2.out)+(3.5,1.0)$);
+\draw [color=black,line width=1.0,decorate,decoration={brace,mirror}] ($(a2.in)+(-0.5,-1.0)$) -- ($(a2.out)+(3.5,-1.0)$);
 
 \end{tikzpicture}
 \endpgfgraphicnamed
