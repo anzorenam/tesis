@@ -1,4 +1,5 @@
 \documentclass{tesis}
+\addbibresource{tesis.bib}
 \begin{document}
 \lstset{language=Python}
 \newdate{prueba}{2}{04}{2021}
@@ -16,7 +17,6 @@
 \include{cap3}
 \include{cap4}
 \include{cap5}
-\renewcommand{\bibname}{Referencias}
-\bibliographystyle{unsrt}
-\bibliography{tesis.bib}
+\phantomsection
+\printbibliography
 \end{document}

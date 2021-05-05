@@ -6,6 +6,8 @@
 \RequirePackage{mathpazo}
 \RequirePackage[euler-digits,euler-hat-accent]{eulervm}
 \RequirePackage[english,spanish,es-nodecimaldot]{babel}
+\RequirePackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\RequirePackage{csquotes}
 \RequirePackage{subcaption}
 \RequirePackage[intlimits]{amsmath}
 \RequirePackage{amsfonts,amssymb}
@@ -42,7 +44,7 @@
             bookmarksnumbered=true,
             breaklinks=true,
             linktocpage=false,
-            pagebackref=true,
+            pagebackref=false,
             pdftitle={Desarrollo de un instrumento para la detección de neutrones solares en la cima
 						del Volcán Sierra Negra},
             pdfauthor={Marcos Alfonso Anzorena Méndez},
