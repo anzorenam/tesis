@@ -96,7 +96,7 @@ Existen diversas teorías para explicar la aceleración de partículas en la atm
 
 Para lograr diferenciar entre estos modelos, las observaciones de los productos secundarios es de vital importancia. Cuando las partículas cargadas son aceleradas, éstas emiten radiación electromagnética y partículas secundarias cuando interaccionan en el atmósfera solar. Para ejemplificar esto podemos decir los siguiente: se cree que radiación sincrotrón produce en el corona solar ondas de radio frecuencia, mientras que la interacción de electrones rápidos (los cuales viajan a $1/3$ de la velocidad de la luz) con protones del medio produce rayos X. Los electrones energéticos también emiten fotones en el rango de rayos X duros y rayos $\gamma$. Los iones energéticos que interactúan en la atmósfera solar producen partículas neutras energéticas; neutrones y rayos $\gamma$. Son estos dos tipos de emisiones las que nos brindan la información más confiable sobre la aceleración de iones en el Sol \nocite{diegophd,tsuchiyaphd}.
 
-A continuación
+En lo que resta de este capítulo describiré las características de las observaciones de rayos $\gamma$ y neutrones. No obstante, para poder tratar correctamente el tema de las observaciones de neutrones, primeramente hablaré de la propagación de estas partículas en el espacio interplanetario y la atmósfera terrestre.
 
 \section{Observaciones de rayos $\gamma$ solares}
 
@@ -108,16 +108,38 @@ Los emisiones de rayos $\gamma$ provenientes del Sol están relacionadas con div
   \item decaimiento de $\pi^{0}$, con una energía de alrededor \SI{70}{\mega\electronvolt}.
 \end{enumerate*}
 
+Asociados a la aceleración de iones, son generadas una gran variedad de líneas de rayos $\gamma$ a partir de interacciones nucleares, como por ejemplo la línea de captura neutrones para formar \ce{^{2}H} a  \SI{2.223}{\mega\electronvolt} o núcleos excitados (\ce{O}, \ce{N}, \ce{C}, etc.\,). Rayos $\gamma$ con energías $>\SI{10}{\mega\electronvolt}$ son producidos por el decaimiento de piones neutrones ($\pi^{0}\rightarrow 2\gamma$) además de Bremsstrahlung asociado $e^{+}$ y $e^{-}$ provenientes del decaimiento de piones cargados ($\pi^{\pm}\rightarrow\mu+\nu$; $\mu^{\pm}\rightarrow e^{\pm}+\nu+\bar{\nu}$). Los piones a su vez son producto dispersiones ineslásticas entre los iones acelerados y la materia en la atmósfera ($p^{+}+p^{+}\rightarrow d+\pi^{+}$, $p^{+}+p^{+}\rightarrow n+p^{+}+\pi^{+}$, $p^{+}+p^{+}\rightarrow p^{+}+p^{+}+\pi^{0}$). Luego entonces el espectro de energía de los rayos $\gamma$ asociados a una fulguración exhibe características de espectro continuo y de líneas.
 
+La figura \ref{fig:gamma-espectro} muestra un ejemplo del espectro de rayos $\gamma$ asociado a una ráfaga el \num{4} de Junio de \num{1991}, el cual fue observado por el satélite CGRO \cite{murphy94}. El espectro de líneas va desde los \num{0.5} hasta los \SI{8}{\mega\electronvolt}, mientras que la contribución del continuo se extiende más allá de lo \SI{10}{\mega\electronvolt}.
+
+Las lineas a \SI{511}{\kilo\electronvolt} provenientes de la aniquilación $e^{+}$/$e^{-}$ fueron observadas por el satélite OSO-7 durante la década de los \num{70}, mientras que la observación de líneas de desexcitación fue posible hasta la siguiente década por el satélite Solar maximum mission (SMM). Este satelite además logro observar varios eventos relacionados con la fulguraciones, lo cual permitió establecer mejor las relaciones entre las líneas espectrales y las partículas aceleradas.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.75\textwidth,angle=90]{gamma-espectro.eps}
+        \caption{Espectro de rayos $\gamma$ solares asociados a la explosión del \num{4} de Junio de \num{1991}. Imagen tomada de \url{https://heasarc.gsfc.nasa.gov}}
+        \label{fig:gamma-espectro}
+\end{figure}
+
+A partir de la década de los noventa, observaciones en una amplio espectro (\SI{10}{\kilo\electronvolt} a \SI{30}{\giga\electronvolt}) de energías se llevaron a cabo por cuatro misiones nuevas: BASTE, OSSE, COMPTEL y EGRET. Del año \num{2000} a la fecha, dos satélites se han convertido en los principales pioneros de la observación de rayos $\gamma$: RHESSI (Reuven Ramaty High Energy Solar Spectroscopic Imager) y \emph{Fermi} (Fermi Gamma-ray Space Telescope).
+
+El satélite RHESSI ha abierto una nueva era en las investigaciones de la aceleración de partículas en el Sol. La principal característica de este telescopio es su capacidad de producir imágenes de la atmósfera solar con una excelente resolución en un rango de energías de \SI{3}{\kilo\electronvolt} a \SI{20}{\electronvolt}. Con estas propiedades RHESSI dio la primera evidencia de sobre la localización del sitio de aceleración de los iones energéticos a través de la observación en rayos $\gamma$ \cite{hurford03,hurford06}. La figura \ref{fig:flare-foot} muestra las los \emph{footprints} donde se origina la aceleración de iones/electrones. La imagen compuesta está sobrepuesta en una fotografía tomada por el instrumento TRACE en la banda de \SI{19.5}{\nano\metre} (útil para observar la corona y plasma caliente). Estas observaciones demuestran que el sitio de aceleración es cercano a la región de la explosión, lo cual apuntaría a que está relacionada con el proceso de reconexión magnética. No obstante, no es posible explicar la diferencia entre la región de aceleración de los iones y electrones (del orden de \SI{10}{\mega\metre}).
 
 \begin{figure}
         \centering
         \includegraphics[width=0.75\textwidth]{flare-footprints}
-        \caption{Imagen compuesta de observaciones en rayos \emph{X} y $\gamma$ de la ráfaga solar ocurrida el \num{28} de Octubre de \num{2003}. Los contornos azules y rojos muestran la zona donde se aceleran la partículas dentro de la región activa que produjo la ráfaga.}
+        \caption{Imagen compuesta de observaciones en rayos \emph{X} y $\gamma$ de la ráfaga solar ocurrida el \num{28} de Octubre de \num{2003}. Los contornos azules y rojos muestran la zona donde se aceleran la partículas (iones y electrones, respectivamente) dentro de la región activa que produjo la ráfaga.}
         \label{fig:flare-foot}
 \end{figure}
 
-\section{Propagación de neutrones solares}
+El satélite Fermi fue lanzado en \num{2008} y cuenta con dos instrumentos: el GBM (Gamma-ray burst monitor) y el LAT (Large-area telescope). GBM es un contador de rayos $\gamma$ que se compone de dos cristales de \ce{BGO} y \num{14} centellarodres de \ce{NaI}, que en conjunto permiten analizar el espectro de radiación en un rango de \SI{8}{\kilo\electronvolt} a \SI{40}{\mega\electronvolt}. Por otro lado el instrumento LAT es un telescopio de conversión de pares y es sensible en el rango de \SI{20}{\mega\electronvolt} a $>\SI{300}{\giga\electronvolt}$. Es importante recalcar que mientras el LAT es instrumento capaz apuntar en una cierta dirección, el GBM solo es capaz de observar incrementos en el número de partículas.
+
+Desde su lanzamiento el instrumento LAT ha detectado tanto eventos impulsivos como eventos de larga duración, asociados con ráfagas del tipo X y M. Un descubrimiento importante dentro de estas observaciones son las emisiones de larga duración, las cuales pueden durar más de \SI{12}{\hour}, y son registradas en los rayos $\gamma$ de más alta energía ($>\SI{100}{\mega\electronvolt}$) \cite{ackermann14}. Un aspecto importante de este tipo de emisiones es que no se observan en la misma escala de tiempo en otras longitudes de onda.
+
+En \cite{ackermann14} también se discute la posibilidad del origen de la emisión de larga duración, lo cual se hace con base en los datos del LAT asociados a una explosión ocurrida el \num{7} de Marzo de \num{2011}. En ésta se detectaron rayos $\gamma$ de hasta \SI{1}{\giga\electronvolt}, posible prueba de que fueron generados por decaimiento de $\pi^{0}$ y que la energía de los protones primarios sería del orden de \SI{5}{\giga\electronvolt}. En contraste, si la emisión es ocasionada por Bremsstrahlung de electrones energéticos, el espectro de éstos últimos debe extenderse más allá de \SI{1}{\giga\electronvolt}. Esta segunda opción resulta más compleja de empatar con otros observaciones, por lo que el decaimiento de piones parece un escenario más probable.
+
+\section{Observación de neutrones solares}
+\subsection{Propagación de neutrones solares}
 
 Cuando los neutrones escapan de la atmósfera solar viajan sin ser afectados por los campos magnéticos en el medio interplanetario. Los neutrones libres son inestables y están sujetos a decaimiento $\beta$ con una vida media de $\tau=\SI{880.3}{\second}$. Debido a esto, el espectro de neutrones que arriban a la orbita terrestre se modifica, afectando principalmente a los neutrones de baja energía. Para tener un modelo cuantitativo de este efecto usaremos la siguiente expresión; la probabilidad de que una partícula con $\tau$ tiempo de vida media, sobreviva y alcance la Tierra sin decaer:
 
@@ -125,7 +147,7 @@ Cuando los neutrones escapan de la atmósfera solar viajan sin ser afectados por
 P\left(E_{k},r\right)=\exp\left(-\frac{t}{\gamma\tau}\right)
 \end{equation}
 
-en donde $E_{k}$ es la energía cinética de la partícula, $r$ es la distancia a la fuente (para neutrones solares $r=\SI{1}{AU}$), $t$ es el tiempo de vuelo de la partícula y $\gamma$ es factor de Lorentz. Denominaremos $P(E_{k},1AU)$ como la probabilidad de arribo de neutrones. Para neutrones con energías cinéticas $E_{k}=\SI{100}{\mega\electronvolt}$ el tiempo de vuelo es de aproximadamente \SI{1165}{\second}, con lo cual decaen el \SI{70}{\percent} de las partículas emitidas. Luego entonces, los neutrones solares con esta energía pueden ser detectados en el espacio o en superficie. Un aspecto interesante es que los productos del decaimiento (protones y electrones) también se observan, siempre y cuando se logren distinguir de la emisión de protones solares; lo cual se ha reportado con anterioridad --citas.
+en donde $E_{k}$ es la energía cinética de la partícula, $r$ es la distancia a la fuente (para neutrones solares $r=\SI{1}{AU}$), $t$ es el tiempo de vuelo de la partícula y $\gamma$ es factor de Lorentz. Denominaremos $P(E_{k},1AU)$ como la probabilidad de arribo de neutrones. Para neutrones con energías cinéticas $E_{k}=\SI{100}{\mega\electronvolt}$ el tiempo de vuelo es de aproximadamente \SI{1165}{\second}, con lo cual decaen el \SI{70}{\percent} de las partículas emitidas. Luego entonces, los neutrones solares con esta energía pueden ser detectados en el espacio o en superficie. Un aspecto interesante es que los productos del decaimiento (protones y electrones) también se observan, siempre y cuando se logren distinguir de la emisión de protones solares; lo cual se ha reportado con anterioridad \cite{evenson83,agueda11}.
 
 El panel de la izquierda en la figura \ref{fig:neutron-prob} muestra la probabilidad de arribo de neutrones en el rango de energías de \num{10}-\SI{1000}{\mega\electronvolt}. La utilidad de esta gráfica viene de que puede ser utilizada como función de respuesta para corregir el espectro de energías de neutrones solares observado en el Tierra. Como se observa en la figura, en principio es posible detectar neutrones de bajas energías, sin embargo más adelante veremos que la principal limitante es la atenuación atmosférica. El panel de la derecha muestra el tiempo de vuelo en función de la energía cinética de los neutrones.
 
@@ -158,9 +180,9 @@ Otra característica importante a estudiar es el perfil temporal de los neutrone
         \label{fig:neutron-time}
 \end{figure}
 
-\section{Observaciones de neutrones solares}
+\subsection{Observaciones en el espacio y superficie}
 
-La primera prueba científica sobre la existencia de neutrones solares fue dada por \cite{chupp82}, en relación con la fulguración del \num{21} de Junio de \num{1980} a las 13:18:20 UT. El evento fue registrado el espectrómetro de rayos $\gamma$ del satélite \emph{Solar maximum mission}, con un incremento total de $130\sigma$. El espectrómetro (\emph{GRS} por sus siglas en inglés) está compuesto de \num{7} detectores de \ce{NaI(Tl)} los cuales registran rayos $\gamma$ y un detector de \ce{CsI(Na)} con un espesor de \SI{25}{\centi\metre}; además de un sistema de anti-coincidencias.
+La primera prueba científica sobre la existencia de neutrones solares fue dada por \cite{chupp82}, en relación con la fulguración del \num{21} de Junio de \num{1980} a las 13:18:20 UT. El evento fue registrado el espectrómetro de rayos $\gamma$ del satélite SMM, con un incremento total de $130\sigma$. El espectrómetro (\emph{GRS} por sus siglas en inglés) está compuesto de \num{7} detectores de \ce{NaI(Tl)} los cuales registran rayos $\gamma$ y un detector de \ce{CsI(Na)} con un espesor de \SI{25}{\centi\metre}; además de un sistema de anti-coincidencias.
 
 Los datos del \emph{GRS} registran tanto rayos $\gamma$ como neutrones con energías mayores a los \SI{100}{\mega\electronvolt}, lo cual brinda pruebas de aceleración de iones a energías del orden de los \si{\giga\electronvolt}. La figura \ref{fig:solar-neutrons} muestra el perfil temporal del \emph{GRS} en dos bandas de deposición de energía: en panel superior de \num{10} a \SI{140}{\mega\electronvolt} y el panel inferior de \num{25} a \SI{140}{\mega\electronvolt}.
 

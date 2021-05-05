@@ -43,8 +43,8 @@
             breaklinks=true,
             linktocpage=false,
             pagebackref=true,
-            pdftitle={Desarrollo de un instrumento para la detección de neutrones
-solares utilizando discriminación de forma de pulso en el Telescopio de Neutrones solares en Sierra Negra, Puebla.},
+            pdftitle={Desarrollo de un instrumento para la detección de neutrones solares en la cima
+						del Volcán Sierra Negra},
             pdfauthor={Marcos Alfonso Anzorena Méndez},
             pdfsubject={Tesis de doctorado},
             colorlinks=true,
