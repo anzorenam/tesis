@@ -1,0 +1,34 @@
+\documentclass[margin=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+\usepackage{mathpazo}
+\usepackage[euler-digits,euler-hat-accent]{eulervm}
+
+\begin{document}
+\tdplotsetmaincoords{80}{120}
+\pgfmathsetmacro{\radius}{1}
+\pgfmathsetmacro{\thetavec}{45}
+\pgfmathsetmacro{\phivec}{0}
+\pgfmathsetmacro{\cx}{0.2}
+\pgfmathsetmacro{\cy}{0.2}
+\pgfmathsetmacro{\cz}{0.2}
+
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+\draw[->] (0,0,0)--(1.25,0,0) node[anchor=north]{$x$};
+\draw[->] (0,0,0)--(0,1.25,0) node[anchor=north west]{$y$};
+\draw[->] (0,0,0)--(0,0,1.25) node[anchor=south]{$z$};
+\draw[dashed] (0,0,0)--({1/sqrt(3)},{1/sqrt(3)},{1/sqrt(3)}) node[anchor=east]{$p_{0}$};
+\draw[dashed] (0,0,0)--({1/sqrt(3)},{1/sqrt(3)},0)--++(0,0,{1/sqrt(3)});
+\draw[black,fill=blue,opacity=0.5] (\cx/2,\cy/2,\cz)-- ++(0,-\cy,0)-- ++(-\cx,0,0)-- ++(0,\cy,0) -- cycle;
+\draw[black,fill=blue,opacity=0.5] (\cx/2,\cy/2,\cz)-- ++(0,0,-\cz)-- ++(-\cx,0,0)-- ++(0,0,\cz) -- cycle;
+\draw[black,fill=blue,opacity=0.5] (\cx/2,\cy/2,\cz)-- ++(0,0,-\cz)-- ++(0,-\cy,0)-- ++(0,0,\cz) -- cycle;
+\draw ({1/sqrt(3)},{1/sqrt(3)},{1/sqrt(3)}) node [circle,fill=orange,opacity=0.75,inner sep=.05cm] () {};
+
+\tdplotsetthetaplanecoords{\phivec}
+\draw[dashed] (\radius,0,0) arc (0:360:\radius);
+\shade[ball color=blue!10!white,opacity=0.1] (1cm,0) arc (0:-180:1cm and 1.7mm) arc (180:0:1cm and 1cm);
+\draw (0,0,0) node [circle,fill=black,inner sep=.025cm] () {};
+
+\end{tikzpicture}
+\end{document}
