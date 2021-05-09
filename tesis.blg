@@ -1,68 +1,21 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/Arch Linux)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: tesis.aux
-A level-1 auxiliary file: portada.aux
-A level-1 auxiliary file: resumen.aux
-A level-1 auxiliary file: cap1.aux
-A level-1 auxiliary file: cap2.aux
-A level-1 auxiliary file: cap3.aux
-A level-1 auxiliary file: cap4.aux
-The style file: unsrt.bst
-Database file #1: tesis.bib
-I was expecting a `,' or a `}'---line 386 of file tesis.bib
- : 
- : doi={10.1016/j.nima.2021.165326},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 395 of file tesis.bib
- : 
- : doi={10.1038/158081a0},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 438 of file tesis.bib
- : @article{masuda
- :                ,
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ohkawa76"
-You've used 49 entries,
-            1791 wiz_defined-function locations,
-            728 strings with 9951 characters,
-and the built_in function-call counts, 9591 in all, are:
-= -- 884
-> -- 312
-< -- 1
-+ -- 127
-- -- 78
-* -- 530
-:= -- 1578
-add.period$ -- 148
-call.type$ -- 49
-change.case$ -- 42
-chr.to.int$ -- 0
-cite$ -- 49
-duplicate$ -- 444
-empty$ -- 1019
-format.name$ -- 78
-if$ -- 2176
-int.to.chr$ -- 0
-int.to.str$ -- 49
-missing$ -- 46
-newline$ -- 249
-num.names$ -- 49
-pop$ -- 98
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 176
-stack$ -- 0
-substring$ -- 676
-swap$ -- 59
-text.length$ -- 1
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 82
-width$ -- 51
-write$ -- 539
-(There were 3 error messages)
+[0] Config.pm:312> INFO - This is Biber 2.15
+[0] Config.pm:315> INFO - Logfile is 'tesis.blg'
+[128] biber:330> INFO - === dom may  9, 2021, 00:51:15
+[149] Biber.pm:415> INFO - Reading 'tesis.bcf'
+[257] Biber.pm:952> INFO - Found 63 citekeys in bib section 0
+[277] Biber.pm:4334> INFO - Processing section 0
+[292] Biber.pm:4523> INFO - Looking for bibtex format file 'tesis.bib' for section 0
+[296] bibtex.pm:1682> INFO - LaTeX decoding ...
+[447] bibtex.pm:1494> INFO - Found BibTeX data source 'tesis.bib'
+[513] Utils.pm:395> WARN - year field '{(2011), 6}' in entry 'shiba11' is not an integer - this will probably not sort properly.
+[617] Utils.pm:395> WARN - year field '{2010}' in entry 'dorman' is not an integer - this will probably not sort properly.
+[647] Utils.pm:395> WARN - year field '{2010}' in entry 'barrantes18' is not an integer - this will probably not sort properly.
+[668] Utils.pm:395> WARN - year field '{2015}' in entry 'mirosh15' is not an integer - this will probably not sort properly.
+[780] Utils.pm:395> WARN - year field '{2007}' in entry 'hama07' is not an integer - this will probably not sort properly.
+[783] Utils.pm:395> WARN - year field '{2007}' in entry 'syed07' is not an integer - this will probably not sort properly.
+[918] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[918] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[918] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[972] bbl.pm:651> INFO - Writing 'tesis.bbl' with encoding 'UTF-8'
+[1005] bbl.pm:754> INFO - Output to tesis.bbl
+[1005] Biber.pm:128> INFO - WARNINGS: 6

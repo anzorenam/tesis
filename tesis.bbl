@@ -1,295 +1,1784 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{giovanelli}
-R.~G. Giovanelli.
-\newblock {A Theory of Chromospheric Flares}.
-\newblock {\em Nature}, 158:81--82, 1946.
 
-\bibitem{hoyle}
-F.~Hoyle.
-\newblock {Some Recent Researches in Solar Physics}.
-\newblock {\em Cambridge University Press}, 1950.
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{giovanelli}{article}{}
+      \name{author}{1}{}{%
+        {{hash=104686abf79a67905e807021ce3c5033}{%
+           family={Giovanelli},
+           familyi={G\bibinitperiod},
+           given={R.\bibnamedelimi G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{104686abf79a67905e807021ce3c5033}
+      \strng{fullhash}{104686abf79a67905e807021ce3c5033}
+      \strng{bibnamehash}{104686abf79a67905e807021ce3c5033}
+      \strng{authorbibnamehash}{104686abf79a67905e807021ce3c5033}
+      \strng{authornamehash}{104686abf79a67905e807021ce3c5033}
+      \strng{authorfullhash}{104686abf79a67905e807021ce3c5033}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{{A Theory of Chromospheric Flares}}
+      \field{volume}{158}
+      \field{year}{1946}
+      \field{pages}{81\bibrangedash 82}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1038/158081a0
+      \endverb
+    \endentry
+    \entry{hoyle}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2196b23ff7728fcfd60b60e9109b9f2f}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{2196b23ff7728fcfd60b60e9109b9f2f}
+      \strng{fullhash}{2196b23ff7728fcfd60b60e9109b9f2f}
+      \strng{bibnamehash}{2196b23ff7728fcfd60b60e9109b9f2f}
+      \strng{authorbibnamehash}{2196b23ff7728fcfd60b60e9109b9f2f}
+      \strng{authornamehash}{2196b23ff7728fcfd60b60e9109b9f2f}
+      \strng{authorfullhash}{2196b23ff7728fcfd60b60e9109b9f2f}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cambridge University Press}
+      \field{title}{{Some Recent Researches in Solar Physics}}
+      \field{year}{1950}
+      \verb{doi}
+      \verb 10.1002/qj.49707632720
+      \endverb
+    \endentry
+    \entry{sweet}{article}{}
+      \name{author}{1}{}{%
+        {{hash=799eb6224a8f7b190bac8f3884a865eb}{%
+           family={Sweet},
+           familyi={S\bibinitperiod},
+           given={P.\bibnamedelimi A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{799eb6224a8f7b190bac8f3884a865eb}
+      \strng{fullhash}{799eb6224a8f7b190bac8f3884a865eb}
+      \strng{bibnamehash}{799eb6224a8f7b190bac8f3884a865eb}
+      \strng{authorbibnamehash}{799eb6224a8f7b190bac8f3884a865eb}
+      \strng{authornamehash}{799eb6224a8f7b190bac8f3884a865eb}
+      \strng{authorfullhash}{799eb6224a8f7b190bac8f3884a865eb}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cambridge University Press}
+      \field{title}{{The neutral point theory of solar flares}}
+      \field{year}{1958}
+      \field{pages}{123\bibrangedash 134}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1017/S0074180900237704
+      \endverb
+    \endentry
+    \entry{parker}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1b8298bb4e7ccf76c3e1a5f988f5cd97}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={E.\bibnamedelimi N.},
+           giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b8298bb4e7ccf76c3e1a5f988f5cd97}
+      \strng{fullhash}{1b8298bb4e7ccf76c3e1a5f988f5cd97}
+      \strng{bibnamehash}{1b8298bb4e7ccf76c3e1a5f988f5cd97}
+      \strng{authorbibnamehash}{1b8298bb4e7ccf76c3e1a5f988f5cd97}
+      \strng{authornamehash}{1b8298bb4e7ccf76c3e1a5f988f5cd97}
+      \strng{authorfullhash}{1b8298bb4e7ccf76c3e1a5f988f5cd97}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Geophysical Research}
+      \field{title}{{Sweet’s mechanism for merging magnetic fields in conducting fluids}}
+      \field{volume}{62(4)}
+      \field{year}{1957}
+      \field{pages}{509\bibrangedash 520}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1029/JZ062i004p00509
+      \endverb
+    \endentry
+    \entry{shiba11}{article}{}
+      \name{author}{1}{}{%
+        {{hash=18cc6bd834ccf8f347508a02bc14bb95}{%
+           family={{Shibata, K. y Magara, T.}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{18cc6bd834ccf8f347508a02bc14bb95}
+      \strng{fullhash}{18cc6bd834ccf8f347508a02bc14bb95}
+      \strng{bibnamehash}{18cc6bd834ccf8f347508a02bc14bb95}
+      \strng{authorbibnamehash}{18cc6bd834ccf8f347508a02bc14bb95}
+      \strng{authornamehash}{18cc6bd834ccf8f347508a02bc14bb95}
+      \strng{authorfullhash}{18cc6bd834ccf8f347508a02bc14bb95}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{Living Rev.\, Solar Phys.}}
+      \field{note}{{[Online article]: cited [21-Ene-2014] \url{http://www.livingreviews.org/lrsp-2011-6}}}
+      \field{title}{{{Solar flares: Magnetohydrodynamic processes}}}
+      \field{volume}{{8}}
+      \field{year}{{(2011), 6}}
+    \endentry
+    \entry{masuda}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=9c452ff6c09d768328db4013a6d1cab8}{%
+           family={Masuda},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7017c364611b90cafbb1eaeb001a42f7}
+      \strng{fullhash}{7017c364611b90cafbb1eaeb001a42f7}
+      \strng{bibnamehash}{7017c364611b90cafbb1eaeb001a42f7}
+      \strng{authorbibnamehash}{7017c364611b90cafbb1eaeb001a42f7}
+      \strng{authornamehash}{7017c364611b90cafbb1eaeb001a42f7}
+      \strng{authorfullhash}{7017c364611b90cafbb1eaeb001a42f7}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{{A loop-top hard x-ray source in a compact solar flare as evidence for magnetic reconnection}}
+      \field{volume}{371}
+      \field{year}{1994}
+      \field{pages}{495\bibrangedash 497}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1038/371495a0
+      \endverb
+    \endentry
+    \entry{tsuneta}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=a5e95cf695d3b9c172dc13cf373c43d1}{%
+           family={Tsuneta},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{20d001d40afa0276d675daed8b4e9549}
+      \strng{fullhash}{20d001d40afa0276d675daed8b4e9549}
+      \strng{bibnamehash}{20d001d40afa0276d675daed8b4e9549}
+      \strng{authorbibnamehash}{20d001d40afa0276d675daed8b4e9549}
+      \strng{authornamehash}{20d001d40afa0276d675daed8b4e9549}
+      \strng{authorfullhash}{20d001d40afa0276d675daed8b4e9549}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Publications of the Astronomical Society of Japan}
+      \field{title}{{Observation of a solar flare at the limb with the YOHKOH Soft X-ray Telescope}}
+      \field{volume}{44(5)}
+      \field{year}{1992}
+      \field{pages}{L63\bibrangedash L69}
+      \range{pages}{-1}
+    \endentry
+    \entry{yokoyama}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a307402848115a082f288991f0ef0476}{%
+           family={Yokoyama},
+           familyi={Y\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=33ca251d19ad4b2d04ec4c6044ea604c}{%
+           family={Shibata},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{38b913311b8eb89d425490c3adf45ec6}
+      \strng{fullhash}{38b913311b8eb89d425490c3adf45ec6}
+      \strng{bibnamehash}{38b913311b8eb89d425490c3adf45ec6}
+      \strng{authorbibnamehash}{38b913311b8eb89d425490c3adf45ec6}
+      \strng{authornamehash}{38b913311b8eb89d425490c3adf45ec6}
+      \strng{authorfullhash}{38b913311b8eb89d425490c3adf45ec6}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{Magnetohydrodynamic Simulation of a Solar Flare with Chromospheric Evaporation Effect Based on the Magnetic Reconnection Model}}
+      \field{volume}{549}
+      \field{year}{2001}
+      \field{pages}{1160\bibrangedash 1174}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1086/319440
+      \endverb
+    \endentry
+    \entry{bierman51}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a5ade8a3588a5dc2dd1d1759d3635cc3}{%
+           family={Bierman},
+           familyi={B\bibinitperiod},
+           given={V.\bibnamedelimi L.},
+           giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=51446aa398afe51e23c1ce455c78832e}{%
+           family={Haxel},
+           familyi={H\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{hash=2a7e0c1e7dcf81420fdc9aa703164db5}{%
+           family={Schlüter},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d7190cd7e59bfc25c9e4551fa77c7221}
+      \strng{fullhash}{d7190cd7e59bfc25c9e4551fa77c7221}
+      \strng{bibnamehash}{d7190cd7e59bfc25c9e4551fa77c7221}
+      \strng{authorbibnamehash}{d7190cd7e59bfc25c9e4551fa77c7221}
+      \strng{authornamehash}{d7190cd7e59bfc25c9e4551fa77c7221}
+      \strng{authorfullhash}{d7190cd7e59bfc25c9e4551fa77c7221}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Zeitschrift für Naturforschung}
+      \field{title}{{Neutral cosmic rays produced in the Sun}}
+      \field{volume}{6a}
+      \field{year}{1951}
+      \field{pages}{47\bibrangedash 48}
+      \range{pages}{2}
+    \endentry
+    \entry{morrison58}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b7c4441105701dafd7204d7ad1d7817a}{%
+           family={Morrison},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7c4441105701dafd7204d7ad1d7817a}
+      \strng{fullhash}{b7c4441105701dafd7204d7ad1d7817a}
+      \strng{bibnamehash}{b7c4441105701dafd7204d7ad1d7817a}
+      \strng{authorbibnamehash}{b7c4441105701dafd7204d7ad1d7817a}
+      \strng{authornamehash}{b7c4441105701dafd7204d7ad1d7817a}
+      \strng{authorfullhash}{b7c4441105701dafd7204d7ad1d7817a}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Il Nuovo Cimento}
+      \field{title}{{On gamma ray astronomi}}
+      \field{volume}{7(6)}
+      \field{year}{1958}
+      \field{pages}{858\bibrangedash 865}
+      \range{pages}{8}
+    \endentry
+    \entry{lingen67}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9191baec8cd40288eb8e2cd8c0ea6c3a}{%
+           family={Lingenfelter},
+           familyi={L\bibinitperiod},
+           given={R.\bibnamedelimi E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=a04719fe0352ef0a5a9770da27af50a8}{%
+           family={Ramaty},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff6a95ba7fd07f83f01a713e50cca2b3}
+      \strng{fullhash}{ff6a95ba7fd07f83f01a713e50cca2b3}
+      \strng{bibnamehash}{ff6a95ba7fd07f83f01a713e50cca2b3}
+      \strng{authorbibnamehash}{ff6a95ba7fd07f83f01a713e50cca2b3}
+      \strng{authornamehash}{ff6a95ba7fd07f83f01a713e50cca2b3}
+      \strng{authorfullhash}{ff6a95ba7fd07f83f01a713e50cca2b3}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{High-Energy Nuclear Reactions in Astrophysics: A collection of articles}
+      \field{title}{{High Energy Nuclear Reactions in Solar Flares}}
+      \field{year}{1967}
+      \field{pages}{99\bibrangedash 158}
+      \range{pages}{60}
+    \endentry
+    \entry{shea71}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cf7a1e3d83f1060d2266901692bb09fc}{%
+           family={Smart},
+           familyi={S\bibinitperiod},
+           given={D.\bibnamedelimi F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=71d6d7bdc34bab229f21eb30cc0ef84f}{%
+           family={Shea},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e06a46ca5601873e1d13b9fb56087b21}
+      \strng{fullhash}{e06a46ca5601873e1d13b9fb56087b21}
+      \strng{bibnamehash}{e06a46ca5601873e1d13b9fb56087b21}
+      \strng{authorbibnamehash}{e06a46ca5601873e1d13b9fb56087b21}
+      \strng{authornamehash}{e06a46ca5601873e1d13b9fb56087b21}
+      \strng{authorfullhash}{e06a46ca5601873e1d13b9fb56087b21}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Solar Physics}
+      \field{title}{{Solar proton event classification systems}}
+      \field{volume}{16}
+      \field{year}{1971}
+      \field{pages}{484\bibrangedash 487}
+      \range{pages}{4}
+    \endentry
+    \entry{diegophd}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9d10b7cfe846d71a2d72219b2b1e3c46}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Nagoya University}%
+      }
+      \strng{namehash}{9d10b7cfe846d71a2d72219b2b1e3c46}
+      \strng{fullhash}{9d10b7cfe846d71a2d72219b2b1e3c46}
+      \strng{bibnamehash}{9d10b7cfe846d71a2d72219b2b1e3c46}
+      \strng{authorbibnamehash}{9d10b7cfe846d71a2d72219b2b1e3c46}
+      \strng{authornamehash}{9d10b7cfe846d71a2d72219b2b1e3c46}
+      \strng{authorfullhash}{9d10b7cfe846d71a2d72219b2b1e3c46}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Estimation of the neutron emissions during the large flares of solar cycle 24}}
+      \field{type}{phdthesis}
+      \field{year}{2016}
+      \true{nocite}
+    \endentry
+    \entry{tsuchiyaphd}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=51b3a525030afeab6aab60ca0e70d4cd}{%
+           family={Tsuchiya},
+           familyi={T\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Nagoya University}%
+      }
+      \strng{namehash}{51b3a525030afeab6aab60ca0e70d4cd}
+      \strng{fullhash}{51b3a525030afeab6aab60ca0e70d4cd}
+      \strng{bibnamehash}{51b3a525030afeab6aab60ca0e70d4cd}
+      \strng{authorbibnamehash}{51b3a525030afeab6aab60ca0e70d4cd}
+      \strng{authornamehash}{51b3a525030afeab6aab60ca0e70d4cd}
+      \strng{authorfullhash}{51b3a525030afeab6aab60ca0e70d4cd}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Observation of solar neutrons in association with solar flare using an international network of a new type of solar neutron detector}}
+      \field{type}{phdthesis}
+      \field{year}{2001}
+      \true{nocite}
+    \endentry
+    \entry{murphy94}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=f8f5e5a551848119dce7068496ab47ee}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca9bf046d1ba5cf8e5b4b9171b973d36}
+      \strng{fullhash}{ca9bf046d1ba5cf8e5b4b9171b973d36}
+      \strng{bibnamehash}{ca9bf046d1ba5cf8e5b4b9171b973d36}
+      \strng{authorbibnamehash}{ca9bf046d1ba5cf8e5b4b9171b973d36}
+      \strng{authornamehash}{ca9bf046d1ba5cf8e5b4b9171b973d36}
+      \strng{authorfullhash}{ca9bf046d1ba5cf8e5b4b9171b973d36}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AIP Conference Proceedings}
+      \field{title}{{OSSE observations of the 4 June 1991 solar flare}}
+      \field{year}{1994}
+      \verb{doi}
+      \verb 10.1063/1.45214
+      \endverb
+    \endentry
+    \entry{hurford03}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b0288dde8a4acfae21fc6e34ed420b08}{%
+           family={Hurford},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{fullhash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{bibnamehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{authorbibnamehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{authornamehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{authorfullhash}{86d64d56c03c38152b41b4682ebd0703}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{First Gamma-Ray Images of a Solar Flare}}
+      \field{volume}{595(2)}
+      \field{year}{2003}
+      \field{pages}{L77\bibrangedash L80}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1086/378179
+      \endverb
+    \endentry
+    \entry{hurford06}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b0288dde8a4acfae21fc6e34ed420b08}{%
+           family={Hurford},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{fullhash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{bibnamehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{authorbibnamehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{authornamehash}{86d64d56c03c38152b41b4682ebd0703}
+      \strng{authorfullhash}{86d64d56c03c38152b41b4682ebd0703}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{Gamma-Ray Imaging of the 2003 October/November Solar Flares}}
+      \field{volume}{644(1)}
+      \field{year}{2006}
+      \field{pages}{L93\bibrangedash L96}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1086/505329
+      \endverb
+    \endentry
+    \entry{ackermann14}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=682d80d4153127d79ca8c4c06bde6d1d}{%
+           family={Ackermann},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9169b6dce3bf436f6536ef3e11b2afa}
+      \strng{fullhash}{c9169b6dce3bf436f6536ef3e11b2afa}
+      \strng{bibnamehash}{c9169b6dce3bf436f6536ef3e11b2afa}
+      \strng{authorbibnamehash}{c9169b6dce3bf436f6536ef3e11b2afa}
+      \strng{authornamehash}{c9169b6dce3bf436f6536ef3e11b2afa}
+      \strng{authorfullhash}{c9169b6dce3bf436f6536ef3e11b2afa}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{High-energy gamma-ray emission from solar flares: Summary of Fermi Large Area Telescope detections and analysis of two M-class flares}}
+      \field{volume}{787(15)}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.1088/0004-637X/787/1/15
+      \endverb
+    \endentry
+    \entry{evenson83}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=56051d4ae707495acacfb59b7e862474}{%
+           family={Evenson},
+           familyi={E\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7f443fff1582e0e41d1cdf761d52672}
+      \strng{fullhash}{c7f443fff1582e0e41d1cdf761d52672}
+      \strng{bibnamehash}{c7f443fff1582e0e41d1cdf761d52672}
+      \strng{authorbibnamehash}{c7f443fff1582e0e41d1cdf761d52672}
+      \strng{authornamehash}{c7f443fff1582e0e41d1cdf761d52672}
+      \strng{authorfullhash}{c7f443fff1582e0e41d1cdf761d52672}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{Protons from the decay of solar flare neutrons}}
+      \field{volume}{274(2)}
+      \field{year}{1983}
+      \field{pages}{875\bibrangedash 882}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1086/161500
+      \endverb
+    \endentry
+    \entry{agueda11}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=a7f3c178539b3cdd6b2e72678eaf446b}{%
+           family={Agueda},
+           familyi={A\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6133744cb2484ccd212c8b2fa5aa197e}
+      \strng{fullhash}{6133744cb2484ccd212c8b2fa5aa197e}
+      \strng{bibnamehash}{6133744cb2484ccd212c8b2fa5aa197e}
+      \strng{authorbibnamehash}{6133744cb2484ccd212c8b2fa5aa197e}
+      \strng{authornamehash}{6133744cb2484ccd212c8b2fa5aa197e}
+      \strng{authorfullhash}{6133744cb2484ccd212c8b2fa5aa197e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{On the near-earth observation of protons and electrons from the decay of low-energy solar flare neutrons}}
+      \field{volume}{737(2)}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1088/0004-637X/737/2/53
+      \endverb
+    \endentry
+    \entry{shibata94}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0f81247ea26b831c56f7b0cba1994be4}{%
+           family={Shibata},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f81247ea26b831c56f7b0cba1994be4}
+      \strng{fullhash}{0f81247ea26b831c56f7b0cba1994be4}
+      \strng{bibnamehash}{0f81247ea26b831c56f7b0cba1994be4}
+      \strng{authorbibnamehash}{0f81247ea26b831c56f7b0cba1994be4}
+      \strng{authornamehash}{0f81247ea26b831c56f7b0cba1994be4}
+      \strng{authorfullhash}{0f81247ea26b831c56f7b0cba1994be4}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Geophysical Research}
+      \field{title}{{Propagation of solar neutrons through the atmosphere of the Earth}}
+      \field{volume}{99}
+      \field{year}{1994}
+      \field{pages}{6651\bibrangedash 6665}
+      \range{pages}{15}
+    \endentry
+    \entry{chupp82}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=c4122d08ee26f21ef9e51c61e152e07b}{%
+           family={Chupp},
+           familyi={C\bibinitperiod},
+           given={E.\bibnamedelimi L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{fullhash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{bibnamehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{authorbibnamehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{authornamehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{authorfullhash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal, Part 2}
+      \field{title}{{A direct observation of solar neutrons following the 0118 UT flare on 1980 June 21}}
+      \field{volume}{263}
+      \field{year}{1982}
+      \field{pages}{L95\bibrangedash L99}
+      \range{pages}{-1}
+    \endentry
+    \entry{dorman}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a24f739ae561f333bdc3ff6864cf34a0}{%
+           family={{Dorman, L.}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paises Bajos}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a24f739ae561f333bdc3ff6864cf34a0}
+      \strng{fullhash}{a24f739ae561f333bdc3ff6864cf34a0}
+      \strng{bibnamehash}{a24f739ae561f333bdc3ff6864cf34a0}
+      \strng{authorbibnamehash}{a24f739ae561f333bdc3ff6864cf34a0}
+      \strng{authornamehash}{a24f739ae561f333bdc3ff6864cf34a0}
+      \strng{authorfullhash}{a24f739ae561f333bdc3ff6864cf34a0}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Solar neutrons and related Phenomena}}
+      \field{year}{{2010}}
+    \endentry
+    \entry{debrunner83}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=6e1e865aa84b2de4a7a35ff237a7085b}{%
+           family={Debrunner},
+           familyi={D\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cee1ed70d92057acc3de0646c8e1e80}
+      \strng{fullhash}{5cee1ed70d92057acc3de0646c8e1e80}
+      \strng{bibnamehash}{5cee1ed70d92057acc3de0646c8e1e80}
+      \strng{authorbibnamehash}{5cee1ed70d92057acc3de0646c8e1e80}
+      \strng{authornamehash}{5cee1ed70d92057acc3de0646c8e1e80}
+      \strng{authorfullhash}{5cee1ed70d92057acc3de0646c8e1e80}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings 18th International Cosmic Ray Conference}}
+      \field{title}{{The solar cosmic ray neutron event on June 3, 1982}}
+      \field{year}{1983}
+    \endentry
+    \entry{chupp87}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=c4122d08ee26f21ef9e51c61e152e07b}{%
+           family={Chupp},
+           familyi={C\bibinitperiod},
+           given={E.\bibnamedelimi L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{fullhash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{bibnamehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{authorbibnamehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{authornamehash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \strng{authorfullhash}{5a8ae5a4ba0727b3ff77234db961b888}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{Solar Neutron Emissivity during the Large Flare on 1982 June 3}
+      \field{volume}{318}
+      \field{year}{1987}
+      \field{pages}{913\bibrangedash 925}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1086/165423
+      \endverb
+    \endentry
+    \entry{muraki92}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=38dbbd84c3b43fd410edfd51508d2b9f}{%
+           family={Muraki},
+           familyi={M\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{fullhash}{71674593f3e067f966c67a1faf648b08}
+      \strng{bibnamehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{authorbibnamehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{authornamehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{authorfullhash}{71674593f3e067f966c67a1faf648b08}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{Observation of solar neutrons associated with the large flare on 1991 June 4}}
+      \field{volume}{400}
+      \field{year}{1992}
+      \field{pages}{L75\bibrangedash L78}
+      \range{pages}{-1}
+    \endentry
+    \entry{valdes04}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=82fa0fedd86b4db4c361f761a000921a}{%
+           family={Valdés-Galicia},
+           familyi={V\bibinithyphendelim G\bibinitperiod},
+           given={J.\bibnamedelimi F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1ff3589fa4cbcc7492891928fd74dfb}
+      \strng{fullhash}{b1ff3589fa4cbcc7492891928fd74dfb}
+      \strng{bibnamehash}{b1ff3589fa4cbcc7492891928fd74dfb}
+      \strng{authorbibnamehash}{b1ff3589fa4cbcc7492891928fd74dfb}
+      \strng{authornamehash}{b1ff3589fa4cbcc7492891928fd74dfb}
+      \strng{authorfullhash}{b1ff3589fa4cbcc7492891928fd74dfb}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{An improved solar neutron telescope installed at a very high altitude in México}}
+      \field{volume}{535}
+      \field{year}{2004}
+      \field{pages}{656\bibrangedash 664}
+      \range{pages}{9}
+    \endentry
+    \entry{barrantes18}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=b847247786e9cea26feb210986317a21}{%
+           family={{Barrantes, M.}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Instituto de Geofísica UNAM}%
+      }
+      \strng{namehash}{b847247786e9cea26feb210986317a21}
+      \strng{fullhash}{b847247786e9cea26feb210986317a21}
+      \strng{bibnamehash}{b847247786e9cea26feb210986317a21}
+      \strng{authorbibnamehash}{b847247786e9cea26feb210986317a21}
+      \strng{authornamehash}{b847247786e9cea26feb210986317a21}
+      \strng{authorfullhash}{b847247786e9cea26feb210986317a21}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{El Telescopio de neutrones solares en Sierra Negra y aceleración de iones en la atmósfera solar}}
+      \field{type}{Tesis doctoral}
+      \field{year}{{2010}}
+    \endentry
+    \entry{watanabe05}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=43d8b33365445b3084333b504c933fac}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Nagoya University}%
+      }
+      \strng{namehash}{43d8b33365445b3084333b504c933fac}
+      \strng{fullhash}{43d8b33365445b3084333b504c933fac}
+      \strng{bibnamehash}{43d8b33365445b3084333b504c933fac}
+      \strng{authorbibnamehash}{43d8b33365445b3084333b504c933fac}
+      \strng{authornamehash}{43d8b33365445b3084333b504c933fac}
+      \strng{authorfullhash}{43d8b33365445b3084333b504c933fac}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Solar Neutron Events Associated with Large Solar Flares in Solar Cycle 23}}
+      \field{type}{phdthesis}
+      \field{year}{2005}
+    \endentry
+    \entry{sako06}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=77ca3b5168ac1fb0b4ebaa42dd03b6ce}{%
+           family={Sako},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{fullhash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{bibnamehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{authorbibnamehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{authornamehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{authorfullhash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{title}{{Long-lived solar neutron emission in comparison with electron-produced radiaion in the 2005 September 7 solar flare}}
+      \field{volume}{651}
+      \field{year}{2006}
+      \field{pages}{L69\bibrangedash L72}
+      \range{pages}{-1}
+    \endentry
+    \entry{muraki16}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=38dbbd84c3b43fd410edfd51508d2b9f}{%
+           family={Muraki},
+           familyi={M\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{fullhash}{71674593f3e067f966c67a1faf648b08}
+      \strng{bibnamehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{authorbibnamehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{authornamehash}{71674593f3e067f966c67a1faf648b08}
+      \strng{authorfullhash}{71674593f3e067f966c67a1faf648b08}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Solar physics}
+      \field{title}{{Simultaneous Observation of Solar Neutrons from the International Space Station and High Mountain Observatories in Association with a Flare on July 8, 2014}}
+      \field{volume}{291}
+      \field{year}{2016}
+      \field{pages}{1241\bibrangedash 1265}
+      \range{pages}{25}
+    \endentry
+    \entry{mirosh15}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6910571f3db8cde9f27976f350e8753e}{%
+           family={{Miroshnichenko, L. I.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Estados Unidos, Segunda Edición}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{6910571f3db8cde9f27976f350e8753e}
+      \strng{fullhash}{6910571f3db8cde9f27976f350e8753e}
+      \strng{bibnamehash}{6910571f3db8cde9f27976f350e8753e}
+      \strng{authorbibnamehash}{6910571f3db8cde9f27976f350e8753e}
+      \strng{authornamehash}{6910571f3db8cde9f27976f350e8753e}
+      \strng{authorfullhash}{6910571f3db8cde9f27976f350e8753e}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Solar cosmic rays: Fundamentals and applications}}
+      \field{year}{{2015}}
+    \endentry
+    \entry{watanabe09}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=43d8b33365445b3084333b504c933fac}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e6822f1ad5b51ed156203d2e57ee65e}
+      \strng{fullhash}{9e6822f1ad5b51ed156203d2e57ee65e}
+      \strng{bibnamehash}{9e6822f1ad5b51ed156203d2e57ee65e}
+      \strng{authorbibnamehash}{9e6822f1ad5b51ed156203d2e57ee65e}
+      \strng{authornamehash}{9e6822f1ad5b51ed156203d2e57ee65e}
+      \strng{authorfullhash}{9e6822f1ad5b51ed156203d2e57ee65e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Space Research}
+      \field{title}{{Physics of ion acceleration in the solar flare on 2005 September 7 determines $\gamma$-ray and neutron production}}
+      \field{volume}{44}
+      \field{year}{2009}
+      \field{pages}{789\bibrangedash 793}
+      \range{pages}{5}
+    \endentry
+    \entry{hua02}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=7f74d697a4957c2dad6950d3058e7563}{%
+           family={Hua},
+           familyi={H\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{51f755f11c9693649c06d3b59c61fc8b}
+      \strng{fullhash}{51f755f11c9693649c06d3b59c61fc8b}
+      \strng{bibnamehash}{51f755f11c9693649c06d3b59c61fc8b}
+      \strng{authorbibnamehash}{51f755f11c9693649c06d3b59c61fc8b}
+      \strng{authornamehash}{51f755f11c9693649c06d3b59c61fc8b}
+      \strng{authorfullhash}{51f755f11c9693649c06d3b59c61fc8b}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astrophysical Journal Supplement Series}
+      \field{title}{{Angular and energy-dependent neutron emission from solar flare magnetic loops}}
+      \field{volume}{140(2)}
+      \field{year}{2002}
+      \field{pages}{563\bibrangedash 579}
+      \range{pages}{17}
+    \endentry
+    \entry{sako03}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=77ca3b5168ac1fb0b4ebaa42dd03b6ce}{%
+           family={Sako},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{fullhash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{bibnamehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{authorbibnamehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{authornamehash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \strng{authorfullhash}{4cd51c999f6bd1d87bf26e2b107941e0}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings 28th International Cosmic Ray Conference}}
+      \field{title}{{Super Solar Neutron Telescope for the Next Solar Maximum}}
+      \field{year}{2013}
+    \endentry
+    \entry{knitta04}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=f26cb5f637c7dcc01cce29a641e1a456}{%
+           family={Nitta},
+           familyi={N\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{535bfc0443fc2dce16f129baee3810fe}
+      \strng{fullhash}{535bfc0443fc2dce16f129baee3810fe}
+      \strng{bibnamehash}{535bfc0443fc2dce16f129baee3810fe}
+      \strng{authorbibnamehash}{535bfc0443fc2dce16f129baee3810fe}
+      \strng{authornamehash}{535bfc0443fc2dce16f129baee3810fe}
+      \strng{authorfullhash}{535bfc0443fc2dce16f129baee3810fe}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{The K2K SciBar detector}}
+      \field{volume}{535}
+      \field{year}{2004}
+      \field{pages}{147\bibrangedash 151}
+      \range{pages}{5}
+    \endentry
+    \entry{hiraide06}{article}{}
+      \name{author}{1}{}{%
+        {{hash=746c771688dc545b741d1b1bdb4a5fb4}{%
+           family={Hiraide},
+           familyi={H\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{746c771688dc545b741d1b1bdb4a5fb4}
+      \strng{fullhash}{746c771688dc545b741d1b1bdb4a5fb4}
+      \strng{bibnamehash}{746c771688dc545b741d1b1bdb4a5fb4}
+      \strng{authorbibnamehash}{746c771688dc545b741d1b1bdb4a5fb4}
+      \strng{authornamehash}{746c771688dc545b741d1b1bdb4a5fb4}
+      \strng{authorfullhash}{746c771688dc545b741d1b1bdb4a5fb4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Physics B - Proceedings Supplements}
+      \field{title}{{The SciBar Detector at FNAL Booster Neutrino Experiment}}
+      \field{volume}{159}
+      \field{year}{2006}
+      \field{pages}{85\bibrangedash 90}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.nuclphysbps.2006.08.052
+      \endverb
+    \endentry
+    \entry{ynagai14}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=f1db1a15355ca264881ff68c71c06083}{%
+           family={Nagai},
+           familyi={N\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{2809c39fec72092498f06bd1a6deef25}
+      \strng{fullhash}{2809c39fec72092498f06bd1a6deef25}
+      \strng{bibnamehash}{2809c39fec72092498f06bd1a6deef25}
+      \strng{authorbibnamehash}{2809c39fec72092498f06bd1a6deef25}
+      \strng{authornamehash}{2809c39fec72092498f06bd1a6deef25}
+      \strng{authorfullhash}{2809c39fec72092498f06bd1a6deef25}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astroparticle physics}
+      \field{title}{{First cosmic-ray measurements by the SciCRT solar neutron experiment in Mexico}}
+      \field{volume}{59}
+      \field{year}{2014}
+      \field{pages}{39\bibrangedash 46}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.astropartphys.2014.04.005
+      \endverb
+    \endentry
+    \entry{garcia20}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1084e45e7e35614f6e46d89bb6dc40a8}{%
+           family={Garcia},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=795f3202b17cb6bc3d4b771d8c6c9eaf}{%
+           family={other},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bb4166b433b5c56652492b6b6ecdbb0}
+      \strng{fullhash}{8bb4166b433b5c56652492b6b6ecdbb0}
+      \strng{bibnamehash}{8bb4166b433b5c56652492b6b6ecdbb0}
+      \strng{authorbibnamehash}{8bb4166b433b5c56652492b6b6ecdbb0}
+      \strng{authornamehash}{8bb4166b433b5c56652492b6b6ecdbb0}
+      \strng{authorfullhash}{8bb4166b433b5c56652492b6b6ecdbb0}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{Particle identification and analysis in the SciCRT using machine learning tools}}
+      \field{volume}{1003}
+      \field{year}{2020}
+      \field{pages}{165326}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.nima.2021.165326
+      \endverb
+    \endentry
+    \entry{kikawa14}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e55647d4767142b90ae9f44d9f2a0f34}{%
+           family={Kikawa},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Kyoto University}%
+      }
+      \strng{namehash}{e55647d4767142b90ae9f44d9f2a0f34}
+      \strng{fullhash}{e55647d4767142b90ae9f44d9f2a0f34}
+      \strng{bibnamehash}{e55647d4767142b90ae9f44d9f2a0f34}
+      \strng{authorbibnamehash}{e55647d4767142b90ae9f44d9f2a0f34}
+      \strng{authornamehash}{e55647d4767142b90ae9f44d9f2a0f34}
+      \strng{authorfullhash}{e55647d4767142b90ae9f44d9f2a0f34}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Measurement of Neutrino Interactions and Three Flavor Neutrino Oscillations in the T2K Experiment}}
+      \field{type}{phdthesis}
+      \field{year}{2014}
+    \endentry
+    \entry{dietz16}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=c19d789efab860b486d75b259bfbb5b1}{%
+           family={Dietz-Laursonn},
+           familyi={D\bibinithyphendelim L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen University}%
+      }
+      \strng{namehash}{c19d789efab860b486d75b259bfbb5b1}
+      \strng{fullhash}{c19d789efab860b486d75b259bfbb5b1}
+      \strng{bibnamehash}{c19d789efab860b486d75b259bfbb5b1}
+      \strng{authorbibnamehash}{c19d789efab860b486d75b259bfbb5b1}
+      \strng{authornamehash}{c19d789efab860b486d75b259bfbb5b1}
+      \strng{authorfullhash}{c19d789efab860b486d75b259bfbb5b1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Detailed Studies of Light Transport in Optical Components of Particle Detectors}}
+      \field{type}{phdthesis}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb http://publications.rwth-aachen.de/record/667646
+      \endverb
+      \verb{url}
+      \verb http://publications.rwth-aachen.de/record/667646
+      \endverb
+    \endentry
+    \entry{myoshi04}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=d5a10b042909dd921a8b4eca8d492b7f}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b7198e46c562fa98ba9a94593caec10}
+      \strng{fullhash}{7b7198e46c562fa98ba9a94593caec10}
+      \strng{bibnamehash}{7b7198e46c562fa98ba9a94593caec10}
+      \strng{authorbibnamehash}{7b7198e46c562fa98ba9a94593caec10}
+      \strng{authornamehash}{7b7198e46c562fa98ba9a94593caec10}
+      \strng{authorfullhash}{7b7198e46c562fa98ba9a94593caec10}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on nuclear science}
+      \field{number}{6}
+      \field{title}{{Development of the readout system for the K2K SciBar detector}}
+      \field{volume}{51}
+      \field{year}{2004}
+      \field{pages}{3043\bibrangedash 3046}
+      \range{pages}{4}
+    \endentry
+    \entry{ysasai14}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=810adf1f2d55cda292ac7d1f6b727758}{%
+           family={Sasai},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{fullhash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{bibnamehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{authorbibnamehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{authornamehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{authorfullhash}{ed51eb11ca4087047018597b5f325d5b}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Earth, Planets and Space}
+      \field{number}{130}
+      \field{title}{{Performance of the SciBar cosmic ray telescope (SciCRT) toward the detection of high-energy solar neutrons insolar cycle 24}}
+      \field{volume}{66}
+      \field{year}{2014}
+    \endentry
+    \entry{beznosko}{report}{}
+      \name{author}{1}{}{%
+        {{hash=f9f15bd75696c3696a50f32cf093d10f}{%
+           family={Beznosko},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Fermilab}%
+      }
+      \strng{namehash}{f9f15bd75696c3696a50f32cf093d10f}
+      \strng{fullhash}{f9f15bd75696c3696a50f32cf093d10f}
+      \strng{bibnamehash}{f9f15bd75696c3696a50f32cf093d10f}
+      \strng{authorbibnamehash}{f9f15bd75696c3696a50f32cf093d10f}
+      \strng{authornamehash}{f9f15bd75696c3696a50f32cf093d10f}
+      \strng{authorfullhash}{f9f15bd75696c3696a50f32cf093d10f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{FNAL-NICADD Extruded Scintillator}}
+      \field{type}{techreport}
+      \field{year}{2004}
+    \endentry
+    \entry{geant403}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=222e7d1c666d4ec44841beff15466852}{%
+           family={Agostinelli},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{fullhash}{4034275bca42b52c1a394d599186c42e}
+      \strng{bibnamehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{authorbibnamehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{authornamehash}{4034275bca42b52c1a394d599186c42e}
+      \strng{authorfullhash}{4034275bca42b52c1a394d599186c42e}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{number}{3}
+      \field{title}{{Geant4---a simulation toolkit}}
+      \field{volume}{06}
+      \field{year}{2003}
+      \field{pages}{250\bibrangedash 303}
+      \range{pages}{54}
+      \verb{doi}
+      \verb 10.1016/S0168-9002(03)01368-8
+      \endverb
+    \endentry
+    \entry{geant406}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=562fa738e889d690a68c3b65e75a4f2b}{%
+           family={Allison},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bda6a5f0c60a3ce4f28b761586cc80f2}
+      \strng{fullhash}{bda6a5f0c60a3ce4f28b761586cc80f2}
+      \strng{bibnamehash}{bda6a5f0c60a3ce4f28b761586cc80f2}
+      \strng{authorbibnamehash}{bda6a5f0c60a3ce4f28b761586cc80f2}
+      \strng{authornamehash}{bda6a5f0c60a3ce4f28b761586cc80f2}
+      \strng{authorfullhash}{bda6a5f0c60a3ce4f28b761586cc80f2}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on nuclear science}
+      \field{number}{1}
+      \field{title}{{Geant4 developments and applications}}
+      \field{volume}{53}
+      \field{year}{2006}
+      \field{pages}{270\bibrangedash 278}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TNS.2006.869826
+      \endverb
+    \endentry
+    \entry{gros18}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=02db0f1c0d36ca204625079cd1247e04}{%
+           family={Ros},
+           familyi={R\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{22184ae14e5d7916e812fcbd531e6981}
+      \strng{fullhash}{22184ae14e5d7916e812fcbd531e6981}
+      \strng{bibnamehash}{22184ae14e5d7916e812fcbd531e6981}
+      \strng{authorbibnamehash}{22184ae14e5d7916e812fcbd531e6981}
+      \strng{authornamehash}{22184ae14e5d7916e812fcbd531e6981}
+      \strng{authorfullhash}{22184ae14e5d7916e812fcbd531e6981}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Radiation Physics and Chemistry}
+      \field{title}{{On the design of experiments based on plastic scintillators using GEANT4 simulations}}
+      \field{volume}{153}
+      \field{year}{2018}
+      \field{pages}{140\bibrangedash 151}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.radphyschem.2018.09.021
+      \endverb
+    \endentry
+    \entry{itow13}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=56e9b79389ad9d022a4e171bffbe2ae0}{%
+           family={Itow},
+           familyi={I\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Nagoya University}%
+      }
+      \strng{namehash}{56e9b79389ad9d022a4e171bffbe2ae0}
+      \strng{fullhash}{56e9b79389ad9d022a4e171bffbe2ae0}
+      \strng{bibnamehash}{56e9b79389ad9d022a4e171bffbe2ae0}
+      \strng{authorbibnamehash}{56e9b79389ad9d022a4e171bffbe2ae0}
+      \strng{authornamehash}{56e9b79389ad9d022a4e171bffbe2ae0}
+      \strng{authorfullhash}{56e9b79389ad9d022a4e171bffbe2ae0}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Calibration of a high sensitivity instrument for solar neutron observation}}
+      \field{type}{mathesis}
+      \field{year}{2013}
+    \endentry
+    \entry{sanchez10}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fc26360057e77471acfd6b0132317399}{%
+           family={Sanchéz},
+           familyi={S\bibinitperiod},
+           given={F.\bibnamedelimi A.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2a173cfc078f19068557f6b462051dfc}{%
+           family={Medina-Tanco},
+           familyi={M\bibinithyphendelim T\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f1c3e4f445ed0ed00cd107bec2d38ff}
+      \strng{fullhash}{9f1c3e4f445ed0ed00cd107bec2d38ff}
+      \strng{bibnamehash}{9f1c3e4f445ed0ed00cd107bec2d38ff}
+      \strng{authorbibnamehash}{9f1c3e4f445ed0ed00cd107bec2d38ff}
+      \strng{authornamehash}{9f1c3e4f445ed0ed00cd107bec2d38ff}
+      \strng{authorfullhash}{9f1c3e4f445ed0ed00cd107bec2d38ff}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{Modeling scintillator and WLS fiber signals for fast Monte Carlo simulations}}
+      \field{volume}{620}
+      \field{year}{2010}
+      \field{pages}{182\bibrangedash 191}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.nima.2010.03.110
+      \endverb
+    \endentry
+    \entry{mineev11}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=863b0a5b35e5dff7adc9f133c70877e3}{%
+           family={Mineev},
+           familyi={M\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{264b2637183a2c203f2c34c19f215184}
+      \strng{fullhash}{264b2637183a2c203f2c34c19f215184}
+      \strng{bibnamehash}{264b2637183a2c203f2c34c19f215184}
+      \strng{authorbibnamehash}{264b2637183a2c203f2c34c19f215184}
+      \strng{authornamehash}{264b2637183a2c203f2c34c19f215184}
+      \strng{authorfullhash}{264b2637183a2c203f2c34c19f215184}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of instrumentation}
+      \field{title}{{Scintillator detectors with long WLS fibers and multi-pixel photodiodes}}
+      \field{volume}{6}
+      \field{year}{2011}
+      \field{pages}{P12004}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/6/12/P12004
+      \endverb
+    \endentry
+    \entry{hama07}{book}{}
+      \name{author}{1}{}{%
+        {{hash=57a9fd4884d3d751b513a418c8cbef38}{%
+           family={{Hamamatsu Photonics K.K.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Japón, Tercera edición}%
+      }
+      \list{publisher}{1}{%
+        {Word Technical Writing, Inc.}%
+      }
+      \strng{namehash}{57a9fd4884d3d751b513a418c8cbef38}
+      \strng{fullhash}{57a9fd4884d3d751b513a418c8cbef38}
+      \strng{bibnamehash}{57a9fd4884d3d751b513a418c8cbef38}
+      \strng{authorbibnamehash}{57a9fd4884d3d751b513a418c8cbef38}
+      \strng{authornamehash}{57a9fd4884d3d751b513a418c8cbef38}
+      \strng{authorfullhash}{57a9fd4884d3d751b513a418c8cbef38}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Photomultiplier tubes: Basics and applications}}
+      \field{year}{{2007}}
+    \endentry
+    \entry{syed07}{book}{}
+      \name{author}{1}{}{%
+        {{hash=58c6e667632fdcae3059088fd3b206f2}{%
+           family={{Ahmed, S. N.}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Reino Unido}%
+      }
+      \list{publisher}{1}{%
+        {Elseivier}%
+      }
+      \strng{namehash}{58c6e667632fdcae3059088fd3b206f2}
+      \strng{fullhash}{58c6e667632fdcae3059088fd3b206f2}
+      \strng{bibnamehash}{58c6e667632fdcae3059088fd3b206f2}
+      \strng{authorbibnamehash}{58c6e667632fdcae3059088fd3b206f2}
+      \strng{authornamehash}{58c6e667632fdcae3059088fd3b206f2}
+      \strng{authorfullhash}{58c6e667632fdcae3059088fd3b206f2}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Physics and engineering of radiation detection}}
+      \field{year}{{2007}}
+    \endentry
+    \entry{barnhill08}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=dc09f53ea90840266af6cf1c73c8e4fb}{%
+           family={Barnhill},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{af34f8571a570068cd96a34f2253f65e}
+      \strng{fullhash}{af34f8571a570068cd96a34f2253f65e}
+      \strng{bibnamehash}{af34f8571a570068cd96a34f2253f65e}
+      \strng{authorbibnamehash}{af34f8571a570068cd96a34f2253f65e}
+      \strng{authornamehash}{af34f8571a570068cd96a34f2253f65e}
+      \strng{authorfullhash}{af34f8571a570068cd96a34f2253f65e}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{Testing of photomultiplier tubes for use in the surface detector of the Pierre Auger observatory}}
+      \field{volume}{591}
+      \field{year}{2008}
+      \field{pages}{453\bibrangedash 466}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.nima.2008.01.088
+      \endverb
+    \endentry
+    \entry{sato15}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ca8df0535bc96db6c2cb72a627f3b5ed}{%
+           family={Sato},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{fullhash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{bibnamehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{authorbibnamehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{authornamehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{authorfullhash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLOS ONE}
+      \field{number}{12}
+      \field{title}{{Analytical Model for Estimating Terrestrial Cosmic Ray Fluxes Nearly Anytime and Anywhere in the World: Extension of PARMA/EXPACS}}
+      \field{volume}{10}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 33}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0144679
+      \endverb
+    \endentry
+    \entry{sato16}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ca8df0535bc96db6c2cb72a627f3b5ed}{%
+           family={Sato},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{fullhash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{bibnamehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{authorbibnamehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{authornamehash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \strng{authorfullhash}{ca8df0535bc96db6c2cb72a627f3b5ed}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLOS ONE}
+      \field{number}{8}
+      \field{title}{{Analytical Model for Estimating the Zenith Angle Dependence of Terrestrial Cosmic Ray Fluxes}}
+      \field{volume}{11}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0160390
+      \endverb
+    \endentry
+    \entry{uchida08}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cba57623ea934f3f92b6e42e1c6d970f}{%
+           family={Uchida},
+           familyi={U\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{cba57623ea934f3f92b6e42e1c6d970f}
+      \strng{fullhash}{cba57623ea934f3f92b6e42e1c6d970f}
+      \strng{bibnamehash}{cba57623ea934f3f92b6e42e1c6d970f}
+      \strng{authorbibnamehash}{cba57623ea934f3f92b6e42e1c6d970f}
+      \strng{authornamehash}{cba57623ea934f3f92b6e42e1c6d970f}
+      \strng{authorfullhash}{cba57623ea934f3f92b6e42e1c6d970f}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on nuclear science}
+      \field{title}{{Hardware-Based TCP Processor for Gigabit Ethernet}}
+      \field{volume}{55}
+      \field{year}{2008}
+      \field{pages}{1631\bibrangedash 1637}
+      \range{pages}{7}
+    \endentry
+    \entry{ysasai17}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=810adf1f2d55cda292ac7d1f6b727758}{%
+           family={Sasai},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{fullhash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{bibnamehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{authorbibnamehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{authornamehash}{ed51eb11ca4087047018597b5f325d5b}
+      \strng{authorfullhash}{ed51eb11ca4087047018597b5f325d5b}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{A faster and more reliable data acquisition system for the full performance of the SciCRT}}
+      \field{volume}{857}
+      \field{year}{2017}
+      \field{pages}{50\bibrangedash 57}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.nima.2016.12.060
+      \endverb
+    \endentry
+    \entry{manzorena171}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=f8581c856a85267dd45050f8a38915fa}{%
+           family={Anzorena},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d56aac9dfaf7e3f84a745e7c8fffb93}
+      \strng{fullhash}{4d56aac9dfaf7e3f84a745e7c8fffb93}
+      \strng{bibnamehash}{4d56aac9dfaf7e3f84a745e7c8fffb93}
+      \strng{authorbibnamehash}{4d56aac9dfaf7e3f84a745e7c8fffb93}
+      \strng{authornamehash}{4d56aac9dfaf7e3f84a745e7c8fffb93}
+      \strng{authorfullhash}{4d56aac9dfaf7e3f84a745e7c8fffb93}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings 35th International Cosmic Ray Conference}}
+      \field{title}{{Current status of SciCRT experiment and its expected future performance}}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.22323/1.301.0051
+      \endverb
+    \endentry
+    \entry{nagaiphd}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=f1db1a15355ca264881ff68c71c06083}{%
+           family={Nagai},
+           familyi={N\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Nagoya University}%
+      }
+      \strng{namehash}{f1db1a15355ca264881ff68c71c06083}
+      \strng{fullhash}{f1db1a15355ca264881ff68c71c06083}
+      \strng{bibnamehash}{f1db1a15355ca264881ff68c71c06083}
+      \strng{authorbibnamehash}{f1db1a15355ca264881ff68c71c06083}
+      \strng{authornamehash}{f1db1a15355ca264881ff68c71c06083}
+      \strng{authorfullhash}{f1db1a15355ca264881ff68c71c06083}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Observation of cosmic rays by the new solar neutron telescope, SciCRT}}
+      \field{type}{phdthesis}
+      \field{year}{2014}
+    \endentry
+    \entry{fujiwara10}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b104bfa5ce5726d95c88e0f911393b60}{%
+           family={Fujiwara},
+           familyi={F\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1451625a07b3178bf4844d93bca7a851}
+      \strng{fullhash}{1451625a07b3178bf4844d93bca7a851}
+      \strng{bibnamehash}{1451625a07b3178bf4844d93bca7a851}
+      \strng{authorbibnamehash}{1451625a07b3178bf4844d93bca7a851}
+      \strng{authornamehash}{1451625a07b3178bf4844d93bca7a851}
+      \strng{authorfullhash}{1451625a07b3178bf4844d93bca7a851}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on nuclear science}
+      \field{number}{5}
+      \field{title}{{Multi-Level Time-Over-Threshold Method for Energy Resolving Multi-Channel Systems}}
+      \field{volume}{57}
+      \field{year}{2010}
+      \field{pages}{2545\bibrangedash 2548}
+      \range{pages}{4}
+    \endentry
+    \entry{spencer06}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=be260e49e885f4b334e5d7a273a1fd64}{%
+           family={Spencer},
+           familyi={S\bibinitperiod},
+           given={D.\bibnamedelimi F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b9409d17e37d8f63c6cdc74ad9aa4ca}
+      \strng{fullhash}{1b9409d17e37d8f63c6cdc74ad9aa4ca}
+      \strng{bibnamehash}{1b9409d17e37d8f63c6cdc74ad9aa4ca}
+      \strng{authorbibnamehash}{1b9409d17e37d8f63c6cdc74ad9aa4ca}
+      \strng{authornamehash}{1b9409d17e37d8f63c6cdc74ad9aa4ca}
+      \strng{authorfullhash}{1b9409d17e37d8f63c6cdc74ad9aa4ca}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{A high-resolution, multi-stop, time-to-digital converter for nuclear time-of-flight measurements}}
+      \field{volume}{556}
+      \field{year}{2006}
+      \field{pages}{291\bibrangedash 295}
+      \range{pages}{5}
+    \endentry
+    \entry{balla14}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=f1ee8d41d44f371a84ccf2be2467eadb}{%
+           family={Balla},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5092249ced3a87a39ad4d72911f5b6b1}
+      \strng{fullhash}{5092249ced3a87a39ad4d72911f5b6b1}
+      \strng{bibnamehash}{5092249ced3a87a39ad4d72911f5b6b1}
+      \strng{authorbibnamehash}{5092249ced3a87a39ad4d72911f5b6b1}
+      \strng{authornamehash}{5092249ced3a87a39ad4d72911f5b6b1}
+      \strng{authorfullhash}{5092249ced3a87a39ad4d72911f5b6b1}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{The characterization and application of a low resource FPGA-based time to digital converter}}
+      \field{volume}{739}
+      \field{year}{2014}
+      \field{pages}{75\bibrangedash 82}
+      \range{pages}{8}
+    \endentry
+    \entry{ohkawa76}{article}{}
+      \name{author}{3}{}{%
+        {{hash=95ede905cae03eb3e32e2a861f49d8b8}{%
+           family={Ohkawa},
+           familyi={O\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e35f13dbc8ac388ba4dff0dcbd856e2d}{%
+           family={Yoshizawa},
+           familyi={Y\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e97388c181a5aa2a97f77a7b41a9e1db}{%
+           family={Husimi},
+           familyi={H\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{063f4ace44932541a129d21497ced21a}
+      \strng{fullhash}{063f4ace44932541a129d21497ced21a}
+      \strng{bibnamehash}{063f4ace44932541a129d21497ced21a}
+      \strng{authorbibnamehash}{063f4ace44932541a129d21497ced21a}
+      \strng{authornamehash}{063f4ace44932541a129d21497ced21a}
+      \strng{authorfullhash}{063f4ace44932541a129d21497ced21a}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research A}
+      \field{title}{{Direct synthesis of the Gaussian filter for nuclear pulse amplifiers}}
+      \field{volume}{138}
+      \field{year}{1976}
+      \field{pages}{85\bibrangedash 92}
+      \range{pages}{8}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem{sweet}
-P.~A. Sweet.
-\newblock {The neutral point theory of solar flares}.
-\newblock {\em Cambridge University Press}, pages 123--134, 1958.
-
-\bibitem{parker}
-E.~N. Parker.
-\newblock {Sweet’s mechanism for merging magnetic fields in conducting
-  fluids}.
-\newblock {\em Journal of Geophysical Research}, 62(4):509--520, 1957.
-
-\bibitem{shiba11}
-{Shibata, K. y Magara, T.}
-\newblock {{Solar flares: Magnetohydrodynamic processes}}.
-\newblock {\em {Living Rev.\, Solar Phys.}}, {8}, {(2011), 6}.
-\newblock {[Online article]: cited [21-Ene-2014]
-  \url{http://www.livingreviews.org/lrsp-2011-6}},.
-
-\bibitem{masuda}
-S.~Masuda et~al.
-\newblock {A loop-top hard x-ray source in a compact solar flare as evidence
-  for magnetic reconnection}.
-\newblock {\em Nature}, 371:495--497, 1994.
-
-\bibitem{tsuneta}
-S.~Tsuneta et~al.
-\newblock {Observation of a solar flare at the limb with the YOHKOH Soft X-ray
-  Telescope}.
-\newblock {\em Publications of the Astronomical Society of Japan},
-  44(5):L63--L69, 1992.
-
-\bibitem{yokoyama}
-T.~Yokoyama and K.~Shibata.
-\newblock {Magnetohydrodynamic Simulation of a Solar Flare with Chromospheric
-  Evaporation Effect Based on the Magnetic Reconnection Model}.
-\newblock {\em The Astrophysical Journal}, 549:1160--1174, 2001.
-
-\bibitem{mirosh15}
-{Miroshnichenko, L. I.}
-\newblock {\em {Solar cosmic rays: Fundamentals and applications}}.
-\newblock {Springer}, {Estados Unidos, Segunda Edición}, {2015}.
-
-\bibitem{shibata94}
-S.~Shibata.
-\newblock {Propagation of solar neutrons through the atmosphere of the Earth}.
-\newblock {\em Journal of Geophysical Research}, 99:6651--6665, 1994.
-
-\bibitem{chupp82}
-E.~L. Chupp et~al.
-\newblock {A direct observation of solar neutrons following the 0118 UT flare
-  on 1980 June 21}.
-\newblock {\em Astrophysical Journal, Part 2}, 263:L95--L99, 1982.
-
-\bibitem{dorman}
-{Dorman, L.}
-\newblock {\em {Solar neutrons and related Phenomena}}.
-\newblock {Springer}, {Paises Bajos}, {2010}.
-
-\bibitem{debrunner83}
-H.~Debrunner et~al.
-\newblock {The solar cosmic ray neutron event on June 3, 1982}.
-\newblock In {\em {Proceedings 18th International Cosmic Ray Conference}},
-  1983.
-
-\bibitem{chupp87}
-E.~L. Chupp et~al.
-\newblock Solar neutron emissivity during the large flare on 1982 june 3.
-\newblock {\em Astrophysical Journal}, 318:913--925, 1987.
-
-\bibitem{muraki92}
-Y.~Muraki et~al.
-\newblock {Observation of solar neutrons associated with the large flare on
-  1991 June 4}.
-\newblock {\em The Astrophysical Journal}, 400:L75--L78, 1992.
-
-\bibitem{valdes04}
-J.~F. Valdés-Galicia et~al.
-\newblock {An improved solar neutron telescope installed at a very high
-  altitude in México}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  535:656--664, 2004.
-
-\bibitem{barrantes18}
-{Barrantes, M.}
-\newblock {\em {El Telescopio de neutrones solares en Sierra Negra y
-  aceleración de iones en la atmósfera solar}}.
-\newblock Tesis doctoral, {Instituto de Geofísica UNAM}, {2010}.
-
-\bibitem{watanabe05}
-K.~Watanabe.
-\newblock {\em {Solar Neutron Events Associated with Large Solar Flares in
-  Solar Cycle 23}}.
-\newblock PhD thesis, Nagoya University, 2005.
-
-\bibitem{sako06}
-T.~Sako et~al.
-\newblock {Long-lived solar neutron emission in comparison with
-  electron-produced radiaion in the 2005 September 7 solar flare}.
-\newblock {\em The Astrophysical Journal}, 651:L69--L72, 2006.
-
-\bibitem{muraki16}
-Y.~Muraki et~al.
-\newblock {Simultaneous Observation of Solar Neutrons from the International
-  Space Station and High Mountain Observatories in Association with a Flare on
-  July 8, 2014}.
-\newblock {\em Solar physics}, 291:1241--1265, 2016.
-
-\bibitem{watanabe09}
-K.~Watanabe et~al.
-\newblock {Physics of ion acceleration in the solar flare on 2005 September 7
-  determines $\gamma$-ray and neutron production}.
-\newblock {\em Advances in Space Research}, 44:789--793, 2009.
-
-\bibitem{hua02}
-X.~Hua et~al.
-\newblock {Angular and energy-dependent neutron emission from solar flare
-  magnetic loops}.
-\newblock {\em Astrophysical Journal Supplement Series}, 140(2):563--579, 2002.
-
-\bibitem{sako03}
-T.~Sako et~al.
-\newblock {Super Solar Neutron Telescope for the Next Solar Maximum}.
-\newblock In {\em {Proceedings 28th International Cosmic Ray Conference}},
-  2013.
-
-\bibitem{knitta04}
-K.~Nitta et~al.
-\newblock {The K2K SciBar detector}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  535:147--151, 2004.
-
-\bibitem{hiraide06}
-K.~Hiraide.
-\newblock {The SciBar Detector at FNAL Booster Neutrino Experiment}.
-\newblock {\em Nuclear Physics B - Proceedings Supplements}, 159:85 -- 90,
-  2006.
-
-\bibitem{ynagai14}
-Y.~Nagai et~al.
-\newblock {First cosmic-ray measurements by the SciCRT solar neutron experiment
-  in Mexico}.
-\newblock {\em Astroparticle physics}, 59:39--46, 2014.
-
-\bibitem{garcia20}
-R.~Garcia and other.
-\newblock {Particle identification and analysis in the SciCRT using machine
-  learning tools}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  1002:165326, 2020.
-
-\bibitem{kikawa14}
-T.~Kikawa.
-\newblock {\em {Measurement of Neutrino Interactions and Three Flavor Neutrino
-  Oscillations in the T2K Experiment}}.
-\newblock PhD thesis, Kyoto University, 2014.
-
-\bibitem{dietz16}
-E.~Dietz-Laursonn.
-\newblock {\em {Detailed Studies of Light Transport in Optical Components of
-  Particle Detectors}}.
-\newblock PhD thesis, RWTH Aachen University, 2016.
-
-\bibitem{myoshi04}
-M.~Yoshida et~al.
-\newblock {Development of the readout system for the K2K SciBar detector}.
-\newblock {\em IEEE transactions on nuclear science}, 51(6):3043--3046, 2004.
-
-\bibitem{ysasai14}
-Y.~Sasai et~al.
-\newblock {Performance of the SciBar cosmic ray telescope (SciCRT) toward the
-  detection of high-energy solar neutrons insolar cycle 24}.
-\newblock {\em Earth, Planets and Space}, 66(130), 2014.
-
-\bibitem{beznosko}
-D.~Beznosko.
-\newblock {FNAL-NICADD Extruded Scintillator}.
-\newblock Technical report, {Fermilab}, 2004.
-
-\bibitem{geant403}
-S.~Agostinelli et~al.
-\newblock {Geant4---a simulation toolkit}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  06(3):250--303, 2003.
-
-\bibitem{geant406}
-J.~Allison et~al.
-\newblock {Geant4 developments and applications}.
-\newblock {\em IEEE transactions on nuclear science}, 53(1):270--278, 2006.
-
-\bibitem{gros18}
-G.~Ros et~al.
-\newblock {On the design of experiments based on plastic scintillators using
-  GEANT4 simulations}.
-\newblock {\em Radiation Physics and Chemistry}, 153:140--151, 2018.
-
-\bibitem{itow13}
-T.~Itow.
-\newblock {Calibration of a high sensitivity instrument for solar neutron
-  observation}.
-\newblock Master's thesis, Nagoya University, 2013.
-
-\bibitem{sanchez10}
-F.~A. Sanchéz and G.~Medina-Tanco.
-\newblock {Modeling scintillator and WLS fiber signals for fast Monte Carlo
-  simulations}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  620:182--191, 2010.
-
-\bibitem{mineev11}
-O.~Mineev et~al.
-\newblock {Scintillator detectors with long WLS fibers and multi-pixel
-  photodiodes}.
-\newblock {\em Journal of instrumentation}, 6:P12004, 2011.
-
-\bibitem{hama07}
-{Hamamatsu Photonics K.K.}
-\newblock {\em {Photomultiplier tubes: Basics and applications}}.
-\newblock {Word Technical Writing, Inc.}, {Japón, Tercera edición}, {2007}.
-
-\bibitem{syed07}
-{Ahmed, S. N.}
-\newblock {\em {Physics and engineering of radiation detection}}.
-\newblock {Elseivier}, {Reino Unido}, {2007}.
-
-\bibitem{barnhill08}
-D.~Barnhill et~al.
-\newblock {Testing of photomultiplier tubes for use in the surface detector of
-  the Pierre Auger observatory}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  591:453--466, 2008.
-
-\bibitem{sato15}
-T.~Sato.
-\newblock {Analytical Model for Estimating Terrestrial Cosmic Ray Fluxes Nearly
-  Anytime and Anywhere in the World: Extension of PARMA/EXPACS}.
-\newblock {\em PLOS ONE}, 10(12):1--33, 2015.
-
-\bibitem{uchida08}
-T.~Uchida.
-\newblock {Hardware-Based TCP Processor for Gigabit Ethernet}.
-\newblock {\em IEEE transactions on nuclear science}, 55:1631--1637, 2008.
-
-\bibitem{ysasai17}
-Y.~Sasai et~al.
-\newblock {A faster and more reliable data acquisition system for the full
-  performance of the SciCRT}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  857:50--57, 2017.
-
-\bibitem{manzorena171}
-M.~Anzorena et~al.
-\newblock {Current status of SciCRT experiment and its expected future
-  performance}.
-\newblock In {\em {Proceedings 35th International Cosmic Ray Conference}},
-  2017.
-
-\bibitem{nagaiphd}
-Y.~Nagai.
-\newblock {\em {Observation of cosmic rays by the new solar neutron telescope,
-  SciCRT}}.
-\newblock PhD thesis, Nagoya University, 2014.
-
-\bibitem{fujiwara10}
-T.~Fujiwara et~al.
-\newblock {Multi-Level Time-Over-Threshold Method for Energy Resolving
-  Multi-Channel Systems}.
-\newblock {\em IEEE transactions on nuclear science}, 57(5):2545--2548, 2010.
-
-\bibitem{spencer06}
-D.~F. Spencer et~al.
-\newblock {A high-resolution, multi-stop, time-to-digital converter for nuclear
-  time-of-flight measurements}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  556:291--295, 2006.
-
-\bibitem{balla14}
-A.~Balla et~al.
-\newblock {The characterization and application of a low resource FPGA-based
-  time to digital converter}.
-\newblock {\em Nuclear Instruments and Methods in Physics Research A},
-  739:75--82, 2014.
-
-\end{thebibliography}

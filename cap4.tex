@@ -27,9 +27,10 @@ La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para
         \label{fig:sim-setup}
 \end{figure}
 
-La condición para que las partículas sean contadas en la simulación es que éstas depositen al menos \SI{7}{\mega\electronvolt} en una barra de cada lado del detector; sin generar señal en las capas dedicadas a la detección de muones. A partir de aquí selecciono solo los eventos que cumplieron con el disparo en el SB \num{3}, que es donde está instalada la electrónica de alta velocidad. El resultado de este análisis se muestra en la figura \ref{fig:total-efficiency}. La línea roja representa la eficiencia de detección de neutrones; mientras que las lineas verde, café, morada, azul y naranja son eficiencias de protones, $\mu^{\pm}$, rayos $\gamma$, positrones y electrones; respectivamente. En todos los casos las eficiencias reportadas son las totales, es decir, están ponderadas con respecto a la distribución angular e incluyen un barra de error. La tasa de eventos total estimada a partir de estas especies de \SI{3132.31(9480)}{eventos  \per\minute}, de las cuales el \SI{84}{\percent} son neutrones.
+La condición para que las partículas sean contadas en la simulación es que éstas depositen al menos \SI{7}{\mega\electronvolt} en una barra de cada lado del detector; sin generar señal en las capas dedicadas a la detección de muones. A partir de aquí selecciono solo los eventos que cumplieron con el disparo en el SB \num{3}, que es donde está instalada la electrónica de alta velocidad. El resultado de este análisis se muestra en la figura \ref{fig:total-efficiency}. La línea roja representa la eficiencia de detección de neutrones; mientras que las lineas verde, café, morada, azul y naranja son eficiencias de protones, $\mu^{\pm}$, rayos $\gamma$, positrones y electrones; respectivamente. En todos los casos las eficiencias reportadas son las totales, es decir, están ponderadas con respecto a la distribución angular e incluyen un barra de error. La tasa de eventos total estimada a partir de estas especies es de \SI{3132.31(9480)}{eventos  \per\minute}, de los cuales el \SI{84}{\percent} son generados por neutrones.
 
-Protons are effectively rejected using the muon layers, however they are capable of entering by the sides.  About \SI{12}{\percent} of the events are produced by protons. The SciCRT has a large detection efficiency for high energy/inclined muons and $\gamma$-rays, but their contribution to the total number of events is small because these events are rare.
+Las partículas cargadas son rechazadas de manera eficiente usando la señal de anti-coincidencia, sin embargo éstas puede entrar por los lados del detector. Las distribuciones cenitales  Aun así, dado que electrones, positrones y muones depositan en promedio poca energía por barra (aunque tienen una deposición de energía grande en el detector), el umbral de \SI{7}{\mega\electronvolt} constituye una barrera para estas especies. El caso de los protones es más complejo
+puesto que puede tener deposiciones de energía simulares a las de los neutrones.  About \SI{12}{\percent} of the events are produced by protons. The SciCRT has a large detection efficiency for high energy/inclined muons and $\gamma$-rays, but their contribution to the total number of events is small because these events are rare.
 
 \begin{figure}
         \centering
@@ -37,6 +38,8 @@ Protons are effectively rejected using the muon layers, however they are capable
         \caption{Eficiencia de detección del SciCRT para diferentes especies de partículas en función de la energía incidente.}
         \label{fig:total-efficiency}
 \end{figure}
+
+
 
 \begin{figure}
         \centering

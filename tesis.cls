@@ -62,6 +62,8 @@
 \setlength{\parindent}{0pt}
 \addtolength{\parskip}{10pt}
 
+\DeclareSIUnit \year{yr}
+
 \pagestyle{fancy}
 \renewcommand\headrule{{\color{light-gray} \hrule height  2pt width \headwidth}}
 \renewcommand{\headrulewidth}{2pt}
