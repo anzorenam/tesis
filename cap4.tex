@@ -10,15 +10,15 @@ Estudios sobre el desempeño del SciCRT como detector de rayos cósmicos se encu
 Con el fin de alcanzar este objetivo utilicé un código de simulación que incluye las descripción completa del telescopio, el cual fue desarrollado por mi colega Rocío García. Los detalles de esta simulación se presentan en \cite{garcia20}. Algunos puntos que fueron necesarios adaptar para realizar mi análisis son los siguientes:
 
 \begin{itemize}
-  \item Considerar seis tipos de partículas diferentes: neutrones, protones, $\mu^{\pm}$, $e^{\pm}$ y rayos $\gamma$.
-  \item Utilizar el modelo PARMA con generador de eventos para las distribuciones de energía y de ángulos cenitales.
+  \item Considerar siete tipos de partículas diferentes: neutrones, protones, $\mu^{\pm}$, $e^{\pm}$ y rayos $\gamma$.
+  \item Utilizar el modelo PARMA como generador de eventos para las distribuciones de energía y de ángulos cenitales.
   \item Los parámetros de entra del modelo son los correspondientes a la localidad de Sierra Negra y el periodo de observación de Septiembre de \num{2017}.
   \item Todas los espectros de energía de las partículas usadas en la simulación se definen en un rango de \SI{10}{\mega\electronvolt} a \SI{1}{\tera\electronvolt}.
   \item Los propiedades ópticas de los materiales del detector están deshabilitadas para reducir el tiempo de computo.
   \item Se simulan en total \num{3e7} de eventos, los cuales son lanzados al detector desde una esfera de \SI{5}{\metre} de radio.
 \end{itemize}
 
-La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para inyectar las partículas al detector.
+La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para inyectar las partículas al detector. El cubo azul representa la posición del detector en la simulación, mientras que las partículas son inyectas desde la esfera.
 
 \begin{figure}
         \centering
