@@ -1,18 +1,18 @@
 % !TEX root = tesis.tex
 
-\chapter{Detección de partículas energéticas\\ solares en el \emph{SciCRT}}
+\chapter{Detección de partículas energéticas\\ solares con el SciCRT}
 \chaptermark{Detección de partículas}
 \label{chap:cuatro}
 \section{Desempeño del \emph{SciCRT} como detector de RC}
 
 Estudios sobre el desempeño del SciCRT como detector de rayos cósmicos se encuentran en \cite{ynagai14,ysasai14}, sin embargo hacen la evaluación durante un periodo de tiempo corto y condiciones operacionales distintas a las actuales. En la presente sección enfocaré mis esfuerzos en determinar el desempeño del detector bajo las condiciones actuales de operación, con vistas a determinar su confiabilidad durante un evento de partículas solares y estimar los errores sistemáticos.
 
-Con el fin de alcanzar este objetivo utilicé un código de simulación que incluye las descripción completa del telescopio, el cual fue desarrollado por mi colega Rocío García. Los detalles de esta simulación se presentan en \cite{garcia20}. Algunos puntos que fueron necesarios adaptar para realizar mi análisis son los siguientes:
+Con el fin de alcanzar este objetivo utilicé un código de simulación que incluye las descripción completa del telescopio, el cual fue desarrollado por mi colega Rocío García. Los detalles de esta simulación se presentan en \cite{garcia20}. Algunos puntos que fueron necesarios adaptar para mi análisis son los siguientes:
 
 \begin{itemize}
   \item Considerar siete tipos de partículas diferentes: neutrones, protones, $\mu^{\pm}$, $e^{\pm}$ y rayos $\gamma$.
   \item Utilizar el modelo PARMA como generador de eventos para las distribuciones de energía y de ángulos cenitales.
-  \item Los parámetros de entra del modelo son los correspondientes a la localidad de Sierra Negra y el periodo de observación de Septiembre de \num{2017}.
+  \item Los parámetros de entrada del modelo son los correspondientes a la localidad de Sierra Negra y el periodo de observación de Septiembre de \num{2017}.
   \item Todas los espectros de energía de las partículas usadas en la simulación se definen en un rango de \SI{10}{\mega\electronvolt} a \SI{1}{\tera\electronvolt}.
   \item Los propiedades ópticas de los materiales del detector están deshabilitadas para reducir el tiempo de computo.
   \item Se simulan en total \num{3e7} de eventos, los cuales son lanzados al detector desde una esfera de \SI{5}{\metre} de radio.
@@ -27,10 +27,12 @@ La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para
         \label{fig:sim-setup}
 \end{figure}
 
-La condición para que las partículas sean contadas en la simulación es que éstas depositen al menos \SI{7}{\mega\electronvolt} en una barra de cada lado del detector; sin generar señal en las capas dedicadas a la detección de muones. A partir de aquí selecciono solo los eventos que cumplieron con el disparo en el SB \num{3}, que es donde está instalada la electrónica de alta velocidad. El resultado de este análisis se muestra en la figura \ref{fig:total-efficiency}. La línea roja representa la eficiencia de detección de neutrones; mientras que las lineas verde, café, morada, azul y naranja son eficiencias de protones, $\mu^{\pm}$, rayos $\gamma$, positrones y electrones; respectivamente. En todos los casos las eficiencias reportadas son las totales, es decir, están ponderadas con respecto a la distribución angular e incluyen un barra de error. La tasa de eventos total estimada a partir de estas especies es de \SI{3132.31(9480)}{eventos  \per\minute}, de los cuales el \SI{84}{\percent} son generados por neutrones.
+La condición para que las partículas sean contadas en la simulación es que éstas depositen al menos \SI{7}{\mega\electronvolt} en una barra de cada lado del detector; sin generar señal en las capas dedicadas a la detección de muones. A partir de aquí selecciono solo los eventos que cumplen con el disparo en el SB \num{3}, que es donde está instalada la electrónica de alta velocidad. El resultado de este análisis se muestra en la figura \ref{fig:total-efficiency}. La línea roja representa la eficiencia de detección de neutrones; mientras que las lineas verde, café, morada, azul y naranja son eficiencias de protones, $\mu^{\pm}$, rayos $\gamma$, positrones y electrones; respectivamente. En todos los casos las eficiencias reportadas son las totales, es decir, están ponderadas con respecto a la distribución angular e incluyen un barra de error. La tasa de eventos total estimada a partir de estas especies es de \SI{3132.31(9480)}{eventos \per\minute}, de los cuales el \SI{84}{\percent} son generados por neutrones.
 
-Las partículas cargadas son rechazadas de manera eficiente usando la señal de anti-coincidencia, sin embargo éstas puede entrar por los lados del detector. Las distribuciones cenitales  Aun así, dado que electrones, positrones y muones depositan en promedio poca energía por barra (aunque tienen una deposición de energía grande en el detector), el umbral de \SI{7}{\mega\electronvolt} constituye una barrera para estas especies. El caso de los protones es más complejo
-puesto que puede tener deposiciones de energía simulares a las de los neutrones.  About \SI{12}{\percent} of the events are produced by protons. The SciCRT has a large detection efficiency for high energy/inclined muons and $\gamma$-rays, but their contribution to the total number of events is small because these events are rare.
+Las partículas cargadas son rechazadas de manera eficiente usando la señal de anti-coincidencia, sin embargo éstas puede entrar por los lados del detector. Aun así, dado que electrones, positrones y muones depositan en promedio poca energía por barra (aunque tienen una deposición de energía grande en el detector), el umbral de \SI{7}{\mega\electronvolt} constituye una barrera para estas especies. El caso de los protones es más complejo
+puesto que pueden tener deposiciones de energía similares a las de los neutrones. De esta forma cerca del \SI{12}{\percent} de los eventos totales son producidos por protones.
+
+De acuerdo con este estudio, el SciCRT tiene una eficiencia de detección grande para rayos $\gamma$ con ángulos mayores a \SI{30}{\degree}; lo cual hace muy limitada su contribución al total de eventos producidos por rayos cósmicos secundarios.
 
 \begin{figure}
         \centering
@@ -39,7 +41,36 @@ puesto que puede tener deposiciones de energía simulares a las de los neutrones
         \label{fig:total-efficiency}
 \end{figure}
 
+El siguiente paso de mi análisis fue comparar la tasa estimada mediante la simulación con los datos experimentales. Con este fin utilicé datos del \num{14} de Noviembre de \num{2017}. La tasa de eventos registrada por el telescopio se muestra en la figura \ref{fig:neutron-1pix}. A partir de aquí, la tasa media de eventos se estima en: \SI{3841.68(214)}{eventos \per\minute}.
 
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{neutron-171114-1pix.pdf}
+        \caption{Tasa de eventos registrada por el SB3 durante el \num{14} de Noviembre de \num{2017}}
+        \label{fig:neutron-1pix}
+\end{figure}
+
+La diferencia entre la simulación y el experimento es evidente, con un error de \SI{\approx 20}{\percent} tomando como base la simulación. En principio las diferencias deben ser ocasionadas por características del detector no incluidas en la simulación, como pueden ser; las ganancias de los MAPMTs, no linealidades de la electrónica y fluctuaciones debidas a la temperatura, entre otros factores.
+
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{neutron-ped.pdf}
+        \caption{Distribuciones de energía máxima depositada en una barra de centello. La distribución en azul corresponde a las barras del lado Y y la distribución naranja al lado X.}
+        \label{fig:neutron-pedestal}
+\end{figure}
+
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{neutron-mindep.pdf}
+        \caption{Distribuciones de energía máxima depositada en una barra de centello. La distribución en azul corresponde a las barras del lado Y y la distribución naranja al lado X.}
+        \label{fig:neutron-mindep}
+\end{figure}
+
+
+
+Regarding the stable operation of the SciCRT, Figure \ref{fig:muon-monthly} shows the trigger rate of muon ADC data during February \num{2020} (dark blue line) in comparison with the Neutron monitor (NM) of Mexico City (light blue). The data from the NM has been shifted by \num{1e6} counts to fit the same scale as the SciCRT. As it may be seen from the figure both series follow the same time evolution, despite the fact that the NM is operated under very controlled conditions and the SciCRT is under severe atmospheric conditions at high altitude. To guarantee the operation of the telescope we have installed battery banks and a zero transfer time uninterruptible power supply to prevent the loss data. The DAQ system is also equipped with ai r circulators to enable efficient heat dissipation in the low pressure environment of Sierra Negra.
 
 \begin{figure}
         \centering
@@ -55,6 +86,7 @@ puesto que puede tener deposiciones de energía simulares a las de los neutrones
         \label{fig:neutron-monthly}
 \end{figure}
 
+Figure \ref{fig:mip-stability} shows the gain stability of the MAPMTs used in the neutron layers in the SciCRT. For this analysis we selected a time period of three months, from December \num{2019} to February \num{2020}. The gain is measured determining the peak of the cosmic ray signal in the ADC distribution after pedestal subtraction. The top panel in the figure shows the time variation of one of the MAPMTs from the neutron layers. From this it is clear that the gain of the MAPMT is affected by the conditions at the site, nonetheless all fluctuations laid in the \SI{\pm 2.0}{\percent} interval (light green shaded area) and most of them in the the \SI{\pm 1.0}{\percent} interval (dark green shaded area). The bottom panel in the figure shows the distribution from all the MAPMTs in the neutron layers during the same period of time. Despite the severe atmospheric conditions at Sierra Negra all gain variations are between \SI{\pm 2.5}{\percent}.
 
 \begin{figure}
         \centering

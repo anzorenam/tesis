@@ -15,5 +15,5 @@ mat.rc('text.latex',preamble=r'\usepackage[utf8]{inputenc}\usepackage[T1]{fonten
 a=np.arange(0,89)
 adist=np.loadtxt('angular-dist.dat',delimiter=' ',comments='#')
 fig,ax=plt.subplots(nrows=1,ncols=1,sharex=False,sharey=False)
-ax.plot(a,adist[0,:],ds='steps-mid')
+ax.plot(a,adist[0,:]/np.sin(np.radians(a)),ds='steps-mid')
 plt.show()
