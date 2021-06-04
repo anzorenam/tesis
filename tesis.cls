@@ -9,12 +9,12 @@
 \RequirePackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \RequirePackage{csquotes}
 \RequirePackage{subcaption}
+\RequirePackage[showseconds=False]{datetime2}
 \RequirePackage[intlimits]{amsmath}
 \RequirePackage{amsfonts,amssymb}
 \RequirePackage[inline]{enumitem}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{mathtools}
-\RequirePackage{datetime}
 \RequirePackage[separate-uncertainty=true,multi-part-units=single,binary-units]{siunitx}
 \RequirePackage{booktabs}
 \RequirePackage{xfrac}

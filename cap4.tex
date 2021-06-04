@@ -127,16 +127,81 @@ Finalmente el panel inferior muestra la distribución para todo los MAPMTs en el
 
 \section{Observación de partículas solares}
 
+Una vez demostrada la operación estable del SciCRT, así como las posibles fuentes de error asociadas con la electrónica; en lo que resta de este capitulo mostraré las capacidades del telescopio en la observación de partículas energéticas solares. Para lograr este objetivo, mi análisis complementa las observaciones hechas con el SciCRT con datos obtenidos mediante satélites dedicados a la detección de rayos X y $\gamma$. Las misiones satelitales utilizadas en este estudio son: FERMI, RHESSI, Integral y GOES \num{15}.
+
+Los datos de GOES \num{15} (obtenidos de \cite{goesdata}) sirven como punto de partida para el estudio, ya que este satélite lleva un registro las \SI{24}{\hour} del flujo de rayos X provenientes del Sol. De acuerdo con la tabla \ref{table:eventos-neutrones} la mayoría de los eventos de neutrones solares están asociados con ráfagas del tipo X, mientras que solo un evento está confirmado se produjo por una ráfaga tipo M. Considerando la base de datos de GOES, desde la instalación de la electrónica de alta velocidad en el SciCRT (Julio \num{2015}) a la fecha; se han detectado \num{4} explosiones del tipo X y \num{71} del tipo M.
+
+De los \num{4} eventos más intensos (todos ocurridos en Septiembre de \num{2017}), dos de ellos no coinciden en tiempo con el periodo de observación del telescopio, mientras que en los otros dos el SciCRT no estaba trabajando debido a problemas en el suministro eléctrico del sitio.
+
+Considerando que el SciCRT es más sensible a neutrones de baja energía y que la intensidad en rayos X está relacionada con el espectro de los neutrones producidos\footnote{Lo cual es una suposición razonable pero aún requiere de más pruebas para sustentarla.}, un estudio sistemático de las \num{71} fulguraciones del tipo M resulta de gran interés para la comunidad, aun considerando que solo una fracción de éstas tiene condiciones para ser detectada en Sierra Negra. No obstante, por restricciones de tiempo solo concentraré mi análisis en dos eventos interesantes ocurridos durante Septiembre de \num{2017}.
+
+\subsection{Observaciones  4 de Septiembre de 2017}
+
+El \num{4} de Septiembre de \num{2017} la región activa \num{12673} produjo una fulguración del tipo M\num{5.5} a las \DTMtime{20:28:00} UT (instante en que se registro en la orbita de la Tierra), localizada  en las coordenadas S\SI{10}{\degree} W\SI{02}{\degree} (figura \ref{fig:september-04-flare}). A esta hora satélite GOES registro un incremento en rayos X suaves en la banda de \SI{1.5}{\kilo\electronvolt}-\SI{12}{\kilo\electronvolt}, lo cual se muestra en color negro en la figura \ref{fig:september-04-xrays}.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{sdo170904-2030-13}
+        \caption{Image tomada por el satélite SDO durante la fulguración del $04/09$ en la banda de \SI{13.1}{\nano\metre}. Fuente: \url{https://www.spaceweatherlive.com/en.html}}
+        \label{fig:september-04-flare}
+\end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{xrays_170904.pdf}
+        \caption{}
+        \label{fig:september-04-xrays}
+\end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{cosz_170904.pdf}
+        \caption{}
+        \label{fig:september-04-zenith}
+\end{figure}
+
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{neutron-170904.pdf}
         \caption{Perfil temporal de eventos registrados por el \emph{SciCRT} el \num{4} de Septiembre de \num{2017}. El área sombreada representa el nivel de $3.0\sigma$.}
-        \label{fig:september-04}
+        \label{fig:september-04-neutrons}
+\end{figure}
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{\textwidth}
+                \includegraphics[width=0.725\textwidth]{scibar-em.pdf}
+                \caption*{Componente electromagnética ($\gamma$,$e^{\pm}$).}
+        \end{subfigure}
+        \begin{subfigure}[b]{\textwidth}
+                \includegraphics[width=0.725\textwidth]{scibar-mu.pdf}
+                \caption*{Componente muónica.}
+        \end{subfigure}
+        \begin{subfigure}[b]{\textwidth}
+                \includegraphics[width=0.725\textwidth]{scibar-had.pdf}
+                \caption*{Componente hadrónica.}
+        \end{subfigure}
+        \caption{Distribuciones $E_{dep}$-$E_{max}$ para las diferentes componentes de la radiación cósmica secundaria.}
+        \label{fig:scicrt-edep-emax}
+\end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{sdo170906-1550-13}
+        \caption{Image tomada por el satélite SDO durante la fulguración del $06/09$ en la banda de \SI{13.1}{\nano\metre}. Fuente: \url{https://www.spaceweatherlive.com/en.html}}
+        \label{fig:september-06-flare}
+\end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{cosz_170906.pdf}
+        \caption{}
+        \label{fig:september-06-zenith}
 \end{figure}
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{neutron-170906.pdf}
-        \caption{Perfil temporal de eventos registrados por el \emph{SciCRT} el \num{4} de Septiembre de \num{2017}. El área sombreada representa el nivel de $3.0\sigma$..}
-        \label{fig:september-06}
+        \caption{Perfil temporal de eventos registrados por el \emph{SciCRT} el \num{4} de Septiembre de \num{2017}. El área sombreada representa el nivel de $3.0\sigma$.}
+        \label{fig:september-06-neutrons}
 \end{figure}
