@@ -27,12 +27,12 @@ La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para
         \label{fig:sim-setup}
 \end{figure}
 
-La condición para que las partículas sean contadas en la simulación es que éstas depositen al menos \SI{7}{\mega\electronvolt} en una barra de cada lado del detector; sin generar señal en las capas dedicadas a la detección de muones. A partir de aquí seleccioné solo los eventos que cumplen con el disparo en el SB \num{3}, que es donde está instalada la electrónica de alta velocidad. El resultado de este análisis se muestra en la figura \ref{fig:total-efficiency}. La línea roja representa la eficiencia de detección de neutrones; mientras que las lineas verde, café, morada, azul y naranja son eficiencias de protones, $\mu^{\pm}$, rayos $\gamma$, positrones y electrones; respectivamente. En todos los casos las eficiencias reportadas son las totales, es decir, están ponderadas con respecto a la distribución angular e incluyen una barra de error. La tasa de eventos total estimada a partir de estas especies es de \SI{3132.31(9480)}{eventos \per\minute}, de los cuales el \SI{84}{\percent} son generados por neutrones.
+La condición para que las partículas sean contadas en la simulación es que éstas depositen al menos \SI{7}{\mega\electronvolt} en una barra de cada lado del detector; sin generar señal en las capas dedicadas a la detección de muones. A partir de aquí seleccioné solo los eventos que cumplen con el disparo en el SB \num{3}, que es donde está instalada la electrónica de alta velocidad. El resultado de este análisis se muestra en la figura \ref{fig:total-efficiency}. La línea roja representa la eficiencia de detección de neutrones; mientras que las lineas verde, café, morada, azul y naranja son eficiencias de protones, $\mu^{\pm}$, rayos $\gamma$, positrones y electrones; respectivamente. En todos los casos las eficiencias reportadas son las totales, es decir, están ponderadas con respecto a la distribución angular e incluyen una barra de error. La tasa de eventos total estimada a partir de estas especies es de \SI{3132.31(9480)}{eventos \per\minute}, de los cuales las principales contribuciones provienen de neutrones, muones, rayos $\gamma$ y protones.
 
 Las partículas cargadas son rechazadas de manera eficiente usando la señal de anti-coincidencia, sin embargo éstas puede entrar por los lados del detector. Aun así, dado que electrones, positrones y muones depositan en promedio poca energía por barra (aunque tienen una deposición de energía grande en el detector), el umbral de \SI{7}{\mega\electronvolt} constituye una barrera para estas especies. El caso de los protones es más complejo
-puesto que pueden tener deposiciones de energía similares a las de los neutrones. De esta forma cerca del \SI{12}{\percent} de los eventos totales son producidos por protones.
+puesto que pueden tener deposiciones de energía similares a las de los neutrones.
 
-De acuerdo con este estudio, el SciCRT tiene una eficiencia de detección grande para rayos $\gamma$ con ángulos mayores a \SI{30}{\degree} y energías superiores a \SI{100}{\mega\electronvolt}; lo cual hace muy limitada su contribución al total de eventos producidos por rayos cósmicos secundarios ya que estos eventos son poco frecuentes.
+De acuerdo con este estudio, el SciCRT tiene una eficiencia de detección grande (comparable con la de neutrones) para rayos $\gamma$ con ángulos mayores a \SI{30}{\degree} y energías superiores a \SI{100}{\mega\electronvolt}; lo cual un buen detector de rayos $\gamma$ solares.
 
 \begin{figure}
         \centering
@@ -127,51 +127,71 @@ Finalmente el panel inferior muestra la distribución para todo los MAPMTs en el
 
 \section{Observación de partículas solares}
 
-Una vez demostrada la operación estable del SciCRT, así como las posibles fuentes de error asociadas con la electrónica; en lo que resta de este capitulo mostraré las capacidades del telescopio en la observación de partículas energéticas solares. Para lograr este objetivo, mi análisis complementa las observaciones hechas con el SciCRT con datos obtenidos mediante satélites dedicados a la detección de rayos X y $\gamma$. Las misiones satelitales utilizadas en este estudio son: FERMI, RHESSI, Integral y GOES \num{15}.
+Una vez demostrada la operación estable del SciCRT, así como las posibles fuentes de error asociadas con la electrónica; en lo que resta de este capitulo mostraré las capacidades del telescopio en la observación de partículas energéticas solares. Para lograr este objetivo, mi análisis complementa las observaciones hechas con el SciCRT con datos obtenidos mediante satélites dedicados a la detección de rayos X y $\gamma$. Las misiones satelitales utilizadas en este estudio son: FERMI, RHESSI, y GOES \num{15}.
 
 Los datos de GOES \num{15} (obtenidos de \cite{goesdata}) sirven como punto de partida para el estudio, ya que este satélite lleva un registro las \SI{24}{\hour} del flujo de rayos X provenientes del Sol. De acuerdo con la tabla \ref{table:eventos-neutrones} la mayoría de los eventos de neutrones solares están asociados con ráfagas del tipo X, mientras que solo un evento está confirmado se produjo por una ráfaga tipo M. Considerando la base de datos de GOES, desde la instalación de la electrónica de alta velocidad en el SciCRT (Julio \num{2015}) a la fecha; se han detectado \num{4} explosiones del tipo X y \num{71} del tipo M.
 
 De los \num{4} eventos más intensos (todos ocurridos en Septiembre de \num{2017}), dos de ellos no coinciden en tiempo con el periodo de observación del telescopio, mientras que en los otros dos el SciCRT no estaba trabajando debido a problemas en el suministro eléctrico del sitio.
 
-Considerando que el SciCRT es más sensible a neutrones de baja energía y que la intensidad en rayos X está relacionada con el espectro de los neutrones producidos\footnote{Lo cual es una suposición razonable pero aún requiere de más pruebas para sustentarla.}, un estudio sistemático de las \num{71} fulguraciones del tipo M resulta de gran interés para la comunidad, aun considerando que solo una fracción de éstas tiene condiciones para ser detectada en Sierra Negra. No obstante, por restricciones de tiempo solo concentraré mi análisis en dos eventos interesantes ocurridos durante Septiembre de \num{2017}.
+Tomando en cuenta que el SciCRT es más sensible a neutrones de baja energía y la intensidad en rayos X está relacionada con el espectro de los neutrones producidos\footnote{Lo cual es una suposición razonable pero aún requiere de más pruebas para sustentarla.}, un estudio sistemático de las \num{71} fulguraciones del tipo M resulta de gran interés para la comunidad, aun considerando que solo una fracción de éstas tiene condiciones para ser detectada en Sierra Negra. No obstante, por restricciones de tiempo solo concentraré mi análisis en dos eventos interesantes ocurridos durante Septiembre de \num{2017}.
 
-\subsection{Observaciones  4 de Septiembre de 2017}
+\subsection{Posible observación de neutrones solares el 4 de Septiembre de 2017}
 
-El \num{4} de Septiembre de \num{2017} la región activa \num{12673} produjo una fulguración del tipo M\num{5.5} a las \DTMtime{20:28:00} UT (instante en que se registro en la orbita de la Tierra), localizada  en las coordenadas S\SI{10}{\degree} W\SI{02}{\degree} (figura \ref{fig:september-04-flare}). A esta hora satélite GOES registro un incremento en rayos X suaves en la banda de \SI{1.5}{\kilo\electronvolt}-\SI{12}{\kilo\electronvolt}, lo cual se muestra en color negro en la figura \ref{fig:september-04-xrays}.
+El \num{4} de Septiembre de \num{2017} la región activa \num{12673} produjo una fulguración del tipo M\num{5.5} a las \DTMtime{20:28:00} UT (instante en que se registro en la orbita de la Tierra), localizada  en las coordenadas S\SI{10}{\degree} W\SI{02}{\degree} (figura \ref{fig:september-04-flare}). A esta hora el satélite GOES registro un incremento en rayos X suaves en la banda de \num{1.5} a \SI{12}{\kilo\electronvolt}, lo cual se muestra en color negro en la figura \ref{fig:september-04-xrays}.
 
 \begin{figure}
         \centering
         \includegraphics[width=0.7\textwidth]{sdo170904-2030-13}
-        \caption{Image tomada por el satélite SDO durante la fulguración del $04/09$ en la banda de \SI{13.1}{\nano\metre}. Fuente: \url{https://www.spaceweatherlive.com/en.html}}
+        \caption{Image tomada por el satélite SDO durante la fulguración del $04/09/17$ en la banda de \SI{13.1}{\nano\metre}. Fuente: \url{https://www.spaceweatherlive.com/en.html}}
         \label{fig:september-04-flare}
 \end{figure}
+
+Por otro, la línea verde en la figura \ref{fig:september-04-xrays} muestra los datos del monitor de estallidos de rayos $\gamma$ de FERMI (GBM) en la banda de \num{50} a \SI{300}{\kilo\electronvolt}. Dos incrementos importantes en esta banda se observan a las \DTMtime{20:28:00} y \DTMtime{20:52:00}, lo cual brinda pruebas de la aceleración de electrones durante la explosión. Un análisis similar usando los datos de RHESSI \cite{rhessidata} nos proporciona información similar a la obtenida con FERMI\footnote{No incluyo los datos de RHESSI en este trabajo debido a que no existen herramientas libres para su procesamiento. Sin embargo, un análisis preliminar de éstos se puede hacer en la siguiente página \url{http://sprg.ssl.berkeley.edu/~tohban/browser/}.}.
+
+Para poder argumentar sobre la producción de neutrones durante la ráfaga es necesario buscar en el espectro de rayos $\gamma$ las firmas de los procesos de desexcitación nuclear y decaimiento de piones. No obstante, en este evento en particular, el telescopio de neutrones SEDA-FIB (instalado en la estación internacional) reporta una detección de neutrones en la dirección solar con alta significancia estadística \cite{kamiya19}. Además de esto GOES también reporta un incremento debido a protones de altas energías, observado \SI{4}{\hour} después de la explosión. De esta manera podemos esperar la observación de neutrones en la superficie terrestre si las condiciones de profundidad atmosféricas y flujo son adecuadas.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{xrays_170904.pdf}
-        \caption{}
+        \caption{Perfil temporal de rayos X suaves (linea negra) observados por GOES 15, para la fulguración del \num{4} de Septiembre de \num{2017}. La linea verde muestra los datos de FERMI-GBM en el rango de \num{50} a \SI{300}{\kilo\electronvolt}.}
         \label{fig:september-04-xrays}
 \end{figure}
 
+La figura \ref{fig:september-04-zenith} muestra el coseno del ángulo cenital solar para las diferentes localidades donde se encuentra la red mundial de telescopios de neutrones, considerando el instante en que se registra el máximo de la ráfaga. A partir de esta figura podemos concluir que en el instante del evento solar las mejores estaciones para observar neutrones solares eran Mauna Kea (Hawaii) y Sierra Negra, México. Tomando en cuenta el caso de México, el valor del ángulo cenital para el momento de la ráfaga es de \SI{38.7}{\degree} y la masa de aire en el sitio \SI{732}{\gram\per\square\cm}. Sin embargo, debido a que los neutrones sufren dispersión elástica en la atmósfera, la masa de aire efectiva es menor (\SI{\approx 650}{\gram\per\square\cm}); lo cual favorece la propagación \cite{dorman99,shibata94}.
+
 \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{cosz_170904.pdf}
-        \caption{}
+        \includegraphics[width=0.8\textwidth]{cosz_170904.pdf}
+        \caption{Coseno del ángulo cenital del Sol para el instante en que se registra la ráfaga. Los puntos muestran la localización geográfica de los TNS. La zona más clara indica un ángulo cenital del Sol cercano a cero.}
         \label{fig:september-04-zenith}
 \end{figure}
+
+A pesar de que estas condiciones favorecen la observación de partículas solares en Sierra Negra, como se puede apreciar en la figura \ref{fig:september-04-neutrons}, la tasa de eventos del telescopio no registra ningún exceso positivo durante la explosión. En la figura, el instante del máximo de la ráfaga $t_{0}$ se indica mediante la linea punteada vertical. Para calcular la significancia ($\sigma$) de los datos lo hice siguiendo el procedimiento descrito en \cite{diegophd}. En este método, primero ajustamos un polinomio de tercer grado a la serie de tiempo de las cuentas, considerando una ventana de tiempo $t_{0}\pm\SI{1.5}{\hour}$. Posteriormente calculamos la significancia mediante la siguiente expresión:
+
+\begin{equation}
+\sigma=\frac{N_{j}-N_{bj}}{\alpha\sqrt{N_{bj}}}
+\end{equation}
+
+de donde $N_{j}$ es el total de cuentas registradas por cada \SI{2}{\minute}, $N_{bj}$ es el valor de la linea de base (polinomio) y $\alpha$ un factor de normalización, el cual sirve para \emph{estandarizar} los residuos ($N_{j}-N_{bj}$). A partir de esta expresión consideramos como señal significativa a cualquier exceso de cuentas arriba de $3\sigma$. Para poder asociar esta señal con la detección de partículas solares, es necesario que ésta ocurra dentro del intervalo de tiempo de $t_{0}-\SI{15}{\minute}$ a $t_{0}+\SI{45}{\minute}$; lo cual tiene como objetivo buscar señales de neutrones solares en un amplio rango de energías.
+
+En la figura \ref{fig:september-04-neutrons} la linea azul representa el ajuste del polinomio de tercer grado, mientras que el área sombreada en la dirección horizontal es el intervalo de $\pm 3\sigma$. Como se puede observar, no existe ningún incremento mayor a $3\sigma$ en el área sombreada vertical, en primera instancia no podemos concluir que el SciCRT detector partículas solares.
+
+Por otro lado, dado que la fulguración no es gran magnitud, es conveniente buscar un método para eliminar la contaminación producida por radiación cósmica secundaria en los eventos registrados, y analizar si de esta forma es posible encontrar una señal significativa.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{neutron-170904.pdf}
-        \caption{Perfil temporal de eventos registrados por el \emph{SciCRT} el \num{4} de Septiembre de \num{2017}. El área sombreada representa el nivel de $3.0\sigma$.}
+        \caption{Perfil temporal de eventos registrados por el SciCRT el $04/09/17$. El área sombreada representa el nivel de $3.0\sigma$.}
         \label{fig:september-04-neutrons}
 \end{figure}
+
+Un método simple para realizar la clasificación consiste en el análisis de las distribuciones de energía depositada contra energía máxima depositada en una barra \cite{nagaiphd,sasaiphd}. La figura \ref{fig:scicrt-edep-emax} muestra las distribuciones obtenidas mediante simulación para las diferentes componentes de la radiación cósmica. El panel superior muestra los resultados para $e^{\pm}$ y rayos $\gamma$, el panel del centro contiene datos de $\mu^{\pm}$ y el panel inferior corresponde a la componente hadrónica. Se puede apreciar en las figuras que tanto las componente electromagnética como la muónica se agrupan en el extremo inferior derecho de las gráficas, mientras que los hadrones están agrupados en la parte superior izquierda. Esto se debe a que los protones tienen pérdidas de energía grandes cuando se detienen dentro del detector.
 
 \begin{figure}
         \centering
         \begin{subfigure}[b]{\textwidth}
                 \includegraphics[width=0.725\textwidth]{scibar-em.pdf}
-                \caption*{Componente electromagnética ($\gamma$,$e^{\pm}$).}
+                \caption*{Componente electromagnética ($\gamma$ y $e^{\pm}$).}
         \end{subfigure}
         \begin{subfigure}[b]{\textwidth}
                 \includegraphics[width=0.725\textwidth]{scibar-mu.pdf}
@@ -181,27 +201,84 @@ El \num{4} de Septiembre de \num{2017} la región activa \num{12673} produjo una
                 \includegraphics[width=0.725\textwidth]{scibar-had.pdf}
                 \caption*{Componente hadrónica.}
         \end{subfigure}
-        \caption{Distribuciones $E_{dep}$-$E_{max}$ para las diferentes componentes de la radiación cósmica secundaria.}
+        \caption{Distribuciones $E_{dep}$  $E_{max}$ para las diferentes componentes de la radiación cósmica secundaria.}
         \label{fig:scicrt-edep-emax}
 \end{figure}
+
+De esta forma podemos definir la ecuación \ref{equ:edep-disc}, la cual permite realizar la separación entre hadrones y componentes muónica/electromagnética:
+
+\begin{align}
+\label{equ:edep-disc}
+E_{max} &=0.646807\cdot (E_{dep})^{k}\\
+k &=0.5\cdot\log_{10}\left(\frac{283.0}{5.0}\right) \nonumber
+\end{align}
+
+Cabe mencionar que, a pesar de que este método tiene buena precisión para hadrones (hay poca contaminación de las componentes electromagnética y muónica), la eficiencia es muy pobre (menor al \SI{40}{\percent}) y no permite directamente separar entre neutrones y protones. Con respecto a esto, los métodos desarrollados en \cite{garcia20} son mucho más poderosos y versátiles, pero por limitaciones de tiempo decidí no probarlos.
+
+El resultado de aplicar el criterio de selección descrito anteriormente a los datos del SciCRT se muestra en la figura \ref{fig:september-04-disc}. En la figura se grafican las significancias de las series de tiempo de los hadrones (serie en color violeta) y componentes muónica/electromagnética (serie en color azul fuerte), además del instante del máximo de la ráfaga (linea punteada) y la ventana de tiempo para observar neutrones. Cada \emph{bin} en la serie de tiempo corresponde a \SI{4}{\minute}. De la serie de tiempo de hadrones se observa un incremento de $3.8\sigma$ doce minutos después del máximo en rayos X, lo cual indicaría la detección de neutrones de \SI{400}{\mega\electronvolt}.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{significance-170904.pdf}
+        \caption{Significancia en función del tiempo para los grupos de hadrones (serie color violeta) y muones/electromagnética (serie color azul fuerte).}
+        \label{fig:september-04-disc}
+\end{figure}
+
+Aunado a esto, la serie de hadrones tiene \num{4} excesos positivos posteriores al máximo, lo cual podría estar relacionados con neutrones de menor energía. Tomando en cuenta estos excesos la significancia está entre $5.1\sigma$ y $10.1\sigma$, dependiendo cuanto consideremos que dura la emisión. También existe la posibilidad que estos las dos señales significativas se presenten debido a dos instantes de aceleración diferentes, tomando en cuenta los dos máximos en emisión de rayos X duros. En este sentido un análisis más detallado del espectro registrado por FERMI y RHESSI puede dar pistas sobre el escenario en el que se aceleraron los neutrones.
+
+\subsection{Posible observación de rayos $\gamma$ solares el 6 de Septiembre de 2017}
+
+El \num{6} de Septiembre de \num{2017} el Sol produjo otra ráfaga tipo M\num{2.7} a las \DTMtime{15:45:00} UT, proveniente de la misma región activa que la explosión analizada previamente (aunque desplazada \SI{20}{\degree} al Oeste). La figura \ref{fig:september-06-flare} muestra una imagen de la atmósfera solar en la banda de \SI{13.1}{\nano\metre}.
 
 \begin{figure}
         \centering
         \includegraphics[width=0.7\textwidth]{sdo170906-1550-13}
-        \caption{Image tomada por el satélite SDO durante la fulguración del $06/09$ en la banda de \SI{13.1}{\nano\metre}. Fuente: \url{https://www.spaceweatherlive.com/en.html}}
+        \caption{Image tomada por el satélite SDO durante la fulguración del $06/09/17$ en la banda de \SI{13.1}{\nano\metre}. Fuente: \url{https://www.spaceweatherlive.com/en.html}}
         \label{fig:september-06-flare}
 \end{figure}
 
+El satélite GOES registró el incremento en la banda de rayos X suaves, sin embargo ni FERMI ni RHESSI estuvieron en condiciones para observar este evento.
+
+Aun con estas limitaciones, al revisar las condiciones para la detección de partículas solares, vemos que el SciCRT tenía buenas posibilidades de observarlas. Esto se puede corroborar mediante la figura \ref{fig:september-06-gammas}, en la cual se muestra que los mejores sitios para observar en el instante de la fulguración son Sierra Negra y Chacaltaya, Bolivia.
+
 \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{cosz_170906.pdf}
-        \caption{}
+        \includegraphics[width=0.8\textwidth]{cosz_170906.pdf}
+        \caption{Coseno del ángulo cenital del Sol para el instante en que se registra la ráfaga. Los puntos muestran la localización geográfica de los TNS. La zona más clara indica un ángulo cenital del Sol cercano a cero.}
         \label{fig:september-06-zenith}
 \end{figure}
+
+La figura \ref{fig:september-06-neutrons} muestra la tasa de eventos registrada para el instante de la ráfaga, considerando la ventana de $t_{0}\pm\SI{1.5}{\hour}$. La linea azul representa el ajuste del polinomio de tercer grado, mientras que el área sombreada en la dirección horizontal es el intervalo de $\pm 3\sigma$. Para este evento en particular tenemos un exceso de $3.8\sigma$, seguido de \num{6} excesos positivos; resultando en una significancia de $8.9\sigma$ durante \SI{14}{\minute}.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{neutron-170906.pdf}
-        \caption{Perfil temporal de eventos registrados por el \emph{SciCRT} el \num{4} de Septiembre de \num{2017}. El área sombreada representa el nivel de $3.0\sigma$.}
+        \caption{Perfil temporal de eventos registrados por el SciCRT el $06/09/17$. El área sombreada representa el nivel de $3.0\sigma$.}
         \label{fig:september-06-neutrons}
 \end{figure}
+
+Por otro lado, aunque la señal es muy significativa para descartarla, sostener la hipótesis de que estas partículas son neutrones es difícil debido al retardo de \SI{20}{\minute} que existe entre $t_{0}$ y el exceso de $3.8\sigma$. De ser neutrones estas partículas, su energía cinética seria de \SI{100}{\mega\electronvolt} y los subsecuentes incrementos de menor energía; lo cual apuntaría a un espectro de emisión muy suave. Otra posibilidad de interpretar este resultado es que los iones primarios en la atmósfera solar no se hayan producido en el mismo instante que los electrones, llevando a este retraso. Ambos posibilidades pueden ser estudiadas analizando con detalle la distribución de energía depositada, lo cual se deja para un futuro estudio.
+
+Otro posibilidad que surge de este resultado es que las partículas detectadas no sean neutrones. En este sentido el satélite GOES reporta un flujo de protones energéticos en la órbita terrestre, sin embargo esta hipótesis también resulta muy poco probable por dos circunstancias. La primera es que los protones monitoreados por GOES son de energías menores a \SI{1}{\giga\electronvolt}, lo que hace imposible que lleguen al sitio de Sierra Negra debido a la rigidez umbral del sitio ($\approx\SI{8.2}{\giga\electronvolt}$). Aunado a esto, no hay ningún exceso registrado asociado a estas partículas en la base de datos de monitores de neutrones (\url{https://www.nmdb.eu/nest/}).
+
+Más aún, el incremento reportado por GOES inicia a las \DTMtime{12:02:00}, asociado a una fulguración muy intensa del tipo X\num{9.3}. En el caso de que un pequeño número de los protones producidos durante esta ráfaga tuviera la energía suficiente para entrar en la localidad de Sierra Negra, surge el problema de por qué se observan su detección a las \DTMtime{16:15:00}.
+
+Otro escenario es el de la detección de rayos $\gamma$ solares. En este caso FERMI reporta una emisión de rayos $\gamma$ con energía $>\SI{100}{\mega\electronvolt}$, iniciando con la fulguración X\num{9.3} y manteniéndose durante más de \SI{13}{\hour} dos ordenes de magnitud arriba de la línea de base. Los datos de FERMI se muestran en la figura \ref{fig:september-06-gammas}, con la linea punteada indicando $t_{0}$ para la ráfaga M\num{2.6}. La linea negra solida representa el nivel de flujo de Sol quieto ($\approx\SI{4.5e-5}{\per\square\cm\per\second}$).
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{gammas-170906.pdf}
+        \caption{Flujo de rayos $\gamma$ con energías $>\SI{100}{\mega\electronvolt}$ detectado por FERMI el $06/09/17$.}
+        \label{fig:september-06-gammas}
+\end{figure}
+
+Para poder descartar las diferentes posibilidades, seguí una metodología similar a la hecha para el evento del \num{4} de Septiembre y apliqué el criterio de separación antes mencionado. De esta forma obtuve el resultado de la figura \ref{fig:september-06-disc}. Como se observa, para este evento el exceso se encuentra registrado en la serie de tiempo de la componente electromagnética/muones, con lo que en principio nos brinda pruebas de que las partículas detectadas son rayos $\gamma$.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{significance-170906.pdf}
+        \caption{Significancia en función del tiempo para los grupos de hadrones (serie violeta) y muones/electromagnética (serie azul fuerte).}
+        \label{fig:september-06-disc}
+\end{figure}
+
+Aun con este resultado, sustentar la hipótesis de la detección de rayos $\gamma$ es complicado, en primer lugar porque la atmósfera terrestre es opaca a este tipo de radiación. Por otra parte, esta hipótesis sufre del mismo problema que la detección de protones, debido a los intervalos de tiempo en que se registra. Con respecto a este ultimo punto, un argumento a favor es el presentando en \cite{muraki20}, en donde se reporta una detección de rayos $\gamma$ solares bajo circunstancias similares.
