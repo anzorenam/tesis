@@ -15,10 +15,10 @@ Con el fin de alcanzar este objetivo utilicé un código de simulación que incl
   \item Los parámetros de entrada del modelo son los correspondientes a la localidad de Sierra Negra y el periodo de observación de Septiembre de \num{2017}.
   \item Todas los espectros de energía de las partículas usadas en la simulación se definen en un rango de \SI{10}{\mega\electronvolt} a \SI{1}{\tera\electronvolt}.
   \item Los propiedades ópticas de los materiales del detector están deshabilitadas para reducir el tiempo de computo.
-  \item Se simulan en total \num{3e7} de eventos, los cuales son lanzados al detector desde una esfera de \SI{5}{\metre} de radio.
+  \item Se simulan en total \num{3e7} de eventos, los cuales son lanzados al detector desde una semiesfera de \SI{5}{\metre} de radio.
 \end{itemize}
 
-La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para inyectar las partículas al detector. El cubo azul representa la posición del detector en la simulación, mientras que las partículas son inyectas desde la esfera.
+La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para inyectar las partículas al detector. El cubo azul representa la posición del detector en la simulación, mientras que las partículas son inyectas desde la semiesfera.
 
 \begin{figure}
         \centering
@@ -29,15 +29,14 @@ La figura \ref{fig:sim-setup} muestra la geometría usada en la simulación para
 
 La condición para que las partículas sean contadas en la simulación es que éstas depositen al menos \SI{7}{\mega\electronvolt} en una barra de cada lado del detector; sin generar señal en las capas dedicadas a la detección de muones. A partir de aquí seleccioné solo los eventos que cumplen con el disparo en el SB \num{3}, que es donde está instalada la electrónica de alta velocidad. El resultado de este análisis se muestra en la figura \ref{fig:total-efficiency}. La línea roja representa la eficiencia de detección de neutrones; mientras que las lineas verde, café, morada, azul y naranja son eficiencias de protones, $\mu^{\pm}$, rayos $\gamma$, positrones y electrones; respectivamente. En todos los casos las eficiencias reportadas son las totales, es decir, están ponderadas con respecto a la distribución angular e incluyen una barra de error. La tasa de eventos total estimada a partir de estas especies es de \SI{3132.31(9480)}{eventos \per\minute}, de los cuales las principales contribuciones provienen de neutrones, muones, rayos $\gamma$ y protones.
 
-Las partículas cargadas son rechazadas de manera eficiente usando la señal de anti-coincidencia, sin embargo éstas puede entrar por los lados del detector. Aun así, dado que electrones, positrones y muones depositan en promedio poca energía por barra (aunque tienen una deposición de energía grande en el detector), el umbral de \SI{7}{\mega\electronvolt} constituye una barrera para estas especies. El caso de los protones es más complejo
-puesto que pueden tener deposiciones de energía similares a las de los neutrones.
+Las partículas cargadas son rechazadas de manera eficiente usando la señal de anti-coincidencia, sin embargo éstas puede entrar por los lados del detector. Aun así, dado que electrones, positrones y muones depositan en promedio poca energía por barra (aunque tienen una deposición de energía grande en el detector), el umbral de \SI{7}{\mega\electronvolt} constituye una barrera para estas especies. El caso de los protones es más complejo puesto que pueden tener deposiciones de energía similares a las de los neutrones.
 
-De acuerdo con este estudio, el SciCRT tiene una eficiencia de detección grande (comparable con la de neutrones) para rayos $\gamma$ con ángulos mayores a \SI{30}{\degree} y energías superiores a \SI{100}{\mega\electronvolt}; lo cual un buen detector de rayos $\gamma$ solares.
+De acuerdo con este estudio, el SciCRT tiene una eficiencia de detección grande (comparable con la de neutrones) para rayos $\gamma$ con ángulos mayores a \SI{30}{\degree} y energías superiores a \SI{100}{\mega\electronvolt}; lo cual lo hace un buen detector de rayos $\gamma$ solares.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{scibar-efficiency.pdf}
-        \caption{Eficiencia de detección del SciCRT para diferentes especies de partículas en función de la energía incidente.}
+        \caption{Eficiencia de detección del SciCRT para diferentes especies de partículas en función de la energía incidente (ver texto).}
         \label{fig:total-efficiency}
 \end{figure}
 
@@ -54,7 +53,7 @@ La diferencia entre la simulación y el experimento es evidente, con un error de
 
 Para poder investigar cualquiera de las posibilidades restantes es necesario reconstruir los eventos registrados por el detector. En resumen este proceso consta de: eliminar el pedestal de las distribuciones de ADC, corregir el efecto de atenuación en las barras y finalmente convertir los valores de ADC en energía depositada.
 
-Una ejemplo de distribución ADC de una de las barras de centelleo se muestra en la figura \ref{fig:neutron-pedestal}. Dos de las características importantes de estas distribuciones son el pico debido a ruido electrónico (pedestal) y el pico de señal (en este caso aproximadamente en \SI{100}{ADC}). Para cada archivo de eventos registrados es necesario estimar el valor del pedestal por barra, ya que éste representa el punto de referencia a partir del cual la electrónica mide la energía depositada. La posición del pedestal de cada barra la calculo a partir de la media de una distribución Gaussiana ajustada al pico principal. La distribución que se muestra en la figura \ref{fig:neutron-pedestal} corresponde a los datos de una barra, acumulados durante una día y a los que se les ha sustraído el pedestal.
+Una ejemplo de distribución ADC de una de las barras de centelleo se muestra en la figura \ref{fig:neutron-pedestal}. Dos características importantes de estas distribuciones son el pico debido a ruido electrónico (pedestal) y el pico de señal (en este caso aproximadamente en \SI{100}{ADC}). Para cada archivo de eventos registrados es necesario estimar el valor del pedestal por barra, ya que éste representa el punto de referencia a partir del cual la electrónica mide la energía depositada. La posición del pedestal de cada barra la calculo a partir de la media de una distribución Gaussiana ajustada al pico principal. La distribución que se muestra en la figura \ref{fig:neutron-pedestal} corresponde a los datos de una barra, acumulados durante una día y a los que se les ha sustraído el pedestal (es decir las distribuciones están referidas a cero).
 
 \begin{figure}
         \centering
@@ -63,9 +62,9 @@ Una ejemplo de distribución ADC de una de las barras de centelleo se muestra en
         \label{fig:neutron-pedestal}
 \end{figure}
 
-Posteriormente es necesario corregir los datos de ADC por efectos de la atenuación en la fibra. Este procedimiento se realiza a través de la ecuación \ref{equ:fiber-att}, mencionada previamente. Finalmente los datos de ADC son convertidos a energía depositada usando el mapa de ganancias descrito en \cite{hikimochi16}.
+Posteriormente es necesario corregir los datos de ADC por efectos de la atenuación en la fibra. Este procedimiento se realiza a través de la ecuación \ref{equ:fiber-att}. Finalmente los datos de ADC son convertidos a energía depositada usando el mapa de ganancias descrito en \cite{hikimochi16}.
 
-Utilizando los datos de energía depositada, construí distribuciones de energía máxima por traza $E_{max}$, para el periodo de tiempo analizado. El resultado se muestra en la figura \ref{fig:neutron-mindep}, en donde la distribución azul corresponde a las barras del lado Y del SciCRT y la distribución naranja a las del lado X. Estas distribuciones son útiles ya que permiten estudiar el umbral de detección de las barras, y de esta manera nos permiten observar si las diferencias detectadas provienen de la electrónica y/o los MAPMTs. A partir de la figura podemos corroborar que el umbral de detección de las barras es menor a \SI{7}{\mega\electronvolt}, lo cual explica la mayor tasa de eventos en el experimento.
+Utilizando los datos de energía depositada construí distribuciones de energía máxima por traza $E_{max}$ para el periodo de tiempo analizado. El resultado se muestra en la figura \ref{fig:neutron-mindep}, en donde la distribución azul corresponde a las barras del lado Y del SciCRT y la distribución naranja a las del lado X. Estas distribuciones son útiles ya que permiten estudiar el umbral de detección de las barras, y de esta manera nos permiten observar si las diferencias detectadas provienen de la electrónica y/o los MAPMTs. A partir de la figura podemos corroborar que el umbral de detección de las barras es menor a \SI{7}{\mega\electronvolt}, lo cual explica la mayor tasa de eventos en el experimento.
 
 \begin{figure}
         \centering
@@ -74,7 +73,7 @@ Utilizando los datos de energía depositada, construí distribuciones de energí
         \label{fig:neutron-mindep}
 \end{figure}
 
-El origen de este fenómeno muy probablemente se debe a unidades de electrónica FE que presentan una ganancia mayor a la del promedio, y por lo tanto permiten registrar eventos de menor energía. La figura \ref{fig:scibar-threshold} permite comprobar este comportamiento. En ella he obtenido las mismas distribuciones de energía máxima depositada, pero en esta ocasión clasificándolas de acuerdo al número de MAPMT donde se detecto el evento. El panel izquierdo muestra en total \num{28} distribuciones, correspondientes a cada uno de los MAPMTs que comprenden el SB3. Se puede apreciar de esta gráfica que la distribución de cada MAPMT inicia en un valor de energía diferente, lo cual apunta a diferencias en el umbral detección. Para observar más claramente este efecto, el panel derecho muestra las distribuciones acumuladas; a partir de las cuales podemos calcular un umbral promedio de \SI{5}{\mega\electronvolt}.
+El origen de este fenómeno muy probablemente se debe a unidades de electrónica FE que presentan una ganancia mayor a la del promedio, y por lo tanto permiten registrar eventos de menor energía. La figura \ref{fig:scibar-threshold} permite comprobar este comportamiento. En ella he obtenido las mismas distribuciones de energía máxima depositada, pero en esta ocasión clasificándolas de acuerdo al número de MAPMT donde se detectó el evento. El panel izquierdo muestra en total \num{28} distribuciones, correspondientes a cada uno de los MAPMTs que comprenden el SB3. Se puede apreciar de esta gráfica que la distribución de cada MAPMT inicia en un valor de energía diferente, lo cual apunta a diferencias en el umbral detección. Para observar más claramente este efecto, el panel derecho muestra las distribuciones acumuladas; a partir de esto podemos calcular un umbral promedio de \SI{5}{\mega\electronvolt}.
 
 \begin{figure}
         \centering
@@ -83,11 +82,11 @@ El origen de este fenómeno muy probablemente se debe a unidades de electrónica
         \label{fig:scibar-threshold}
 \end{figure}
 
-No obstante, el efecto de este menor umbral solo afecta una pequeña cantidad de eventos; ya que la razón entre el número de eventos que no superan el umbral de \SI{7}{\mega\electronvolt} y los que si solo superan es tan solo del \SI{3.5}{\percent}. Esto podría indicar que el número de canales en la electrónica que permiten el paso de eventos de menor energía es muy pequeño. Luego entonces podemos considerar todos los eventos por debajo de \SI{7}{\mega\electronvolt} como hits accidentales y eliminarlos de nuestro análisis. Finalmente podemos estimar la tasa de eventos del experimento en: \SI{3178.40(177)}{eventos \per\minute}, lo cual concuerda con la simulación dentro de la incertidumbre asociada.
+No obstante, el efecto del umbral solo afecta a una pequeña cantidad de eventos; ya que la razón entre el número de eventos que no superan el umbral de \SI{7}{\mega\electronvolt} y los que si solo superan es tan solo del \SI{3.5}{\percent}\footnote{Aquí conviene aclarar que nos referimos al número de eventos por MAPMT, no al número de eventos totales.}. Luego entonces podemos considerar todos los eventos por debajo de \SI{7}{\mega\electronvolt} como hits accidentales y eliminarlos de nuestro análisis. Finalmente podemos estimar la tasa de eventos del experimento en: \SI{3178.40(177)}{eventos \per\minute}, lo cual concuerda con la simulación dentro de la incertidumbre asociada.
 
 \subsection{Estabilidad del detector}
 
-Para finalizar esta sección presentaré un análisis sobre la operación estable del telescopio. Dado que el SciCRT se encuentra operando en alta montaña, bajo condiciones atmosféricas severas, una parte importante de nuestro trabajo en sitio ha sido el desarrollo e instalación de la infraestructura necesaria. Esto incluye sistemas de respaldo de alimentación eléctrica (banco de baterías y fuente de alimentación ininterrumpida) y sistema de ventilación para favorecer la disipación de calor de la electrónica. La figura \ref{fig:muon-monthly} presenta un ejemplo de la operación estable del detector durante el mes de febrero de \num{2020}. En esta figura se muestran los datos del número de eventos por hora registrados en las capas de muones en color azul oscuro, mientras que la linea azul claro presenta los datos del NM de la Ciudad de México. A fin de presentar ambas gráficas en la misma escala, sume \SI{e6} cuentas a los datos del NM. De la gráfica se puede observar que ambas series de tiempo siguen la misma evolución en el tiempo, lo cual es notable para en el caso de un detector operando a la altura de Sierra Negra ya que los NMs son instrumentos ampliamente usados en el estudio de RC debido a su estabilidad.
+Para finalizar esta sección presentaré un análisis sobre la operación estable del telescopio. Dado que el SciCRT se encuentra trabajando en alta montaña, bajo condiciones atmosféricas severas, una parte importante de nuestro trabajo en sitio ha sido el desarrollo e instalación de la infraestructura necesaria. Esto incluye sistemas de respaldo de alimentación eléctrica (banco de baterías y fuente de alimentación ininterrumpida) y sistema de ventilación para favorecer la disipación de calor de la electrónica. La figura \ref{fig:muon-monthly} presenta un ejemplo de la operación estable del detector durante el mes de febrero de \num{2020}. En esta figura se muestran los datos del número de eventos por hora registrados en las capas de muones en color azul oscuro, mientras que la linea azul claro presenta los datos del NM de la Ciudad de México. A fin de presentar ambas gráficas en la misma escala, sumé \SI{e6} cuentas a los datos del NM. De la gráfica se puede observar que ambas series de tiempo siguen la misma evolución en el tiempo, lo cual es notable para en el caso de un detector operando a la altura de Sierra Negra, ya que los NMs son instrumentos ampliamente usados en el estudio de RC debido a su estabilidad.
 
 \begin{figure}
         \centering
@@ -96,7 +95,7 @@ Para finalizar esta sección presentaré un análisis sobre la operación establ
         \label{fig:muon-monthly}
 \end{figure}
 
-De forma simular la figura \ref{fig:neutron-monthly} muestra el número de eventos por hora de las capas de neutrones. En este punto es importante aclarar que, debido al gran volumen de datos que registra el SB3, la adquisición en esta capa del detector se detiene por las noches para poder comprimir los archivos registrados. Esto explica las discontinuidades que se observan en la gráfica. A pesar de esta limitante, se pueden notar de la figura que la serie de tiempo sigue la misma tendencia de las otras mencionadas previamente.
+De forma simular la figura \ref{fig:neutron-monthly} muestra el número de eventos por hora de las capas de neutrones. En este punto es importante aclarar que, debido al gran volumen de datos que registra el SB3, la adquisición en esta capa del detector se detiene por las noches para poder comprimir los archivos registrados. Esto explica las discontinuidades que se observan en la gráfica. A pesar de esta limitante se pueden notar de la figura que la serie de tiempo sigue la misma tendencia de las otras mencionadas previamente.
 
 \begin{figure}
         \centering
@@ -105,18 +104,18 @@ De forma simular la figura \ref{fig:neutron-monthly} muestra el número de event
         \label{fig:neutron-monthly}
 \end{figure}
 
-Por otra parte, ya que una parte significativa del análisis con los datos de neutrones está relacionada con la deposición de energía en las barras, un estudio de estabilidad requiere monitorear las ganancia de los MAPMTs en función del tiempo. La figura \ref{fig:mip-stability} muestra el resultado de esta análisis para los MAPMTs en las capas de neutrones, durante un periodo de tres; de Diciembre \num{2019} a Febrero \num{2020}. Para calcular la ganancia de los MAPMTs, dado que el pico de señal no es muy prominente, el procedimiento análisis es el siguiente:
+Por otra parte, ya que una parte significativa del análisis con los datos de neutrones está relacionada con la deposición de energía en las barras, un estudio de estabilidad requiere monitorear las ganancia de los MAPMTs en función del tiempo. La figura \ref{fig:mip-stability} muestra el resultado de esta análisis para los MAPMTs en las capas de neutrones durante un periodo de tres meses; de Diciembre \num{2019} a Febrero \num{2020}. Para calcular la ganancia de los MAPMTs, dado que el pico de señal no es muy prominente, el procedimiento de análisis es el siguiente:
 
 \begin{enumerate}
-  \item Usando las distribuciones de ADC de cada barra y calcular los pedestales (ver figura \ref{fig:neutron-pedestal}).
+  \item Usar las distribuciones de ADC de cada barra y calcular los pedestales (ver figura \ref{fig:neutron-pedestal}).
   \item Ajustar una función exponencial negativa a la región de \num{15} a \SI{70}{ADC} posterior al pico del pedestal.
   \item Sustraer el pedestal y función exponencial de la distribución de la barra.
   \item Estimar la posición del pico de la señal.
 \end{enumerate}
 
-El paso final se puede realizar ajustando una distribución al histograma resultado o calculando la moda del mismo. Por simplicidad del algoritmo utilicé la moda del histograma, sin embargo, resultados similares se pueden obtener ajustando una distribución. La desventaja de usar la moda es que este es parámetro muy sensible a la estadística del histograma, lo cual contrarreste calculando la ganancia en periodos de tres días. El panel superior de la figura \ref{fig:mip-stability} muestra la variación de la ganancia en el tiempo para uno de los MAPMTs del SB3. Como se observa en la figura, la ganancia tiene fluctuaciones considerables durante el periodo, muy probablemente causadas por efectos de temperatura \cite{knitta04}. No obstante, la mayoría de las variaciones están en el intervalo del \SI{\pm 1.0}{\percent} (área sombreada en verde oscuro) y ninguna sobrepasa \SI{\pm 2.0}{\percent} (área sombreada en verde claro).
+El paso final se puede realizar ajustando una distribución al histograma resultante o calculando la moda del mismo. Por simplicidad del algoritmo utilicé la moda del histograma, sin embargo, resultados similares se pueden obtener ajustando una distribución. La desventaja de usar la moda es que este es parámetro muy sensible a la estadística del histograma, lo cual compensé calculando la ganancia por periodos de tres días. El panel superior de la figura \ref{fig:mip-stability} muestra la variación de la ganancia en el tiempo para uno de los MAPMTs del SB3. Como se observa en la figura, la ganancia tiene fluctuaciones considerables durante el periodo, muy probablemente causadas por efectos de temperatura \cite{knitta04}. No obstante, la mayoría de las variaciones están en el intervalo del \SI{\pm 1.0}{\percent} (área sombreada en verde oscuro) y ninguna sobrepasa \SI{\pm 2.0}{\percent} (área sombreada en verde claro).
 
-Finalmente el panel inferior muestra la distribución para todo los MAPMTs en el SB3 durante el periodo de tres meses. De la figura se puede concluir que, a pesar de las condiciones atmosféricas de Sierra Negra, todas las variaciones se encuentran en el rango de \SI{\pm 2.5}{\percent}.
+Finalmente el panel inferior muestra la distribución para tods los MAPMT en el SB3 durante el periodo de tres meses. De la figura se puede concluir que, a pesar de las condiciones atmosféricas de Sierra Negra, todas las variaciones se encuentran en el rango de \SI{\pm 2.5}{\percent}.
 
 \begin{figure}
         \centering
@@ -174,7 +173,7 @@ A pesar de que estas condiciones favorecen la observación de partículas solare
 
 de donde $N_{j}$ es el total de cuentas registradas por cada \SI{2}{\minute}, $N_{bj}$ es el valor de la linea de base (polinomio) y $\alpha$ un factor de normalización, el cual sirve para \emph{estandarizar} los residuos ($N_{j}-N_{bj}$). A partir de esta expresión consideramos como señal significativa a cualquier exceso de cuentas arriba de $3\sigma$. Para poder asociar esta señal con la detección de partículas solares, es necesario que ésta ocurra dentro del intervalo de tiempo de $t_{0}-\SI{15}{\minute}$ a $t_{0}+\SI{45}{\minute}$; lo cual tiene como objetivo buscar señales de neutrones solares en un amplio rango de energías.
 
-En la figura \ref{fig:september-04-neutrons} la linea azul representa el ajuste del polinomio de tercer grado, mientras que el área sombreada en la dirección horizontal es el intervalo de $\pm 3\sigma$. Como se puede observar, no existe ningún incremento mayor a $3\sigma$ en el área sombreada vertical, en primera instancia no podemos concluir que el SciCRT detector partículas solares.
+En la figura \ref{fig:september-04-neutrons} la linea azul representa el ajuste del polinomio de tercer grado, mientras que el área sombreada en la dirección horizontal es el intervalo de $\pm 3\sigma$. Como se puede observar, no existe ningún incremento mayor a $3\sigma$ durante la ventana de tiempo de interés (área sombreada vertical), en primera instancia no podemos concluir que el SciCRT detector partículas solares.
 
 Por otro lado, dado que la fulguración no es gran magnitud, es conveniente buscar un método para eliminar la contaminación producida por radiación cósmica secundaria en los eventos registrados, y analizar si de esta forma es posible encontrar una señal significativa.
 
@@ -185,7 +184,7 @@ Por otro lado, dado que la fulguración no es gran magnitud, es conveniente busc
         \label{fig:september-04-neutrons}
 \end{figure}
 
-Un método simple para realizar la clasificación consiste en el análisis de las distribuciones de energía depositada contra energía máxima depositada en una barra \cite{nagaiphd,sasaiphd}. La figura \ref{fig:scicrt-edep-emax} muestra las distribuciones obtenidas mediante simulación para las diferentes componentes de la radiación cósmica. El panel superior muestra los resultados para $e^{\pm}$ y rayos $\gamma$, el panel del centro contiene datos de $\mu^{\pm}$ y el panel inferior corresponde a la componente hadrónica. En todas las figuras la escala de color (de colores claros a oscuros) representa la densidad de eventos en uno de los \emph{bines}. Se puede apreciar en las figuras que tanto las componente electromagnética como la muónica se agrupan en el extremo inferior derecho de las gráficas, mientras que los hadrones están agrupados en la parte superior izquierda. Esto se debe a que los protones tienen pérdidas de energía grandes cuando se detienen dentro del detector.
+Un método simple para realizar la clasificación consiste en el análisis de las distribuciones de energía depositada contra energía máxima depositada en una barra \cite{nagaiphd,eortiz19}. La figura \ref{fig:scicrt-edep-emax} muestra las distribuciones obtenidas mediante simulación para las diferentes componentes de la radiación cósmica. El panel superior muestra los resultados para $e^{\pm}$ y rayos $\gamma$, el panel del centro contiene datos de $\mu^{\pm}$ y el panel inferior corresponde a la componente hadrónica. En todas las figuras la escala de color (de colores claros a oscuros) representa la densidad de eventos en uno de los \emph{bines}. Se puede apreciar en las figuras que tanto las componente electromagnética como la muónica se agrupan en el extremo inferior derecho de las gráficas, mientras que los hadrones están agrupados en la parte superior izquierda. Esto se debe a que los protones tienen pérdidas de energía grandes cuando se detienen dentro del detector.
 
 \begin{figure}
         \centering
@@ -213,18 +212,18 @@ E_{max} &=0.646807\cdot (E_{dep})^{k}\\
 k &=0.5\cdot\log_{10}\left(\frac{283.0}{5.0}\right) \nonumber
 \end{align}
 
-Cabe mencionar que, a pesar de que este método tiene buena precisión para hadrones (hay poca contaminación de las componentes electromagnética y muónica), la eficiencia es muy pobre (menor al \SI{40}{\percent}) y no permite directamente separar entre neutrones y protones. Con respecto a esto, los métodos desarrollados en \cite{garcia20} son mucho más poderosos y versátiles, pero por limitaciones de tiempo decidí no probarlos.
+Cabe mencionar que, a pesar de que este método tiene buena precisión para hadrones (hay poca contaminación de las componentes electromagnética y muónica), la eficiencia es muy pobre (menor al \SI{40}{\percent}) y no permite directamente separar entre neutrones y protones. Un método adicional que se puede utilizar para seperar entre partículas cargadas y no cargadas se presenta en el Apéndice \ref{chap:apen-a}. No obstante, los métodos desarrollados en \cite{garcia20} son mucho más poderosos.
 
-El resultado de aplicar el criterio de selección descrito anteriormente a los datos del SciCRT se muestra en la figura \ref{fig:september-04-disc}. En la figura se grafican las significancias de las series de tiempo de los hadrones (serie en color violeta) y componentes muónica/electromagnética (serie en color azul fuerte), además del instante del máximo de la ráfaga (linea punteada) y la ventana de tiempo para observar neutrones. Cada \emph{bin} en la serie de tiempo corresponde a \SI{4}{\minute}. De la serie de tiempo de hadrones se observa un incremento de $3.8\sigma$ doce minutos después del máximo en rayos X, lo cual indicaría la detección de neutrones de \SI{400}{\mega\electronvolt}.
+El resultado de aplicar el criterio de selección descrito anteriormente a los datos del SciCRT se muestra en la figura \ref{fig:september-04-disc}. En la figura se grafican las significancias de las series de tiempo de los hadrones (serie en color violeta) y componentes muónica/electromagnética (serie en color azul fuerte), además del instante del máximo de la ráfaga (linea punteada) y la ventana de tiempo para observar neutrones. Cada \emph{bin} en la serie de tiempo corresponde a \SI{4}{\minute}. De la serie de tiempo de hadrones se observa un incremento de $3.8\sigma$ doce minutos después del máximo en rayos X, lo cual indicaría la detección de neutrones de \SI{400}{\mega\electronvolt} (tomando en cuenta el tiempo de vuelo, ver figura \ref{fig:neutron-prob}).
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{significance-170904.pdf}
-        \caption{Significancia en función del tiempo para los grupos de hadrones (serie color violeta) y muones/electromagnética (serie color azul fuerte).}
+        \caption{Significancia en función del tiempo para los grupos de hadrones (serie color violeta) y muones/electromagnética (serie color azul fuerte). La resolución temporal de las series es de \SI{4}{\minute}.}
         \label{fig:september-04-disc}
 \end{figure}
 
-Aunado a esto, la serie de hadrones tiene \num{4} excesos positivos posteriores al máximo, lo cual podría estar relacionados con neutrones de menor energía. Tomando en cuenta estos excesos la significancia está entre $5.1\sigma$ y $10.1\sigma$, dependiendo cuanto consideremos que dura la emisión. También existe la posibilidad que estos las dos señales significativas se presenten debido a dos instantes de aceleración diferentes, tomando en cuenta los dos máximos en emisión de rayos X duros. En este sentido un análisis más detallado del espectro registrado por FERMI y RHESSI puede dar pistas sobre el escenario en el que se aceleraron los neutrones.
+Aunado a esto, la serie de hadrones tiene \num{4} excesos positivos posteriores al máximo, lo cual podría estar relacionados con neutrones de menor energía. Tomando en cuenta estos excesos la significancia está entre $5.1\sigma$ y $10.1\sigma$, dependiendo cuanto consideremos que dura la emisión. También existe la posibilidad que estos las dos señales significativas se presenten debido a dos instantes de aceleración diferentes, tomando en cuenta los dos máximos en emisión de rayos X duros (ver figura \ref{fig:september-04-xrays}). En este sentido un análisis más detallado del espectro registrado por FERMI y RHESSI puede dar pistas sobre el escenario en el que se aceleraron los neutrones.
 
 \subsection{Posible observación de rayos $\gamma$ solares el 6 de Septiembre de 2017}
 
@@ -239,7 +238,7 @@ El \num{6} de Septiembre de \num{2017} el Sol produjo otra ráfaga tipo M\num{2.
 
 El satélite GOES registró el incremento en la banda de rayos X suaves, sin embargo ni FERMI ni RHESSI estuvieron en condiciones para observar este evento.
 
-Aun con estas limitaciones, al revisar las condiciones para la detección de partículas solares, vemos que el SciCRT tenía buenas posibilidades de observarlas. Esto se puede corroborar mediante la figura \ref{fig:september-06-gammas}, en la cual se muestra que los mejores sitios para observar en el instante de la fulguración son Sierra Negra y Chacaltaya, Bolivia. El ángulo cenital solar es de \SI{45.1}{\degree} en el instante de la ráfaga, con una masa de aire de \SI{813}{\gram\per\square\cm} (masa efectiva de\SI{688}{\gram\per\square\cm}).
+Aun con estas limitaciones, al revisar las condiciones para la detección de partículas solares, vemos que el SciCRT tenía buenas posibilidades de observarlas. Esto se puede corroborar mediante la figura \ref{fig:september-06-zenith}, en la cual se muestra que los mejores sitios para observar en el instante de la fulguración son Sierra Negra y Chacaltaya, Bolivia. El ángulo cenital solar es de \SI{45.1}{\degree} en el instante de la ráfaga, con una masa de aire de \SI{813}{\gram\per\square\cm} (masa efectiva de\SI{688}{\gram\per\square\cm}).
 
 \begin{figure}
         \centering
@@ -257,11 +256,11 @@ La figura \ref{fig:september-06-neutrons} muestra la tasa de eventos registrada 
         \label{fig:september-06-neutrons}
 \end{figure}
 
-Por otro lado, aunque la señal es muy significativa para descartarla, sostener la hipótesis de que estas partículas son neutrones es difícil debido al retardo de \SI{20}{\minute} que existe entre $t_{0}$ y el exceso de $3.8\sigma$. De ser neutrones estas partículas, su energía cinética seria de \SI{100}{\mega\electronvolt} y los subsecuentes incrementos de menor energía; lo cual apuntaría a un espectro de emisión muy suave. Otra posibilidad de interpretar este resultado es que los iones primarios en la atmósfera solar no se hayan producido en el mismo instante que los electrones, llevando a este retraso. Ambos posibilidades pueden ser estudiadas analizando con detalle la distribución de energía depositada, lo cual se deja para un futuro estudio.
+Por otro lado, aunque la señal es muy significativa, sostener la hipótesis de que estas partículas son neutrones es difícil debido al retardo de \SI{20}{\minute} que existe entre $t_{0}$ y el exceso de $3.8\sigma$. De ser neutrones estas partículas, su energía cinética seria de \SI{100}{\mega\electronvolt} y los subsecuentes incrementos de menor energía; lo cual apuntaría a un espectro de emisión muy suave. Otra posibilidad de interpretar este resultado es que los iones primarios en la atmósfera solar no se hayan producido en el mismo instante que los electrones, llevando a este retraso. Ambos posibilidades pueden ser estudiadas analizando con detalle la distribución de energía depositada, lo cual se deja para un futuro estudio.
 
-Otro posibilidad que surge de este resultado es que las partículas detectadas no sean neutrones. En este sentido el satélite GOES reporta un flujo de protones energéticos en la órbita terrestre, sin embargo esta hipótesis también resulta muy poco probable por dos circunstancias. La primera es que los protones monitoreados por GOES son de energías menores a \SI{1}{\giga\electronvolt}, lo que hace imposible que lleguen al sitio de Sierra Negra debido a la rigidez umbral del sitio ($\approx\SI{8.2}{\giga\electronvolt}$). Aunado a esto, no hay ningún exceso registrado asociado a estas partículas en la base de datos de monitores de neutrones (\url{https://www.nmdb.eu/nest/}).
+Otro posibilidad que surge de este resultado es que las partículas detectadas no sean neutrones. En este sentido el satélite GOES reporta un flujo de protones energéticos en la órbita terrestre, sin embargo esta hipótesis también resulta muy poco probable por dos circunstancias. La primera es que los protones monitoreados por GOES son de energías menores a \SI{1}{\giga\electronvolt}, lo que hace imposible que lleguen al sitio de Sierra Negra debido a la rigidez umbral del sitio ($\approx\SI{8.2}{\giga\volt}$). Aunado a esto, no hay ningún exceso registrado asociado a estas partículas en la base de datos de monitores de neutrones (\url{https://www.nmdb.eu/nest/}).
 
-Más aún, el incremento reportado por GOES inicia a las \DTMtime{12:02:00}, asociado a una fulguración muy intensa del tipo X\num{9.3}. En el caso de que un pequeño número de los protones producidos durante esta ráfaga tuviera la energía suficiente para entrar en la localidad de Sierra Negra, surge el problema de por qué se observan su detección a las \DTMtime{16:15:00}.
+Más aún, el incremento reportado por GOES inicia a las \DTMtime{12:02:00}, asociado a una fulguración muy intensa del tipo X\num{9.3}. En el caso de que un pequeño número de los protones producidos durante esta ráfaga tuviera la energía suficiente para entrar en la localidad de Sierra Negra, surge el problema de por qué su detección es a las \DTMtime{16:15:00}.
 
 Otro escenario es el de la detección de rayos $\gamma$ solares. En este caso FERMI reporta una emisión de rayos $\gamma$ con energía $>\SI{100}{\mega\electronvolt}$, iniciando con la fulguración X\num{9.3} y manteniéndose durante más de \SI{13}{\hour} dos ordenes de magnitud arriba de la línea de base. Los datos de FERMI se muestran en la figura \ref{fig:september-06-gammas}, con la linea punteada indicando $t_{0}$ para la ráfaga M\num{2.6}. La linea negra solida representa el nivel de flujo de Sol quieto ($\approx\SI{4.5e-5}{\per\square\cm\per\second}$).
 
@@ -272,13 +271,15 @@ Otro escenario es el de la detección de rayos $\gamma$ solares. En este caso FE
         \label{fig:september-06-gammas}
 \end{figure}
 
-Para poder descartar las diferentes posibilidades, seguí una metodología similar a la hecha para el evento del \num{4} de Septiembre y apliqué el criterio de separación antes mencionado. De esta forma obtuve el resultado de la figura \ref{fig:september-06-disc}. Como se observa, para este evento el exceso se encuentra registrado en la serie de tiempo de la componente electromagnética/muones, con lo que en principio nos brinda pruebas de que las partículas detectadas son rayos $\gamma$.
+Para poder descartar las diferentes posibilidades seguí una metodología similar a la hecha para el evento del \num{4} de Septiembre y apliqué el criterio de separación antes mencionado. De esta forma obtuve el resultado de la figura \ref{fig:september-06-disc}. Como se observa, para este evento el exceso se encuentra registrado en la serie de tiempo de la componente electromagnética/muones, con lo que en principio nos brinda pruebas de que las partículas detectadas son rayos $\gamma$.
 
 \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{significance-170906.pdf}
-        \caption{Significancia en función del tiempo para los grupos de hadrones (serie violeta) y muones/electromagnética (serie azul fuerte).}
+        \caption{Significancia en función del tiempo para los grupos de hadrones (serie violeta) y muones/electromagnética (serie azul fuerte). La resolución temporal de las series es de \SI{4}{\minute}.}
         \label{fig:september-06-disc}
 \end{figure}
 
-Aun con este resultado, sustentar la hipótesis de la detección de rayos $\gamma$ es complicado, en primer lugar porque la atmósfera terrestre es opaca a este tipo de radiación. Por otra parte, esta hipótesis sufre del mismo problema que la detección de protones, debido a los intervalos de tiempo en que se registra. Con respecto a este ultimo punto, un argumento a favor es el presentando en \cite{muraki20}, en donde se reporta una detección de rayos $\gamma$ solares bajo circunstancias similares.
+Aun con este resultado, sustentar la hipótesis de la detección de rayos $\gamma$ es complicado, en primer lugar porque la atmósfera terrestre es opaca a este tipo de radiación. Por otra parte, esta hipótesis sufre del mismo problema que la detección de protones, debido a los intervalos de tiempo en que se registra.
+
+Con respecto a esto ultimo, un argumento a favor es el presentando en \cite{muraki20}, en donde se reporta una detección de rayos $\gamma$ solares bajo circunstancias similares. En primera instancia, el artículo presenta la posible observación de rayos $\gamma$ solares mediante satélite (SEDA-FIB) y un telescopio en superficie (el TNS de Sierra Negra), lo cual soporta que a pesar de su atenuación en la atmósfera estas partículas pueden llegar a sitios en alta montaña. Más aún, las características del evento explosivo son muy parecidas; ya que la producción de los rayos $\gamma$ también se asocia a una emisión de alta energía ($>\SI{100}{\mega\electronvolt}$) de larga duración, pero la observación de las partículas en superficie no se presenta en la fase de crecimiento de la fulguración sino tiempo después. Esto abre la  En este sentido, el evento aquí analizado brinda mayores pruebas de que estos eventos
