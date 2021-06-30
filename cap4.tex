@@ -225,7 +225,7 @@ El resultado de aplicar el criterio de selección descrito anteriormente a los d
 
 Aunado a esto, la serie de hadrones tiene \num{4} excesos positivos posteriores al máximo, lo cual podría estar relacionados con neutrones de menor energía. Tomando en cuenta estos excesos la significancia está entre $5.1\sigma$ y $10.1\sigma$, dependiendo cuanto consideremos que dura la emisión. También existe la posibilidad que estos las dos señales significativas se presenten debido a dos instantes de aceleración diferentes, tomando en cuenta los dos máximos en emisión de rayos X duros (ver figura \ref{fig:september-04-xrays}). En este sentido un análisis más detallado del espectro registrado por FERMI y RHESSI puede dar pistas sobre el escenario en el que se aceleraron los neutrones.
 
-\subsection{Posible observación de rayos $\gamma$ solares el 6 de Septiembre de 2017}
+\subsection{Posible observación de rayos \texorpdfstring{$\scriptstyle\gamma$}{gamma} solares el 6 de Septiembre de 2017}
 
 El \num{6} de Septiembre de \num{2017} el Sol produjo otra ráfaga tipo M\num{2.7} a las \DTMtime{15:45:00} UT, proveniente de la misma región activa que la explosión analizada previamente (aunque desplazada \SI{20}{\degree} al Oeste). La figura \ref{fig:september-06-flare} muestra una imagen de la atmósfera solar en la banda de \SI{13.1}{\nano\metre}.
 
@@ -282,4 +282,40 @@ Para poder descartar las diferentes posibilidades seguí una metodología simila
 
 Aun con este resultado, sustentar la hipótesis de la detección de rayos $\gamma$ es complicado, en primer lugar porque la atmósfera terrestre es opaca a este tipo de radiación. Por otra parte, esta hipótesis sufre del mismo problema que la detección de protones, debido a los intervalos de tiempo en que se registra.
 
-Con respecto a esto ultimo, un argumento a favor es el presentando en \cite{muraki20}, en donde se reporta una detección de rayos $\gamma$ solares bajo circunstancias similares. En primera instancia, el artículo presenta la posible observación de rayos $\gamma$ solares mediante satélite (SEDA-FIB) y un telescopio en superficie (el TNS de Sierra Negra), lo cual soporta que a pesar de su atenuación en la atmósfera estas partículas pueden llegar a sitios en alta montaña. Más aún, las características del evento explosivo son muy parecidas; ya que la producción de los rayos $\gamma$ también se asocia a una emisión de alta energía ($>\SI{100}{\mega\electronvolt}$) de larga duración, pero la observación de las partículas en superficie no se presenta en la fase de crecimiento de la fulguración sino tiempo después. Esto abre la  En este sentido, el evento aquí analizado brinda mayores pruebas de que estos eventos
+Con respecto a esto ultimo, un argumento a favor es el presentando en \cite{muraki20}, en donde se reporta una detección de rayos $\gamma$ solares bajo circunstancias similares. En primera instancia, el artículo presenta la posible observación de rayos $\gamma$ solares mediante satélite (SEDA-FIB) y un telescopio en superficie (el TNS de Sierra Negra), lo cual apoya la idea de que a pesar de su atenuación en la atmósfera; estas partículas pueden llegar a sitios en alta montaña. Más aún, las características del evento explosivo son muy parecidas; ya que la producción de los rayos $\gamma$ también se asocia a una emisión de alta energía ($>\SI{100}{\mega\electronvolt}$) de larga duración, pero la observación de las partículas en superficie no se presenta en la fase de crecimiento de la fulguración sino tiempo después. Esto abre nuevas preguntas sobre como se llevó a cabo la aceleración de las partículas primarias que produjeron los rayos $\gamma$. En este sentido, el evento aquí analizado brinda pruebas para confirmar este tipo de eventos y serviría como motivación para buscar más señales de rayos $\gamma$ solares en detectores de superficie.
+
+\section{Comentarios finales}
+
+Para finalizar este capitulo presento de manera breve un resumen de las características de los eventos con el fin de establecer las líneas sobre las que seguiré mi investigación.
+
+En el caso del evento del \num{4} de Septiembre, tenemos suficiente evidencia de datos de satélites para confirmar la producción de neutrones en el Sol y su detección en la orbita terrestre. Es por lo tanto necesario estudiar la propagación de éstos en la atmósfera terrestre y su interacción con el detector.
+
+Un primer paso de esto es la figura \ref{fig:sn-angular}, en donde se muestran los resultados de una simulación MC con el modelo PARMA incluyendo todas las especies (distribución naranja) y el modelo de Shibata para la propagación de neutrones solares en la atmósfera más la contribución de RC secundarios de PARMA (distribución azul). En ambos casos los histogramas corresponden a las distribuciones de ángulo cenital de partículas en el sitio. El ángulo al que se inyectan las partículas en el tope de la atmósfera es de \SI{38.7}{\degree}. La curva roja en la figura presenta la diferencia cuadrática entre los histogramas durante el evento y el periodo sin evento. Podemos ver de esta gráfica que el máximo se encuentra en  \SI{31}{\degree}.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{solar-neutrons-angular.pdf}
+        \caption{Distribuciones de ángulo cenital para RC secundarios (distribución naranja) y RC más neutrones solares (distribución azul). La curva roja representa la diferencia cuadrática entre ambas.}
+        \label{fig:sn-angular}
+\end{figure}
+
+El número de neutrones solares inyectados en la simulación al tope de la atmósfera es de \num{50e6}, de los cuales solo llegan a la altura de Sierra Negra \num{50e3}. De estos solo aproximadamente el \SI{5}{\percent} producirán señal el SciCRT, lo cual nos deja con \num{2500} posibles eventos detectados. Si distribuimos estos \num{2500} eventos durante el intervalo de duración del evento, obtenemos una significancia similar a la reportada en la sección anterior. De este razonamiento podemos concluir que es factible explicar el incremento registrado en los datos.
+
+Más allá de esto, otro propiedad importante de los resultados en a figura \ref{fig:sn-angular} está en el cambio de la distribución angular de los neutrones que se observan, ya que hay una diferencia de \SI{7}{\degree} entre ambas\footnote{Efecto conocido como refracción de neutrones solares \cite{dorman99}}, lo cual es producto de la dispersión de los neutrones por la atmósfera. A partir aquí percibe la importancia de simular estos neutrones interaccionando con el SciCRT, ya que su distribución angular también debe verse modificada.
+
+Sumado a esto, un análisis más detallado de los datos de satélite y un estudio del espectro de energía observado por el telescopio son necesarios para determinar las propiedades más importantes de este evento.
+
+En lo referente al evento del \num{6} de Septiembre los datos de satélite son insuficientes para establecer todo el escenario del evento. Una alternativa se encuentra en los datos del satélite Integral \cite{integraldata}, el cual también observa rayos $\gamma$ en el rango de energía requerido.
+
+Por otro lado, haciendo un análisis similar al del otro evento, obtuve los resultados que se muestran en la figura \ref{fig:sg-angular}. En este caso utilicé CORSIKA para realizar la simulación, inyectado \num{50e6} de rayos $\gamma$ al tope de la atmósfera con un ángulo cenital de \SI{42}{\degree}.
+
+De la figura es evidente que la distribución angular de los rayos $\gamma$ sufre poca variación con respecto al valor de entrada, ya que el máximo de la diferencia entre ambas distribuciones está en \SI{38}{\degree}. Este valor máximo es un resultado positivo para confirmar la detección del evento con el SciCRT, ya que el telescopio solo es sensible a rayos $\gamma$ de alta energía y ángulos mayores a \SI{30}{\degree}.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{solar-gammas-angular.pdf}
+        \caption{Distribuciones de ángulo cenital para RC secundarios (distribución naranja) y RC más rayos $\gamma$ solares (distribución azul). La curva roja representa la diferencia cuadrática entre ambas.}
+        \label{fig:sg-angular}
+\end{figure}
+
+Sin embargo, el número de rayos $\gamma$ que llegan al sitio es muy sensible al espectro de energía inyectado al tope de la atmósfera, además de que esto también repercute en la capacidad del SciCRT para detectar estos eventos. De este ultimo punto resulta importante hacer un análisis de espectro de energía de las partículas detectadas para posteriormente tratar de estimar el espectro en el tope de la atmósfera. Teniendo este resultado, un estudio de los datos de FERMI del espectro de energía (aunque en un periodo de tiempo diferente) pueden brindar una pauta para establecer la autenticidad del evento.
