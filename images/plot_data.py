@@ -9,8 +9,6 @@ import seaborn as sns
 sns.set(rc={"figure.figsize":(8,4)})
 sns.set_context('paper',font_scale=1.5,rc={'lines.linewidth':1.5})
 sns.set_style('ticks')
-mat.rc('text',usetex=True)
-mat.rc('text.latex',preamble=r'\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage[spanish]{babel}\usepackage{mathpazo}\usepackage[euler-digits,euler-hat-accent]{eulervm}\usepackage{amsmath,amsfonts,amssymb}\usepackage{siunitx}')
 
 qe=1.602176634
 c=0.299792458
