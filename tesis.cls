@@ -23,7 +23,6 @@
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage[toc,page]{appendix}
-\RequirePackage{fancyhdr}
 \RequirePackage{listings}
 \RequirePackage{titlesec}
 \RequirePackage{fix-cm}
@@ -56,12 +55,13 @@
             anchorcolor=green
             ]{hyperref}
 
+\RequirePackage{fancyhdr}
+
 %\renewcommand{\cleardoublepage}{\clearpage}
 
 \linespread{1.05}
 \setlength{\parindent}{0pt}
 \addtolength{\parskip}{10pt}
-
 
 \pagestyle{fancy}
 \renewcommand\headrule{{\color{light-gray} \hrule height  2pt width \headwidth}}
@@ -71,7 +71,7 @@
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
 
-\fancyhead{}
+\fancyhf{}
 \fancyhead[RE]{\textit{\rightmark}}
 \fancyhead[LO]{\textbf{\leftmark}}
 \fancyfoot[C]{\thepage}
